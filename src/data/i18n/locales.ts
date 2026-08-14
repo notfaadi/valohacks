@@ -95,7 +95,7 @@ export const blogUi: Record<
 	en: {
 		blogTitle: 'Valorant Hacks Blog | ESP, Cheats & Meta Tips',
 		blogDescription:
-			'Valorant hacks and valorant cheats guides — ESP, aimbot, ranked meta, loot routes, and Vanguard updates. Global English blog at valoranthacks.net/blog/.',
+			'Valorant hacks and valorant cheats guides — ESP, aimbot, ranked meta, loot routes, and Vanguard updates. Global English blog at valohacks.net/blog/.',
 		blogH1: 'Valorant Hacks Intel',
 		blogIntro:
 			'Actionable Valorant guides for Unrated and Competitive — meta breakdowns, loot routes, weapon tiers, and pro warmup routines. Pair these tips with our valorant hacks pages for ESP boxes, soft aim, and cloud DMA when you need in-match tools.',

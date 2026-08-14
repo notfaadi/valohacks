@@ -253,15 +253,15 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "ESP wallhack and visibility features",
 							paragraphs: [
-								"Enemy player ESP wallhack, vehicle and supply-drop threat cues, loot and chest markers, distance readouts, snaplines, and toggleable ESP categories for BR-critical overlays only.",
+								"Player ESP, Health & Armor Bars, Name ESP, Weapon ESP, Ability ESP, Bone ESP, Distance ESP, Box ESP, Agent ESP, and Spike ESP — stream-proof overlays for Competitive and Unrated.",
 								"Team and enemy colour coding supports Competitive and Unrated. Deep-dive the <a href=\"/valorant-esp/\">ESP page</a> and <a href=\"/valorant-wallhack/\">wallhack guide</a> for category-level detail.",
-								"Map and loot systems evolve with <a href=\"https://playvalorant.com\" target=\"_blank\" rel=\"noopener noreferrer\">Valorant</a> season updates — toggleable ESP categories keep overlays useful when POIs rotate.",
+								"Agent and map updates come from <a href=\"https://playvalorant.com\" target=\"_blank\" rel=\"noopener noreferrer\">Valorant</a> — ESP categories stay useful when the roster or sites rotate.",
 							],
 						},
 						{
 							h2: "Radar hack and Aimbot controls",
 							paragraphs: [
-								"2D radar overlay with directional threat cues, configurable range for rotations and final circles, plus Aimbot smoothness, FOV, bone priority, hotkeys, and per-weapon profiles.",
+								"Radar Hack plus FOV Circle (Private+), Advanced Aimbot (Private+), and Smoothing Control (Private+) so you can tune aim help without stacking separate tools.",
 								"All tools share in-client toggles so you can adjust ESP, radar, and Aimbot during live Valorant sessions. See <a href=\"/valorant-radar-hack/\">radar</a> and <a href=\"/valorant-aimbot/\">Aimbot</a> for settings walkthroughs.",
 								"Prefer a menu-first workflow? The <a href=\"/valorant-mod-menu/\">mod menu page</a> explains mid-match toggles without alt-tabbing.",
 							],
@@ -270,7 +270,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Licensing, delivery, and Vanguard maintenance",
 							paragraphs: [
 								"Monthly ($35) and lifetime ($150) licenses with instant digital delivery. Vanguard maintenance rebuilds publish on the <a href=\"/updates/\">Updates page</a> after anti-cheat or game patches.",
-								"Monitor <a href=\"https://support.riotgames.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Riot Games Support</a> on patch days, then confirm rebuild notes before you queue. Setup and billing help lives on <a href=\"/support/\">Support</a> and support@valoranthacks.net.",
+								"Monitor <a href=\"https://support.riotgames.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Riot Games Support</a> on patch days, then confirm rebuild notes before you queue. Setup and billing help lives on <a href=\"/support/\">Support</a> and support@valohacks.net.",
 								"Next step: compare plans on <a href=\"/pricing/\">Pricing</a> or read <a href=\"/undetected-valorant-cheats/\">how undetected maintenance works</a>.",
 							],
 						},
@@ -422,7 +422,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Delivery, pricing, and support",
 							paragraphs: [
 								"Licenses deliver digitally after payment confirmation. Monthly is $35; lifetime is $150 USD — see <a href=\"/pricing/\">Pricing</a>.",
-								"Contact support@valoranthacks.net or the <a href=\"/support/\">Support page</a> with order details for setup or billing help. First launch steps are on <a href=\"/setup/\">Setup</a>.",
+								"Contact support@valohacks.net or the <a href=\"/support/\">Support page</a> with order details for setup or billing help. First launch steps are on <a href=\"/setup/\">Setup</a>.",
 								"Refund eligibility is covered in the <a href=\"/refund-policy/\">Refund Policy</a>.",
 							],
 						},
@@ -460,7 +460,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Self-service resources",
 							paragraphs: [
 								"Setup guide, Features list, Updates log, Refund Policy, and Terms of Use are linked from the footer. Vanguard bypass notes live on the dedicated <a href=\"/vanguard-bypass/\">Vanguard page</a>.",
-								"Email: support@valoranthacks.net",
+								"Email: support@valohacks.net",
 								"Ready to purchase or renew? Open <a href=\"/pricing/\">Pricing</a>. Need feature detail first? See <a href=\"/features/\">Features</a>.",
 							],
 						},
@@ -651,7 +651,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Read the <a href=\"/valorant-hacks/\">Valorant hacks</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
 								"Also compare the <a href=\"/best-valorant-cheats/\">best Valorant cheats</a> checklist, <a href=\"/blog/valorant-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
-								"Support is available at support@valoranthacks.net via the <a href=\"/support/\">Support page</a>.",
+								"Support is available at support@valohacks.net via the <a href=\"/support/\">Support page</a>.",
 							],
 						},
 					],
@@ -971,9 +971,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 				},
 				privacy: {
 					title: "Privacy Policy | Valorant Hacks",
-					description: "Privacy policy for Valorant Hacks. How we handle support emails, order data, and checkout for valorant cheats licenses on valoranthacks.net.",
+					description: "Privacy policy for Valorant Hacks. How we handle support emails, order data, and checkout for valorant cheats licenses on valohacks.net.",
 					h1: "Privacy Policy",
-					intro: "How Valorant Hacks handles information when you browse valoranthacks.net or contact support about a Valorant license.",
+					intro: "How Valorant Hacks handles information when you browse valohacks.net or contact support about a Valorant license.",
 					imageAlt: "Valorant hacks privacy policy",
 					galleryTitle: "Valorant Hacks legal resources",
 					ctaPrimary: "Email support",
@@ -1002,8 +1002,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Your choices and contact",
 							paragraphs: [
-								"You may request correction or deletion of support email data by contacting support@valoranthacks.net with your request details.",
-								"Policy updates publish on this page. Continued use of valoranthacks.net after updates means you accept the revised policy. Also see <a href=\"/terms/\">Terms of Use</a> and <a href=\"/refund-policy/\">Refund Policy</a>.",
+								"You may request correction or deletion of support email data by contacting support@valohacks.net with your request details.",
+								"Policy updates publish on this page. Continued use of valohacks.net after updates means you accept the revised policy. Also see <a href=\"/terms/\">Terms of Use</a> and <a href=\"/refund-policy/\">Refund Policy</a>.",
 							],
 						},
 					],
@@ -1037,7 +1037,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "How to request a refund",
 							paragraphs: [
-								"Email support@valoranthacks.net with subject \"Refund Request\", your order ID, purchase date, and issue summary — or use the <a href=\"/support/\">Support page</a>.",
+								"Email support@valohacks.net with subject \"Refund Request\", your order ID, purchase date, and issue summary — or use the <a href=\"/support/\">Support page</a>.",
 								"Approved refunds process back to the original payment method when possible. Pricing details live on <a href=\"/pricing/\">Pricing</a>.",
 							],
 						},
@@ -1046,9 +1046,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 				},
 				terms: {
 					title: "Terms of Use 2026 | Valorant Hacks Rules",
-					description: "Terms of use for valoranthacks.net and Valorant Hacks licenses. Usage rules, anti-cheat risk, and liability for PC and controller cheats.",
+					description: "Terms of use for valohacks.net and Valorant Hacks licenses. Usage rules, anti-cheat risk, and liability for PC and controller cheats.",
 					h1: "Terms of Use",
-					intro: "Terms governing use of valoranthacks.net and Valorant Hacks licenses for Valorant on Windows PC.",
+					intro: "Terms governing use of valohacks.net and Valorant Hacks licenses for Valorant on Windows PC.",
 					imageAlt: "Valorant hacks terms of use",
 					galleryTitle: "Valorant Hacks legal pages",
 					ctaPrimary: "Email support",
@@ -1073,7 +1073,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Changes and governing law",
 							paragraphs: [
 								"We may update these terms by posting revisions on this page. Continued use after changes constitutes acceptance.",
-								"Contact support@valoranthacks.net for questions. Related policies: <a href=\"/privacy-policy/\">Privacy</a> and <a href=\"/refund-policy/\">Refunds</a>.",
+								"Contact support@valohacks.net for questions. Related policies: <a href=\"/privacy-policy/\">Privacy</a> and <a href=\"/refund-policy/\">Refunds</a>.",
 							],
 						},
 					],
@@ -1921,7 +1921,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Política de privacidad | Valorant Hacks",
 					description: "Política de privacidad for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "Política de privacidad",
-					intro: "Valorant Hacks ofrece ESP wallhack, radar hack y valorant aimbot indetectables para Valorant en Windows PC. Política de privacidad for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks ofrece ESP wallhack, radar hack y valorant aimbot indetectables para Valorant en Windows PC. Política de privacidad for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks privacy policy",
 					galleryTitle: "Valorant Cheats privacy resources",
 					heroImage: "/images/warzone-aimbot-sniper.webp",
@@ -1933,7 +1933,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Información que recopilamos",
 							paragraphs: [
 								"Valorant Hacks ofrece ESP wallhack, radar hack y valorant aimbot indetectables para Valorant en Windows PC. Contact email, Zadeyo order references, and basic site security data.",
-								"Payment details are processed by Zadeyo checkout — not stored on valoranthacks.net.",
+								"Payment details are processed by Zadeyo checkout — not stored on valohacks.net.",
 							],
 						},
 						{
@@ -1946,8 +1946,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Tus derechos",
 							paragraphs: [
-								"Contacta support@valoranthacks.net para solicitudes legales o de soporte.",
-								"Email: support@valoranthacks.net",
+								"Contacta support@valohacks.net para solicitudes legales o de soporte.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -1956,7 +1956,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Política de reembolso | Valorant Hacks",
 					description: "Política de reembolso for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "Política de reembolso",
-					intro: "Valorant Hacks ofrece ESP wallhack, radar hack y valorant aimbot indetectables para Valorant en Windows PC. Política de reembolso for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks ofrece ESP wallhack, radar hack y valorant aimbot indetectables para Valorant en Windows PC. Política de reembolso for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks refund policy",
 					galleryTitle: "Valorant Cheats refund resources",
 					heroImage: "/images/warzone-cheats-combat.webp",
@@ -1981,8 +1981,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Cómo solicitar",
 							paragraphs: [
-								"Contacta support@valoranthacks.net para solicitudes legales o de soporte.",
-								"Email: support@valoranthacks.net",
+								"Contacta support@valohacks.net para solicitudes legales o de soporte.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -1991,7 +1991,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Términos de uso | Valorant Hacks",
 					description: "Términos de uso for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "Términos de uso",
-					intro: "Valorant Hacks ofrece ESP wallhack, radar hack y valorant aimbot indetectables para Valorant en Windows PC. Términos de uso for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks ofrece ESP wallhack, radar hack y valorant aimbot indetectables para Valorant en Windows PC. Términos de uso for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks terms policy",
 					galleryTitle: "Valorant Cheats terms resources",
 					heroImage: "/images/warzone-aimbot-skeleton.webp",
@@ -2016,8 +2016,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Cambios",
 							paragraphs: [
-								"Contacta support@valoranthacks.net para solicitudes legales o de soporte.",
-								"Email: support@valoranthacks.net",
+								"Contacta support@valohacks.net para solicitudes legales o de soporte.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -2864,7 +2864,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Politique de confidentialité | Valorant Hacks",
 					description: "Politique de confidentialité for Valorant Hacks — ESP wallhack, Aimbot, PC Windows.",
 					h1: "Politique de confidentialité",
-					intro: "Valorant Hacks combine ESP wallhack, radar hack et valorant aimbot indétectables pour Valorant sur PC Windows. Politique de confidentialité for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks combine ESP wallhack, radar hack et valorant aimbot indétectables pour Valorant sur PC Windows. Politique de confidentialité for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks privacy policy",
 					galleryTitle: "Valorant Cheats privacy resources",
 					heroImage: "/images/warzone-aimbot-sniper.webp",
@@ -2876,7 +2876,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Informations collectées",
 							paragraphs: [
 								"Valorant Hacks combine ESP wallhack, radar hack et valorant aimbot indétectables pour Valorant sur PC Windows. Contact email, Zadeyo order references, and basic site security data.",
-								"Payment details are processed by Zadeyo checkout — not stored on valoranthacks.net.",
+								"Payment details are processed by Zadeyo checkout — not stored on valohacks.net.",
 							],
 						},
 						{
@@ -2889,8 +2889,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Vos droits",
 							paragraphs: [
-								"Contactez support@valoranthacks.net pour le support ou les demandes légales.",
-								"Email: support@valoranthacks.net",
+								"Contactez support@valohacks.net pour le support ou les demandes légales.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -2899,7 +2899,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Politique de remboursement | Valorant Hacks",
 					description: "Politique de remboursement for Valorant Hacks — ESP wallhack, Aimbot, PC Windows.",
 					h1: "Politique de remboursement",
-					intro: "Valorant Hacks combine ESP wallhack, radar hack et valorant aimbot indétectables pour Valorant sur PC Windows. Politique de remboursement for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks combine ESP wallhack, radar hack et valorant aimbot indétectables pour Valorant sur PC Windows. Politique de remboursement for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks refund policy",
 					galleryTitle: "Valorant Cheats refund resources",
 					heroImage: "/images/warzone-cheats-combat.webp",
@@ -2924,8 +2924,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Comment demander",
 							paragraphs: [
-								"Contactez support@valoranthacks.net pour le support ou les demandes légales.",
-								"Email: support@valoranthacks.net",
+								"Contactez support@valohacks.net pour le support ou les demandes légales.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -2934,7 +2934,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Conditions d'utilisation | Valorant Hacks",
 					description: "Conditions d'utilisation for Valorant Hacks — ESP wallhack, Aimbot, PC Windows.",
 					h1: "Conditions d'utilisation",
-					intro: "Valorant Hacks combine ESP wallhack, radar hack et valorant aimbot indétectables pour Valorant sur PC Windows. Conditions d'utilisation for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks combine ESP wallhack, radar hack et valorant aimbot indétectables pour Valorant sur PC Windows. Conditions d'utilisation for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks terms policy",
 					galleryTitle: "Valorant Cheats terms resources",
 					heroImage: "/images/warzone-aimbot-skeleton.webp",
@@ -2959,8 +2959,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Modifications",
 							paragraphs: [
-								"Contactez support@valoranthacks.net pour le support ou les demandes légales.",
-								"Email: support@valoranthacks.net",
+								"Contactez support@valohacks.net pour le support ou les demandes légales.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -3807,7 +3807,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Datenschutz | Valorant Hacks",
 					description: "Datenschutz for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "Datenschutz",
-					intro: "Valorant Hacks bündelt ESP wallhack, radar hack und valorant aimbot als undetected Paket für Valorant auf Windows PC. Datenschutz for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks bündelt ESP wallhack, radar hack und valorant aimbot als undetected Paket für Valorant auf Windows PC. Datenschutz for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks privacy policy",
 					galleryTitle: "Valorant Cheats privacy resources",
 					heroImage: "/images/warzone-aimbot-sniper.webp",
@@ -3819,7 +3819,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Erhobene Daten",
 							paragraphs: [
 								"Valorant Hacks bündelt ESP wallhack, radar hack und valorant aimbot als undetected Paket für Valorant auf Windows PC. Contact email, Zadeyo order references, and basic site security data.",
-								"Payment details are processed by Zadeyo checkout — not stored on valoranthacks.net.",
+								"Payment details are processed by Zadeyo checkout — not stored on valohacks.net.",
 							],
 						},
 						{
@@ -3832,8 +3832,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Ihre Rechte",
 							paragraphs: [
-								"support@valoranthacks.net für Support und rechtliche Anfragen.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net für Support und rechtliche Anfragen.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -3842,7 +3842,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Rückerstattung | Valorant Hacks",
 					description: "Rückerstattung for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "Rückerstattung",
-					intro: "Valorant Hacks bündelt ESP wallhack, radar hack und valorant aimbot als undetected Paket für Valorant auf Windows PC. Rückerstattung for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks bündelt ESP wallhack, radar hack und valorant aimbot als undetected Paket für Valorant auf Windows PC. Rückerstattung for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks refund policy",
 					galleryTitle: "Valorant Cheats refund resources",
 					heroImage: "/images/warzone-cheats-combat.webp",
@@ -3867,8 +3867,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Anfrage stellen",
 							paragraphs: [
-								"support@valoranthacks.net für Support und rechtliche Anfragen.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net für Support und rechtliche Anfragen.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -3877,7 +3877,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Nutzungsbedingungen | Valorant Hacks",
 					description: "Nutzungsbedingungen for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "Nutzungsbedingungen",
-					intro: "Valorant Hacks bündelt ESP wallhack, radar hack und valorant aimbot als undetected Paket für Valorant auf Windows PC. Nutzungsbedingungen for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks bündelt ESP wallhack, radar hack und valorant aimbot als undetected Paket für Valorant auf Windows PC. Nutzungsbedingungen for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks terms policy",
 					galleryTitle: "Valorant Cheats terms resources",
 					heroImage: "/images/warzone-aimbot-skeleton.webp",
@@ -3902,8 +3902,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Änderungen",
 							paragraphs: [
-								"support@valoranthacks.net für Support und rechtliche Anfragen.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net für Support und rechtliche Anfragen.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -4750,7 +4750,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Política de privacidade | Valorant Hacks",
 					description: "Política de privacidade for Valorant Hacks — ESP wallhack, Aimbot, PC Windows.",
 					h1: "Política de privacidade",
-					intro: "Valorant Hacks reúne ESP wallhack, radar hack e valorant aimbot indetectáveis para Valorant no PC Windows. Política de privacidade for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks reúne ESP wallhack, radar hack e valorant aimbot indetectáveis para Valorant no PC Windows. Política de privacidade for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks privacy policy",
 					galleryTitle: "Valorant Cheats privacy resources",
 					heroImage: "/images/warzone-aimbot-sniper.webp",
@@ -4762,7 +4762,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Information we collect",
 							paragraphs: [
 								"Valorant Hacks reúne ESP wallhack, radar hack e valorant aimbot indetectáveis para Valorant no PC Windows. Contact email, Zadeyo order references, and basic site security data.",
-								"Payment details are processed by Zadeyo checkout — not stored on valoranthacks.net.",
+								"Payment details are processed by Zadeyo checkout — not stored on valohacks.net.",
 							],
 						},
 						{
@@ -4775,8 +4775,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Your rights",
 							paragraphs: [
-								"Contacte support@valoranthacks.net para suporte ou questões legais.",
-								"Email: support@valoranthacks.net",
+								"Contacte support@valohacks.net para suporte ou questões legais.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -4785,7 +4785,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Política de reembolso | Valorant Hacks",
 					description: "Política de reembolso for Valorant Hacks — ESP wallhack, Aimbot, PC Windows.",
 					h1: "Política de reembolso",
-					intro: "Valorant Hacks reúne ESP wallhack, radar hack e valorant aimbot indetectáveis para Valorant no PC Windows. Política de reembolso for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks reúne ESP wallhack, radar hack e valorant aimbot indetectáveis para Valorant no PC Windows. Política de reembolso for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks refund policy",
 					galleryTitle: "Valorant Cheats refund resources",
 					heroImage: "/images/warzone-cheats-combat.webp",
@@ -4810,8 +4810,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "How to request",
 							paragraphs: [
-								"Contacte support@valoranthacks.net para suporte ou questões legais.",
-								"Email: support@valoranthacks.net",
+								"Contacte support@valohacks.net para suporte ou questões legais.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -4820,7 +4820,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Termos de uso | Valorant Hacks",
 					description: "Termos de uso for Valorant Hacks — ESP wallhack, Aimbot, PC Windows.",
 					h1: "Termos de uso",
-					intro: "Valorant Hacks reúne ESP wallhack, radar hack e valorant aimbot indetectáveis para Valorant no PC Windows. Termos de uso for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks reúne ESP wallhack, radar hack e valorant aimbot indetectáveis para Valorant no PC Windows. Termos de uso for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks terms policy",
 					galleryTitle: "Valorant Cheats terms resources",
 					heroImage: "/images/warzone-aimbot-skeleton.webp",
@@ -4845,8 +4845,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Policy changes",
 							paragraphs: [
-								"Contacte support@valoranthacks.net para suporte ou questões legais.",
-								"Email: support@valoranthacks.net",
+								"Contacte support@valohacks.net para suporte ou questões legais.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -5693,7 +5693,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Informativa privacy | Valorant Hacks",
 					description: "Informativa privacy for Valorant Hacks — ESP wallhack, Aimbot, PC Windows.",
 					h1: "Informativa privacy",
-					intro: "Valorant Hacks unisce ESP wallhack, radar hack e valorant aimbot indetectable per Valorant su PC Windows. Informativa privacy for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks unisce ESP wallhack, radar hack e valorant aimbot indetectable per Valorant su PC Windows. Informativa privacy for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks privacy policy",
 					galleryTitle: "Valorant Cheats privacy resources",
 					heroImage: "/images/warzone-aimbot-sniper.webp",
@@ -5705,7 +5705,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Information we collect",
 							paragraphs: [
 								"Valorant Hacks unisce ESP wallhack, radar hack e valorant aimbot indetectable per Valorant su PC Windows. Contact email, Zadeyo order references, and basic site security data.",
-								"Payment details are processed by Zadeyo checkout — not stored on valoranthacks.net.",
+								"Payment details are processed by Zadeyo checkout — not stored on valohacks.net.",
 							],
 						},
 						{
@@ -5718,8 +5718,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Your rights",
 							paragraphs: [
-								"Contatta support@valoranthacks.net per supporto o richieste legali.",
-								"Email: support@valoranthacks.net",
+								"Contatta support@valohacks.net per supporto o richieste legali.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -5728,7 +5728,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Politica di rimborso | Valorant Hacks",
 					description: "Politica di rimborso for Valorant Hacks — ESP wallhack, Aimbot, PC Windows.",
 					h1: "Politica di rimborso",
-					intro: "Valorant Hacks unisce ESP wallhack, radar hack e valorant aimbot indetectable per Valorant su PC Windows. Politica di rimborso for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks unisce ESP wallhack, radar hack e valorant aimbot indetectable per Valorant su PC Windows. Politica di rimborso for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks refund policy",
 					galleryTitle: "Valorant Cheats refund resources",
 					heroImage: "/images/warzone-cheats-combat.webp",
@@ -5753,8 +5753,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "How to request",
 							paragraphs: [
-								"Contatta support@valoranthacks.net per supporto o richieste legali.",
-								"Email: support@valoranthacks.net",
+								"Contatta support@valohacks.net per supporto o richieste legali.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -5763,7 +5763,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Termini di utilizzo | Valorant Hacks",
 					description: "Termini di utilizzo for Valorant Hacks — ESP wallhack, Aimbot, PC Windows.",
 					h1: "Termini di utilizzo",
-					intro: "Valorant Hacks unisce ESP wallhack, radar hack e valorant aimbot indetectable per Valorant su PC Windows. Termini di utilizzo for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks unisce ESP wallhack, radar hack e valorant aimbot indetectable per Valorant su PC Windows. Termini di utilizzo for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks terms policy",
 					galleryTitle: "Valorant Cheats terms resources",
 					heroImage: "/images/warzone-aimbot-skeleton.webp",
@@ -5788,8 +5788,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Policy changes",
 							paragraphs: [
-								"Contatta support@valoranthacks.net per supporto o richieste legali.",
-								"Email: support@valoranthacks.net",
+								"Contatta support@valohacks.net per supporto o richieste legali.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -6636,7 +6636,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Privacybeleid | Valorant Hacks",
 					description: "Privacybeleid for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "Privacybeleid",
-					intro: "Valorant Hacks bundelt ESP wallhack, radar hack en valorant aimbot als undetected pakket voor Valorant op Windows PC. Privacybeleid for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks bundelt ESP wallhack, radar hack en valorant aimbot als undetected pakket voor Valorant op Windows PC. Privacybeleid for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks privacy policy",
 					galleryTitle: "Valorant Cheats privacy resources",
 					heroImage: "/images/warzone-aimbot-sniper.webp",
@@ -6648,7 +6648,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Information we collect",
 							paragraphs: [
 								"Valorant Hacks bundelt ESP wallhack, radar hack en valorant aimbot als undetected pakket voor Valorant op Windows PC. Contact email, Zadeyo order references, and basic site security data.",
-								"Payment details are processed by Zadeyo checkout — not stored on valoranthacks.net.",
+								"Payment details are processed by Zadeyo checkout — not stored on valohacks.net.",
 							],
 						},
 						{
@@ -6661,8 +6661,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Your rights",
 							paragraphs: [
-								"support@valoranthacks.net voor support en juridische vragen.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net voor support en juridische vragen.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -6671,7 +6671,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Restitutiebeleid | Valorant Hacks",
 					description: "Restitutiebeleid for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "Restitutiebeleid",
-					intro: "Valorant Hacks bundelt ESP wallhack, radar hack en valorant aimbot als undetected pakket voor Valorant op Windows PC. Restitutiebeleid for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks bundelt ESP wallhack, radar hack en valorant aimbot als undetected pakket voor Valorant op Windows PC. Restitutiebeleid for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks refund policy",
 					galleryTitle: "Valorant Cheats refund resources",
 					heroImage: "/images/warzone-cheats-combat.webp",
@@ -6696,8 +6696,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "How to request",
 							paragraphs: [
-								"support@valoranthacks.net voor support en juridische vragen.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net voor support en juridische vragen.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -6706,7 +6706,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Gebruiksvoorwaarden | Valorant Hacks",
 					description: "Gebruiksvoorwaarden for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "Gebruiksvoorwaarden",
-					intro: "Valorant Hacks bundelt ESP wallhack, radar hack en valorant aimbot als undetected pakket voor Valorant op Windows PC. Gebruiksvoorwaarden for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks bundelt ESP wallhack, radar hack en valorant aimbot als undetected pakket voor Valorant op Windows PC. Gebruiksvoorwaarden for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks terms policy",
 					galleryTitle: "Valorant Cheats terms resources",
 					heroImage: "/images/warzone-aimbot-skeleton.webp",
@@ -6731,8 +6731,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Policy changes",
 							paragraphs: [
-								"support@valoranthacks.net voor support en juridische vragen.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net voor support en juridische vragen.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -7579,7 +7579,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Polityka prywatności | Valorant Hacks",
 					description: "Polityka prywatności for Valorant Hacks — ESP wallhack, Aimbot, PC Windows.",
 					h1: "Polityka prywatności",
-					intro: "Valorant Hacks łączy ESP wallhack, radar hack i valorant aimbot jako pakiet undetected dla Valorant na PC Windows. Polityka prywatności for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks łączy ESP wallhack, radar hack i valorant aimbot jako pakiet undetected dla Valorant na PC Windows. Polityka prywatności for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks privacy policy",
 					galleryTitle: "Valorant Cheats privacy resources",
 					heroImage: "/images/warzone-aimbot-sniper.webp",
@@ -7591,7 +7591,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Information we collect",
 							paragraphs: [
 								"Valorant Hacks łączy ESP wallhack, radar hack i valorant aimbot jako pakiet undetected dla Valorant na PC Windows. Contact email, Zadeyo order references, and basic site security data.",
-								"Payment details are processed by Zadeyo checkout — not stored on valoranthacks.net.",
+								"Payment details are processed by Zadeyo checkout — not stored on valohacks.net.",
 							],
 						},
 						{
@@ -7604,8 +7604,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Your rights",
 							paragraphs: [
-								"support@valoranthacks.net w sprawach wsparcia i prawnych.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net w sprawach wsparcia i prawnych.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -7614,7 +7614,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Polityka zwrotów | Valorant Hacks",
 					description: "Polityka zwrotów for Valorant Hacks — ESP wallhack, Aimbot, PC Windows.",
 					h1: "Polityka zwrotów",
-					intro: "Valorant Hacks łączy ESP wallhack, radar hack i valorant aimbot jako pakiet undetected dla Valorant na PC Windows. Polityka zwrotów for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks łączy ESP wallhack, radar hack i valorant aimbot jako pakiet undetected dla Valorant na PC Windows. Polityka zwrotów for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks refund policy",
 					galleryTitle: "Valorant Cheats refund resources",
 					heroImage: "/images/warzone-cheats-combat.webp",
@@ -7639,8 +7639,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "How to request",
 							paragraphs: [
-								"support@valoranthacks.net w sprawach wsparcia i prawnych.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net w sprawach wsparcia i prawnych.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -7649,7 +7649,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Warunki użytkowania | Valorant Hacks",
 					description: "Warunki użytkowania for Valorant Hacks — ESP wallhack, Aimbot, PC Windows.",
 					h1: "Warunki użytkowania",
-					intro: "Valorant Hacks łączy ESP wallhack, radar hack i valorant aimbot jako pakiet undetected dla Valorant na PC Windows. Warunki użytkowania for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks łączy ESP wallhack, radar hack i valorant aimbot jako pakiet undetected dla Valorant na PC Windows. Warunki użytkowania for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks terms policy",
 					galleryTitle: "Valorant Cheats terms resources",
 					heroImage: "/images/warzone-aimbot-skeleton.webp",
@@ -7674,8 +7674,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Policy changes",
 							paragraphs: [
-								"support@valoranthacks.net w sprawach wsparcia i prawnych.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net w sprawach wsparcia i prawnych.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -8522,7 +8522,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Политика конфиденциальности | Valorant Hacks",
 					description: "Политика конфиденциальности for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "Политика конфиденциальности",
-					intro: "Valorant Hacks объединяет ESP wallhack, radar hack и valorant aimbot в undetected пакете для Valorant на Windows PC. Политика конфиденциальности for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks объединяет ESP wallhack, radar hack и valorant aimbot в undetected пакете для Valorant на Windows PC. Политика конфиденциальности for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks privacy policy",
 					galleryTitle: "Valorant Cheats privacy resources",
 					heroImage: "/images/warzone-aimbot-sniper.webp",
@@ -8534,7 +8534,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Information we collect",
 							paragraphs: [
 								"Valorant Hacks объединяет ESP wallhack, radar hack и valorant aimbot в undetected пакете для Valorant на Windows PC. Contact email, Zadeyo order references, and basic site security data.",
-								"Payment details are processed by Zadeyo checkout — not stored on valoranthacks.net.",
+								"Payment details are processed by Zadeyo checkout — not stored on valohacks.net.",
 							],
 						},
 						{
@@ -8547,8 +8547,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Your rights",
 							paragraphs: [
-								"support@valoranthacks.net для поддержки и юридических вопросов.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net для поддержки и юридических вопросов.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -8557,7 +8557,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Политика возврата | Valorant Hacks",
 					description: "Политика возврата for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "Политика возврата",
-					intro: "Valorant Hacks объединяет ESP wallhack, radar hack и valorant aimbot в undetected пакете для Valorant на Windows PC. Политика возврата for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks объединяет ESP wallhack, radar hack и valorant aimbot в undetected пакете для Valorant на Windows PC. Политика возврата for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks refund policy",
 					galleryTitle: "Valorant Cheats refund resources",
 					heroImage: "/images/warzone-cheats-combat.webp",
@@ -8582,8 +8582,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "How to request",
 							paragraphs: [
-								"support@valoranthacks.net для поддержки и юридических вопросов.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net для поддержки и юридических вопросов.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -8592,7 +8592,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Условия использования | Valorant Hacks",
 					description: "Условия использования for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "Условия использования",
-					intro: "Valorant Hacks объединяет ESP wallhack, radar hack и valorant aimbot в undetected пакете для Valorant на Windows PC. Условия использования for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks объединяет ESP wallhack, radar hack и valorant aimbot в undetected пакете для Valorant на Windows PC. Условия использования for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks terms policy",
 					galleryTitle: "Valorant Cheats terms resources",
 					heroImage: "/images/warzone-aimbot-skeleton.webp",
@@ -8617,8 +8617,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Policy changes",
 							paragraphs: [
-								"support@valoranthacks.net для поддержки и юридических вопросов.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net для поддержки и юридических вопросов.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -9465,7 +9465,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Gizlilik politikası | Valorant Hacks",
 					description: "Gizlilik politikası for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "Gizlilik politikası",
-					intro: "Valorant Hacks, Valorant için Windows PC üzerinde ESP wallhack, radar hack ve valorant aimbot undetected paket sunar. Gizlilik politikası for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks, Valorant için Windows PC üzerinde ESP wallhack, radar hack ve valorant aimbot undetected paket sunar. Gizlilik politikası for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks privacy policy",
 					galleryTitle: "Valorant Cheats privacy resources",
 					heroImage: "/images/warzone-aimbot-sniper.webp",
@@ -9477,7 +9477,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Information we collect",
 							paragraphs: [
 								"Valorant Hacks, Valorant için Windows PC üzerinde ESP wallhack, radar hack ve valorant aimbot undetected paket sunar. Contact email, Zadeyo order references, and basic site security data.",
-								"Payment details are processed by Zadeyo checkout — not stored on valoranthacks.net.",
+								"Payment details are processed by Zadeyo checkout — not stored on valohacks.net.",
 							],
 						},
 						{
@@ -9490,8 +9490,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Your rights",
 							paragraphs: [
-								"Destek ve yasal sorular için support@valoranthacks.net.",
-								"Email: support@valoranthacks.net",
+								"Destek ve yasal sorular için support@valohacks.net.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -9500,7 +9500,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "İade politikası | Valorant Hacks",
 					description: "İade politikası for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "İade politikası",
-					intro: "Valorant Hacks, Valorant için Windows PC üzerinde ESP wallhack, radar hack ve valorant aimbot undetected paket sunar. İade politikası for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks, Valorant için Windows PC üzerinde ESP wallhack, radar hack ve valorant aimbot undetected paket sunar. İade politikası for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks refund policy",
 					galleryTitle: "Valorant Cheats refund resources",
 					heroImage: "/images/warzone-cheats-combat.webp",
@@ -9525,8 +9525,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "How to request",
 							paragraphs: [
-								"Destek ve yasal sorular için support@valoranthacks.net.",
-								"Email: support@valoranthacks.net",
+								"Destek ve yasal sorular için support@valohacks.net.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -9535,7 +9535,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Kullanım şartları | Valorant Hacks",
 					description: "Kullanım şartları for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "Kullanım şartları",
-					intro: "Valorant Hacks, Valorant için Windows PC üzerinde ESP wallhack, radar hack ve valorant aimbot undetected paket sunar. Kullanım şartları for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks, Valorant için Windows PC üzerinde ESP wallhack, radar hack ve valorant aimbot undetected paket sunar. Kullanım şartları for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks terms policy",
 					galleryTitle: "Valorant Cheats terms resources",
 					heroImage: "/images/warzone-aimbot-skeleton.webp",
@@ -9560,8 +9560,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Policy changes",
 							paragraphs: [
-								"Destek ve yasal sorular için support@valoranthacks.net.",
-								"Email: support@valoranthacks.net",
+								"Destek ve yasal sorular için support@valohacks.net.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -10408,7 +10408,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "سياسة الخصوصية | Valorant Hacks",
 					description: "سياسة الخصوصية for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "سياسة الخصوصية",
-					intro: "Valorant Hacks يجمع ESP wallhack وradar hack وvalorant aimbot غير مكتشف لـ Valorant على Windows PC. سياسة الخصوصية for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks يجمع ESP wallhack وradar hack وvalorant aimbot غير مكتشف لـ Valorant على Windows PC. سياسة الخصوصية for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks privacy policy",
 					galleryTitle: "Valorant Cheats privacy resources",
 					heroImage: "/images/warzone-aimbot-sniper.webp",
@@ -10420,7 +10420,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "المعلومات التي نجمعها",
 							paragraphs: [
 								"Valorant Hacks يجمع ESP wallhack وradar hack وvalorant aimbot غير مكتشف لـ Valorant على Windows PC. Contact email, Zadeyo order references, and basic site security data.",
-								"Payment details are processed by Zadeyo checkout — not stored on valoranthacks.net.",
+								"Payment details are processed by Zadeyo checkout — not stored on valohacks.net.",
 							],
 						},
 						{
@@ -10433,8 +10433,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "حقوقك",
 							paragraphs: [
-								"support@valoranthacks.net للدعم والطلبات القانونية.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net للدعم والطلبات القانونية.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -10443,7 +10443,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "سياسة الاسترداد | Valorant Hacks",
 					description: "سياسة الاسترداد for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "سياسة الاسترداد",
-					intro: "Valorant Hacks يجمع ESP wallhack وradar hack وvalorant aimbot غير مكتشف لـ Valorant على Windows PC. سياسة الاسترداد for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks يجمع ESP wallhack وradar hack وvalorant aimbot غير مكتشف لـ Valorant على Windows PC. سياسة الاسترداد for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks refund policy",
 					galleryTitle: "Valorant Cheats refund resources",
 					heroImage: "/images/warzone-cheats-combat.webp",
@@ -10468,8 +10468,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "كيفية الطلب",
 							paragraphs: [
-								"support@valoranthacks.net للدعم والطلبات القانونية.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net للدعم والطلبات القانونية.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -10478,7 +10478,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "شروط الاستخدام | Valorant Hacks",
 					description: "شروط الاستخدام for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "شروط الاستخدام",
-					intro: "Valorant Hacks يجمع ESP wallhack وradar hack وvalorant aimbot غير مكتشف لـ Valorant على Windows PC. شروط الاستخدام for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks يجمع ESP wallhack وradar hack وvalorant aimbot غير مكتشف لـ Valorant على Windows PC. شروط الاستخدام for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks terms policy",
 					galleryTitle: "Valorant Cheats terms resources",
 					heroImage: "/images/warzone-aimbot-skeleton.webp",
@@ -10503,8 +10503,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "التغييرات",
 							paragraphs: [
-								"support@valoranthacks.net للدعم والطلبات القانونية.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net للدعم والطلبات القانونية.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -11351,7 +11351,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "プライバシーポリシー | Valorant Hacks",
 					description: "プライバシーポリシー for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "プライバシーポリシー",
-					intro: "Valorant HacksはValorant向けWindows PC用ESP wallhack、radar hack、valorant aimbotのundetectedパッケージです。プライバシーポリシー for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant HacksはValorant向けWindows PC用ESP wallhack、radar hack、valorant aimbotのundetectedパッケージです。プライバシーポリシー for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks privacy policy",
 					galleryTitle: "Valorant Cheats privacy resources",
 					heroImage: "/images/warzone-aimbot-sniper.webp",
@@ -11363,7 +11363,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "収集する情報",
 							paragraphs: [
 								"Valorant HacksはValorant向けWindows PC用ESP wallhack、radar hack、valorant aimbotのundetectedパッケージです。Contact email, Zadeyo order references, and basic site security data.",
-								"Payment details are processed by Zadeyo checkout — not stored on valoranthacks.net.",
+								"Payment details are processed by Zadeyo checkout — not stored on valohacks.net.",
 							],
 						},
 						{
@@ -11376,8 +11376,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "あなたの権利",
 							paragraphs: [
-								"サポート・法務: support@valoranthacks.net",
-								"Email: support@valoranthacks.net",
+								"サポート・法務: support@valohacks.net",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -11386,7 +11386,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "返金ポリシー | Valorant Hacks",
 					description: "返金ポリシー for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "返金ポリシー",
-					intro: "Valorant HacksはValorant向けWindows PC用ESP wallhack、radar hack、valorant aimbotのundetectedパッケージです。返金ポリシー for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant HacksはValorant向けWindows PC用ESP wallhack、radar hack、valorant aimbotのundetectedパッケージです。返金ポリシー for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks refund policy",
 					galleryTitle: "Valorant Cheats refund resources",
 					heroImage: "/images/warzone-cheats-combat.webp",
@@ -11411,8 +11411,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "申請方法",
 							paragraphs: [
-								"サポート・法務: support@valoranthacks.net",
-								"Email: support@valoranthacks.net",
+								"サポート・法務: support@valohacks.net",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -11421,7 +11421,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "利用規約 | Valorant Hacks",
 					description: "利用規約 for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "利用規約",
-					intro: "Valorant HacksはValorant向けWindows PC用ESP wallhack、radar hack、valorant aimbotのundetectedパッケージです。利用規約 for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant HacksはValorant向けWindows PC用ESP wallhack、radar hack、valorant aimbotのundetectedパッケージです。利用規約 for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks terms policy",
 					galleryTitle: "Valorant Cheats terms resources",
 					heroImage: "/images/warzone-aimbot-skeleton.webp",
@@ -11446,8 +11446,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "変更",
 							paragraphs: [
-								"サポート・法務: support@valoranthacks.net",
-								"Email: support@valoranthacks.net",
+								"サポート・法務: support@valohacks.net",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -12294,7 +12294,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "개인정보 처리방침 | Valorant Hacks",
 					description: "개인정보 처리방침 for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "개인정보 처리방침",
-					intro: "Valorant Hacks는 Valorant Windows PC용 ESP wallhack, radar hack, valorant aimbot undetected 패키지입니다. 개인정보 처리방침 for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks는 Valorant Windows PC용 ESP wallhack, radar hack, valorant aimbot undetected 패키지입니다. 개인정보 처리방침 for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks privacy policy",
 					galleryTitle: "Valorant Cheats privacy resources",
 					heroImage: "/images/warzone-aimbot-sniper.webp",
@@ -12306,7 +12306,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Information we collect",
 							paragraphs: [
 								"Valorant Hacks는 Valorant Windows PC용 ESP wallhack, radar hack, valorant aimbot undetected 패키지입니다. Contact email, Zadeyo order references, and basic site security data.",
-								"Payment details are processed by Zadeyo checkout — not stored on valoranthacks.net.",
+								"Payment details are processed by Zadeyo checkout — not stored on valohacks.net.",
 							],
 						},
 						{
@@ -12319,8 +12319,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Your rights",
 							paragraphs: [
-								"지원 및 법무: support@valoranthacks.net",
-								"Email: support@valoranthacks.net",
+								"지원 및 법무: support@valohacks.net",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -12329,7 +12329,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "환불 정책 | Valorant Hacks",
 					description: "환불 정책 for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "환불 정책",
-					intro: "Valorant Hacks는 Valorant Windows PC용 ESP wallhack, radar hack, valorant aimbot undetected 패키지입니다. 환불 정책 for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks는 Valorant Windows PC용 ESP wallhack, radar hack, valorant aimbot undetected 패키지입니다. 환불 정책 for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks refund policy",
 					galleryTitle: "Valorant Cheats refund resources",
 					heroImage: "/images/warzone-cheats-combat.webp",
@@ -12354,8 +12354,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "How to request",
 							paragraphs: [
-								"지원 및 법무: support@valoranthacks.net",
-								"Email: support@valoranthacks.net",
+								"지원 및 법무: support@valohacks.net",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -12364,7 +12364,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "이용 약관 | Valorant Hacks",
 					description: "이용 약관 for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "이용 약관",
-					intro: "Valorant Hacks는 Valorant Windows PC용 ESP wallhack, radar hack, valorant aimbot undetected 패키지입니다. 이용 약관 for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks는 Valorant Windows PC용 ESP wallhack, radar hack, valorant aimbot undetected 패키지입니다. 이용 약관 for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks terms policy",
 					galleryTitle: "Valorant Cheats terms resources",
 					heroImage: "/images/warzone-aimbot-skeleton.webp",
@@ -12389,8 +12389,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Policy changes",
 							paragraphs: [
-								"지원 및 법무: support@valoranthacks.net",
-								"Email: support@valoranthacks.net",
+								"지원 및 법무: support@valohacks.net",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -13237,7 +13237,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "隐私政策 | Valorant Hacks",
 					description: "隐私政策 for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "隐私政策",
-					intro: "Valorant Hacks为ValorantWindows PC提供ESP wallhack、radar hack和valorant aimbotundetected套餐。隐私政策 for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks为ValorantWindows PC提供ESP wallhack、radar hack和valorant aimbotundetected套餐。隐私政策 for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks privacy policy",
 					galleryTitle: "Valorant Cheats privacy resources",
 					heroImage: "/images/warzone-aimbot-sniper.webp",
@@ -13249,7 +13249,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Information we collect",
 							paragraphs: [
 								"Valorant Hacks为ValorantWindows PC提供ESP wallhack、radar hack和valorant aimbotundetected套餐。Contact email, Zadeyo order references, and basic site security data.",
-								"Payment details are processed by Zadeyo checkout — not stored on valoranthacks.net.",
+								"Payment details are processed by Zadeyo checkout — not stored on valohacks.net.",
 							],
 						},
 						{
@@ -13262,8 +13262,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Your rights",
 							paragraphs: [
-								"支持与法务：support@valoranthacks.net",
-								"Email: support@valoranthacks.net",
+								"支持与法务：support@valohacks.net",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -13272,7 +13272,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "退款政策 | Valorant Hacks",
 					description: "退款政策 for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "退款政策",
-					intro: "Valorant Hacks为ValorantWindows PC提供ESP wallhack、radar hack和valorant aimbotundetected套餐。退款政策 for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks为ValorantWindows PC提供ESP wallhack、radar hack和valorant aimbotundetected套餐。退款政策 for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks refund policy",
 					galleryTitle: "Valorant Cheats refund resources",
 					heroImage: "/images/warzone-cheats-combat.webp",
@@ -13297,8 +13297,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "How to request",
 							paragraphs: [
-								"支持与法务：support@valoranthacks.net",
-								"Email: support@valoranthacks.net",
+								"支持与法务：support@valohacks.net",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -13307,7 +13307,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "使用条款 | Valorant Hacks",
 					description: "使用条款 for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "使用条款",
-					intro: "Valorant Hacks为ValorantWindows PC提供ESP wallhack、radar hack和valorant aimbotundetected套餐。使用条款 for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks为ValorantWindows PC提供ESP wallhack、radar hack和valorant aimbotundetected套餐。使用条款 for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks terms policy",
 					galleryTitle: "Valorant Cheats terms resources",
 					heroImage: "/images/warzone-aimbot-skeleton.webp",
@@ -13332,8 +13332,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Policy changes",
 							paragraphs: [
-								"支持与法务：support@valoranthacks.net",
-								"Email: support@valoranthacks.net",
+								"支持与法务：support@valohacks.net",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -14180,7 +14180,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "गोपनीयता नीति | Valorant Hacks",
 					description: "गोपनीयता नीति for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "गोपनीयता नीति",
-					intro: "Valorant Hacks Valorant के लिए Windows PC पर ESP wallhack, radar hack और valorant aimbot undetected पैकेज देता है। गोपनीयता नीति for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks Valorant के लिए Windows PC पर ESP wallhack, radar hack और valorant aimbot undetected पैकेज देता है। गोपनीयता नीति for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks privacy policy",
 					galleryTitle: "Valorant Cheats privacy resources",
 					heroImage: "/images/warzone-aimbot-sniper.webp",
@@ -14192,7 +14192,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Information we collect",
 							paragraphs: [
 								"Valorant Hacks Valorant के लिए Windows PC पर ESP wallhack, radar hack और valorant aimbot undetected पैकेज देता है। Contact email, Zadeyo order references, and basic site security data.",
-								"Payment details are processed by Zadeyo checkout — not stored on valoranthacks.net.",
+								"Payment details are processed by Zadeyo checkout — not stored on valohacks.net.",
 							],
 						},
 						{
@@ -14205,8 +14205,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Your rights",
 							paragraphs: [
-								"सहायता: support@valoranthacks.net",
-								"Email: support@valoranthacks.net",
+								"सहायता: support@valohacks.net",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -14215,7 +14215,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "रिफंड नीति | Valorant Hacks",
 					description: "रिफंड नीति for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "रिफंड नीति",
-					intro: "Valorant Hacks Valorant के लिए Windows PC पर ESP wallhack, radar hack और valorant aimbot undetected पैकेज देता है। रिफंड नीति for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks Valorant के लिए Windows PC पर ESP wallhack, radar hack और valorant aimbot undetected पैकेज देता है। रिफंड नीति for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks refund policy",
 					galleryTitle: "Valorant Cheats refund resources",
 					heroImage: "/images/warzone-cheats-combat.webp",
@@ -14240,8 +14240,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "How to request",
 							paragraphs: [
-								"सहायता: support@valoranthacks.net",
-								"Email: support@valoranthacks.net",
+								"सहायता: support@valohacks.net",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -14250,7 +14250,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "उपयोग की शर्तें | Valorant Hacks",
 					description: "उपयोग की शर्तें for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "उपयोग की शर्तें",
-					intro: "Valorant Hacks Valorant के लिए Windows PC पर ESP wallhack, radar hack और valorant aimbot undetected पैकेज देता है। उपयोग की शर्तें for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks Valorant के लिए Windows PC पर ESP wallhack, radar hack और valorant aimbot undetected पैकेज देता है। उपयोग की शर्तें for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks terms policy",
 					galleryTitle: "Valorant Cheats terms resources",
 					heroImage: "/images/warzone-aimbot-skeleton.webp",
@@ -14275,8 +14275,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Policy changes",
 							paragraphs: [
-								"सहायता: support@valoranthacks.net",
-								"Email: support@valoranthacks.net",
+								"सहायता: support@valohacks.net",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -15123,7 +15123,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Kebijakan privasi | Valorant Hacks",
 					description: "Kebijakan privasi for Valorant Hacks — ESP wallhack, Aimbot, PC Windows.",
 					h1: "Kebijakan privasi",
-					intro: "Valorant Hacks menyediakan ESP wallhack, radar hack, dan valorant aimbot undetected untuk Valorant di PC Windows. Kebijakan privasi for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks menyediakan ESP wallhack, radar hack, dan valorant aimbot undetected untuk Valorant di PC Windows. Kebijakan privasi for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks privacy policy",
 					galleryTitle: "Valorant Cheats privacy resources",
 					heroImage: "/images/warzone-aimbot-sniper.webp",
@@ -15135,7 +15135,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Information we collect",
 							paragraphs: [
 								"Valorant Hacks menyediakan ESP wallhack, radar hack, dan valorant aimbot undetected untuk Valorant di PC Windows. Contact email, Zadeyo order references, and basic site security data.",
-								"Payment details are processed by Zadeyo checkout — not stored on valoranthacks.net.",
+								"Payment details are processed by Zadeyo checkout — not stored on valohacks.net.",
 							],
 						},
 						{
@@ -15148,8 +15148,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Your rights",
 							paragraphs: [
-								"support@valoranthacks.net untuk dukungan dan legal.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net untuk dukungan dan legal.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -15158,7 +15158,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Kebijakan refund | Valorant Hacks",
 					description: "Kebijakan refund for Valorant Hacks — ESP wallhack, Aimbot, PC Windows.",
 					h1: "Kebijakan refund",
-					intro: "Valorant Hacks menyediakan ESP wallhack, radar hack, dan valorant aimbot undetected untuk Valorant di PC Windows. Kebijakan refund for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks menyediakan ESP wallhack, radar hack, dan valorant aimbot undetected untuk Valorant di PC Windows. Kebijakan refund for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks refund policy",
 					galleryTitle: "Valorant Cheats refund resources",
 					heroImage: "/images/warzone-cheats-combat.webp",
@@ -15183,8 +15183,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "How to request",
 							paragraphs: [
-								"support@valoranthacks.net untuk dukungan dan legal.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net untuk dukungan dan legal.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -15193,7 +15193,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Syarat penggunaan | Valorant Hacks",
 					description: "Syarat penggunaan for Valorant Hacks — ESP wallhack, Aimbot, PC Windows.",
 					h1: "Syarat penggunaan",
-					intro: "Valorant Hacks menyediakan ESP wallhack, radar hack, dan valorant aimbot undetected untuk Valorant di PC Windows. Syarat penggunaan for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks menyediakan ESP wallhack, radar hack, dan valorant aimbot undetected untuk Valorant di PC Windows. Syarat penggunaan for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks terms policy",
 					galleryTitle: "Valorant Cheats terms resources",
 					heroImage: "/images/warzone-aimbot-skeleton.webp",
@@ -15218,8 +15218,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Policy changes",
 							paragraphs: [
-								"support@valoranthacks.net untuk dukungan dan legal.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net untuk dukungan dan legal.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -16066,7 +16066,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "นโยบายความเป็นส่วนตัว | Valorant Hacks",
 					description: "นโยบายความเป็นส่วนตัว for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "นโยบายความเป็นส่วนตัว",
-					intro: "Valorant Hacks รวม ESP wallhack, radar hack และ valorant aimbot แบบ undetected สำหรับ Valorant บน Windows PC นโยบายความเป็นส่วนตัว for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks รวม ESP wallhack, radar hack และ valorant aimbot แบบ undetected สำหรับ Valorant บน Windows PC นโยบายความเป็นส่วนตัว for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks privacy policy",
 					galleryTitle: "Valorant Cheats privacy resources",
 					heroImage: "/images/warzone-aimbot-sniper.webp",
@@ -16078,7 +16078,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Information we collect",
 							paragraphs: [
 								"Valorant Hacks รวม ESP wallhack, radar hack และ valorant aimbot แบบ undetected สำหรับ Valorant บน Windows PC Contact email, Zadeyo order references, and basic site security data.",
-								"Payment details are processed by Zadeyo checkout — not stored on valoranthacks.net.",
+								"Payment details are processed by Zadeyo checkout — not stored on valohacks.net.",
 							],
 						},
 						{
@@ -16091,8 +16091,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Your rights",
 							paragraphs: [
-								"support@valoranthacks.net สำหรับการสนับสนุน",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net สำหรับการสนับสนุน",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -16101,7 +16101,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "นโยบายการคืนเงิน | Valorant Hacks",
 					description: "นโยบายการคืนเงิน for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "นโยบายการคืนเงิน",
-					intro: "Valorant Hacks รวม ESP wallhack, radar hack และ valorant aimbot แบบ undetected สำหรับ Valorant บน Windows PC นโยบายการคืนเงิน for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks รวม ESP wallhack, radar hack และ valorant aimbot แบบ undetected สำหรับ Valorant บน Windows PC นโยบายการคืนเงิน for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks refund policy",
 					galleryTitle: "Valorant Cheats refund resources",
 					heroImage: "/images/warzone-cheats-combat.webp",
@@ -16126,8 +16126,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "How to request",
 							paragraphs: [
-								"support@valoranthacks.net สำหรับการสนับสนุน",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net สำหรับการสนับสนุน",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -16136,7 +16136,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "ข้อกำหนดการใช้งาน | Valorant Hacks",
 					description: "ข้อกำหนดการใช้งาน for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "ข้อกำหนดการใช้งาน",
-					intro: "Valorant Hacks รวม ESP wallhack, radar hack และ valorant aimbot แบบ undetected สำหรับ Valorant บน Windows PC ข้อกำหนดการใช้งาน for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks รวม ESP wallhack, radar hack และ valorant aimbot แบบ undetected สำหรับ Valorant บน Windows PC ข้อกำหนดการใช้งาน for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks terms policy",
 					galleryTitle: "Valorant Cheats terms resources",
 					heroImage: "/images/warzone-aimbot-skeleton.webp",
@@ -16161,8 +16161,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Policy changes",
 							paragraphs: [
-								"support@valoranthacks.net สำหรับการสนับสนุน",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net สำหรับการสนับสนุน",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -17009,7 +17009,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Chính sách bảo mật | Valorant Hacks",
 					description: "Chính sách bảo mật for Valorant Hacks — ESP wallhack, Aimbot, PC Windows.",
 					h1: "Chính sách bảo mật",
-					intro: "Valorant Hacks cung cấp ESP wallhack, radar hack và valorant aimbot undetected cho Valorant trên PC Windows. Chính sách bảo mật for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks cung cấp ESP wallhack, radar hack và valorant aimbot undetected cho Valorant trên PC Windows. Chính sách bảo mật for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks privacy policy",
 					galleryTitle: "Valorant Cheats privacy resources",
 					heroImage: "/images/warzone-aimbot-sniper.webp",
@@ -17021,7 +17021,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Information we collect",
 							paragraphs: [
 								"Valorant Hacks cung cấp ESP wallhack, radar hack và valorant aimbot undetected cho Valorant trên PC Windows. Contact email, Zadeyo order references, and basic site security data.",
-								"Payment details are processed by Zadeyo checkout — not stored on valoranthacks.net.",
+								"Payment details are processed by Zadeyo checkout — not stored on valohacks.net.",
 							],
 						},
 						{
@@ -17034,8 +17034,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Your rights",
 							paragraphs: [
-								"support@valoranthacks.net cho hỗ trợ và pháp lý.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net cho hỗ trợ và pháp lý.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -17044,7 +17044,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Chính sách hoàn tiền | Valorant Hacks",
 					description: "Chính sách hoàn tiền for Valorant Hacks — ESP wallhack, Aimbot, PC Windows.",
 					h1: "Chính sách hoàn tiền",
-					intro: "Valorant Hacks cung cấp ESP wallhack, radar hack và valorant aimbot undetected cho Valorant trên PC Windows. Chính sách hoàn tiền for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks cung cấp ESP wallhack, radar hack và valorant aimbot undetected cho Valorant trên PC Windows. Chính sách hoàn tiền for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks refund policy",
 					galleryTitle: "Valorant Cheats refund resources",
 					heroImage: "/images/warzone-cheats-combat.webp",
@@ -17069,8 +17069,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "How to request",
 							paragraphs: [
-								"support@valoranthacks.net cho hỗ trợ và pháp lý.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net cho hỗ trợ và pháp lý.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -17079,7 +17079,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Điều khoản sử dụng | Valorant Hacks",
 					description: "Điều khoản sử dụng for Valorant Hacks — ESP wallhack, Aimbot, PC Windows.",
 					h1: "Điều khoản sử dụng",
-					intro: "Valorant Hacks cung cấp ESP wallhack, radar hack và valorant aimbot undetected cho Valorant trên PC Windows. Điều khoản sử dụng for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks cung cấp ESP wallhack, radar hack và valorant aimbot undetected cho Valorant trên PC Windows. Điều khoản sử dụng for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks terms policy",
 					galleryTitle: "Valorant Cheats terms resources",
 					heroImage: "/images/warzone-aimbot-skeleton.webp",
@@ -17104,8 +17104,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Policy changes",
 							paragraphs: [
-								"support@valoranthacks.net cho hỗ trợ và pháp lý.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net cho hỗ trợ và pháp lý.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -17952,7 +17952,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Політика конфіденційності | Valorant Hacks",
 					description: "Політика конфіденційності for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "Політика конфіденційності",
-					intro: "Valorant Hacks об'єднує ESP wallhack, radar hack і valorant aimbot у undetected пакеті для Valorant на Windows PC. Політика конфіденційності for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks об'єднує ESP wallhack, radar hack і valorant aimbot у undetected пакеті для Valorant на Windows PC. Політика конфіденційності for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks privacy policy",
 					galleryTitle: "Valorant Cheats privacy resources",
 					heroImage: "/images/warzone-aimbot-sniper.webp",
@@ -17964,7 +17964,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Information we collect",
 							paragraphs: [
 								"Valorant Hacks об'єднує ESP wallhack, radar hack і valorant aimbot у undetected пакеті для Valorant на Windows PC. Contact email, Zadeyo order references, and basic site security data.",
-								"Payment details are processed by Zadeyo checkout — not stored on valoranthacks.net.",
+								"Payment details are processed by Zadeyo checkout — not stored on valohacks.net.",
 							],
 						},
 						{
@@ -17977,8 +17977,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Your rights",
 							paragraphs: [
-								"support@valoranthacks.net для підтримки та правових питань.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net для підтримки та правових питань.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -17987,7 +17987,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Політика повернення | Valorant Hacks",
 					description: "Політика повернення for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "Політика повернення",
-					intro: "Valorant Hacks об'єднує ESP wallhack, radar hack і valorant aimbot у undetected пакеті для Valorant на Windows PC. Політика повернення for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks об'єднує ESP wallhack, radar hack і valorant aimbot у undetected пакеті для Valorant на Windows PC. Політика повернення for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks refund policy",
 					galleryTitle: "Valorant Cheats refund resources",
 					heroImage: "/images/warzone-cheats-combat.webp",
@@ -18012,8 +18012,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "How to request",
 							paragraphs: [
-								"support@valoranthacks.net для підтримки та правових питань.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net для підтримки та правових питань.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -18022,7 +18022,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Умови використання | Valorant Hacks",
 					description: "Умови використання for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "Умови використання",
-					intro: "Valorant Hacks об'єднує ESP wallhack, radar hack і valorant aimbot у undetected пакеті для Valorant на Windows PC. Умови використання for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks об'єднує ESP wallhack, radar hack і valorant aimbot у undetected пакеті для Valorant на Windows PC. Умови використання for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks terms policy",
 					galleryTitle: "Valorant Cheats terms resources",
 					heroImage: "/images/warzone-aimbot-skeleton.webp",
@@ -18047,8 +18047,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Policy changes",
 							paragraphs: [
-								"support@valoranthacks.net для підтримки та правових питань.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net для підтримки та правових питань.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -18895,7 +18895,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Zásady ochrany soukromí | Valorant Hacks",
 					description: "Zásady ochrany soukromí for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "Zásady ochrany soukromí",
-					intro: "Valorant Hacks spojuje ESP wallhack, radar hack a valorant aimbot jako undetected balíček pro Valorant na Windows PC. Zásady ochrany soukromí for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks spojuje ESP wallhack, radar hack a valorant aimbot jako undetected balíček pro Valorant na Windows PC. Zásady ochrany soukromí for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks privacy policy",
 					galleryTitle: "Valorant Cheats privacy resources",
 					heroImage: "/images/warzone-aimbot-sniper.webp",
@@ -18907,7 +18907,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Information we collect",
 							paragraphs: [
 								"Valorant Hacks spojuje ESP wallhack, radar hack a valorant aimbot jako undetected balíček pro Valorant na Windows PC. Contact email, Zadeyo order references, and basic site security data.",
-								"Payment details are processed by Zadeyo checkout — not stored on valoranthacks.net.",
+								"Payment details are processed by Zadeyo checkout — not stored on valohacks.net.",
 							],
 						},
 						{
@@ -18920,8 +18920,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Your rights",
 							paragraphs: [
-								"support@valoranthacks.net pro podporu a právní dotazy.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net pro podporu a právní dotazy.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -18930,7 +18930,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Zásady vrácení peněz | Valorant Hacks",
 					description: "Zásady vrácení peněz for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "Zásady vrácení peněz",
-					intro: "Valorant Hacks spojuje ESP wallhack, radar hack a valorant aimbot jako undetected balíček pro Valorant na Windows PC. Zásady vrácení peněz for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks spojuje ESP wallhack, radar hack a valorant aimbot jako undetected balíček pro Valorant na Windows PC. Zásady vrácení peněz for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks refund policy",
 					galleryTitle: "Valorant Cheats refund resources",
 					heroImage: "/images/warzone-cheats-combat.webp",
@@ -18955,8 +18955,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "How to request",
 							paragraphs: [
-								"support@valoranthacks.net pro podporu a právní dotazy.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net pro podporu a právní dotazy.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -18965,7 +18965,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Podmínky použití | Valorant Hacks",
 					description: "Podmínky použití for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "Podmínky použití",
-					intro: "Valorant Hacks spojuje ESP wallhack, radar hack a valorant aimbot jako undetected balíček pro Valorant na Windows PC. Podmínky použití for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks spojuje ESP wallhack, radar hack a valorant aimbot jako undetected balíček pro Valorant na Windows PC. Podmínky použití for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks terms policy",
 					galleryTitle: "Valorant Cheats terms resources",
 					heroImage: "/images/warzone-aimbot-skeleton.webp",
@@ -18990,8 +18990,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Policy changes",
 							paragraphs: [
-								"support@valoranthacks.net pro podporu a právní dotazy.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net pro podporu a právní dotazy.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -19838,7 +19838,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Politica de confidențialitate | Valorant Hacks",
 					description: "Politica de confidențialitate for Valorant Hacks — ESP wallhack, Aimbot, PC Windows.",
 					h1: "Politica de confidențialitate",
-					intro: "Valorant Hacks combină ESP wallhack, radar hack și valorant aimbot undetected pentru Valorant pe PC Windows. Politica de confidențialitate for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks combină ESP wallhack, radar hack și valorant aimbot undetected pentru Valorant pe PC Windows. Politica de confidențialitate for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks privacy policy",
 					galleryTitle: "Valorant Cheats privacy resources",
 					heroImage: "/images/warzone-aimbot-sniper.webp",
@@ -19850,7 +19850,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Information we collect",
 							paragraphs: [
 								"Valorant Hacks combină ESP wallhack, radar hack și valorant aimbot undetected pentru Valorant pe PC Windows. Contact email, Zadeyo order references, and basic site security data.",
-								"Payment details are processed by Zadeyo checkout — not stored on valoranthacks.net.",
+								"Payment details are processed by Zadeyo checkout — not stored on valohacks.net.",
 							],
 						},
 						{
@@ -19863,8 +19863,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Your rights",
 							paragraphs: [
-								"support@valoranthacks.net pentru suport și legal.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net pentru suport și legal.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -19873,7 +19873,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Politica de rambursare | Valorant Hacks",
 					description: "Politica de rambursare for Valorant Hacks — ESP wallhack, Aimbot, PC Windows.",
 					h1: "Politica de rambursare",
-					intro: "Valorant Hacks combină ESP wallhack, radar hack și valorant aimbot undetected pentru Valorant pe PC Windows. Politica de rambursare for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks combină ESP wallhack, radar hack și valorant aimbot undetected pentru Valorant pe PC Windows. Politica de rambursare for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks refund policy",
 					galleryTitle: "Valorant Cheats refund resources",
 					heroImage: "/images/warzone-cheats-combat.webp",
@@ -19898,8 +19898,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "How to request",
 							paragraphs: [
-								"support@valoranthacks.net pentru suport și legal.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net pentru suport și legal.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -19908,7 +19908,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Termeni de utilizare | Valorant Hacks",
 					description: "Termeni de utilizare for Valorant Hacks — ESP wallhack, Aimbot, PC Windows.",
 					h1: "Termeni de utilizare",
-					intro: "Valorant Hacks combină ESP wallhack, radar hack și valorant aimbot undetected pentru Valorant pe PC Windows. Termeni de utilizare for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks combină ESP wallhack, radar hack și valorant aimbot undetected pentru Valorant pe PC Windows. Termeni de utilizare for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks terms policy",
 					galleryTitle: "Valorant Cheats terms resources",
 					heroImage: "/images/warzone-aimbot-skeleton.webp",
@@ -19933,8 +19933,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Policy changes",
 							paragraphs: [
-								"support@valoranthacks.net pentru suport și legal.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net pentru suport și legal.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -20781,7 +20781,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Integritetspolicy | Valorant Hacks",
 					description: "Integritetspolicy for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "Integritetspolicy",
-					intro: "Valorant Hacks kombinerar ESP wallhack, radar hack och valorant aimbot som undetected paket för Valorant på Windows PC. Integritetspolicy for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks kombinerar ESP wallhack, radar hack och valorant aimbot som undetected paket för Valorant på Windows PC. Integritetspolicy for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks privacy policy",
 					galleryTitle: "Valorant Cheats privacy resources",
 					heroImage: "/images/warzone-aimbot-sniper.webp",
@@ -20793,7 +20793,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Information we collect",
 							paragraphs: [
 								"Valorant Hacks kombinerar ESP wallhack, radar hack och valorant aimbot som undetected paket för Valorant på Windows PC. Contact email, Zadeyo order references, and basic site security data.",
-								"Payment details are processed by Zadeyo checkout — not stored on valoranthacks.net.",
+								"Payment details are processed by Zadeyo checkout — not stored on valohacks.net.",
 							],
 						},
 						{
@@ -20806,8 +20806,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Your rights",
 							paragraphs: [
-								"support@valoranthacks.net för support och juridik.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net för support och juridik.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -20816,7 +20816,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Återbetalningspolicy | Valorant Hacks",
 					description: "Återbetalningspolicy for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "Återbetalningspolicy",
-					intro: "Valorant Hacks kombinerar ESP wallhack, radar hack och valorant aimbot som undetected paket för Valorant på Windows PC. Återbetalningspolicy for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks kombinerar ESP wallhack, radar hack och valorant aimbot som undetected paket för Valorant på Windows PC. Återbetalningspolicy for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks refund policy",
 					galleryTitle: "Valorant Cheats refund resources",
 					heroImage: "/images/warzone-cheats-combat.webp",
@@ -20841,8 +20841,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "How to request",
 							paragraphs: [
-								"support@valoranthacks.net för support och juridik.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net för support och juridik.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],
@@ -20851,7 +20851,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					title: "Användarvillkor | Valorant Hacks",
 					description: "Användarvillkor for Valorant Hacks — ESP wallhack, Aimbot, Windows PC.",
 					h1: "Användarvillkor",
-					intro: "Valorant Hacks kombinerar ESP wallhack, radar hack och valorant aimbot som undetected paket för Valorant på Windows PC. Användarvillkor for valoranthacks.net and Valorant licenses.",
+					intro: "Valorant Hacks kombinerar ESP wallhack, radar hack och valorant aimbot som undetected paket för Valorant på Windows PC. Användarvillkor for valohacks.net and Valorant licenses.",
 					imageAlt: "Valorant hacks terms policy",
 					galleryTitle: "Valorant Cheats terms resources",
 					heroImage: "/images/warzone-aimbot-skeleton.webp",
@@ -20876,8 +20876,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Policy changes",
 							paragraphs: [
-								"support@valoranthacks.net för support och juridik.",
-								"Email: support@valoranthacks.net",
+								"support@valohacks.net för support och juridik.",
+								"Email: support@valohacks.net",
 							],
 						},
 					],

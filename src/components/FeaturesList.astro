@@ -1,0 +1,140 @@
+---
+import { productInfo } from '../data/site';
+
+const items = productInfo.featureList;
+const left = items.slice(0, 7);
+const right = items.slice(7, 14);
+---
+
+<section class="features" id="features" aria-labelledby="features-heading">
+	<div class="shell">
+		<h2 id="features-heading">FEATURES</h2>
+		<div class="features__grid">
+			<ul>
+				{
+					left.map((item) => (
+						<li>
+							<span class="features__check" aria-hidden="true">
+								<svg viewBox="0 0 24 24" fill="none">
+									<path
+										d="M5 13.2l4.2 4.2L19 7.6"
+										stroke="currentColor"
+										stroke-width="2.2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+								</svg>
+							</span>
+							<span>{item}</span>
+						</li>
+					))
+				}
+			</ul>
+			<ul>
+				{
+					right.map((item) => (
+						<li>
+							<span class="features__check" aria-hidden="true">
+								<svg viewBox="0 0 24 24" fill="none">
+									<path
+										d="M5 13.2l4.2 4.2L19 7.6"
+										stroke="currentColor"
+										stroke-width="2.2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+								</svg>
+							</span>
+							<span>{item}</span>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+	</div>
+</section>
+
+<style>
+	.features {
+		padding-block: clamp(2.25rem, 4.5vw, 3.5rem) clamp(2.75rem, 5.5vw, 4rem);
+		background: var(--bg);
+		border-top: 1px solid var(--line-soft);
+	}
+
+	.features h2 {
+		margin: 0 0 1.35rem;
+		font-family: var(--font-display);
+		font-size: clamp(1.85rem, 4.2vw, 2.65rem);
+		font-weight: 800;
+		letter-spacing: -0.035em;
+		line-height: 1.05;
+		text-transform: uppercase;
+		color: var(--ink);
+	}
+
+	.features__grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 0.7rem 1.35rem;
+	}
+
+	.features ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: grid;
+		gap: 0.55rem;
+	}
+
+	.features li {
+		display: flex;
+		align-items: center;
+		gap: 0.7rem;
+		min-height: 3rem;
+		padding: 0.7rem 0.85rem;
+		border-radius: 0.85rem;
+		border: 1px solid var(--line);
+		background: var(--bg-panel);
+		color: var(--ink);
+		font-size: 0.95rem;
+		font-weight: 600;
+		letter-spacing: -0.015em;
+		cursor: pointer;
+		transition:
+			border-color 0.2s ease,
+			box-shadow 0.2s ease,
+			background 0.2s ease;
+	}
+
+	.features li:hover {
+		border-color: color-mix(in srgb, var(--magenta) 70%, var(--line));
+		background: color-mix(in srgb, var(--magenta) 10%, var(--bg-panel));
+		box-shadow:
+			0 0 0 1px color-mix(in srgb, var(--magenta) 45%, transparent),
+			0 0 18px color-mix(in srgb, var(--magenta) 55%, transparent),
+			0 0 36px color-mix(in srgb, var(--magenta) 28%, transparent);
+	}
+
+	.features__check {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 1.35rem;
+		height: 1.35rem;
+		flex-shrink: 0;
+		border-radius: 0.35rem;
+		background: color-mix(in srgb, var(--ok) 18%, var(--bg-elevated));
+		color: var(--ok);
+	}
+
+	.features__check svg {
+		width: 0.85rem;
+		height: 0.85rem;
+	}
+
+	@media (max-width: 720px) {
+		.features__grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

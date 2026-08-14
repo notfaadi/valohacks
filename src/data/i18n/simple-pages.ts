@@ -1,6 +1,6 @@
 import type { PageId } from './content.generated';
 import { fillBrandTokens, seoDescription } from '../brand';
-import { brandCopy, brandSeo, seoPageTitle } from '../site-core';
+import { brandCopy, brandSeo, productInfo, seoPageTitle } from '../site-core';
 
 export type SimpleSection = {
 	h2: string;
@@ -48,19 +48,9 @@ export const simplePageCopy: Partial<Record<PageId, SimplePageCopy>> = {
 		galleryTitle: 'In-game look',
 		sections: [
 			{
-				h2: 'ESP & wallhack',
-				paragraphs: ['See players and utility through walls.'],
-				list: ['Player boxes & distance', 'Spike and ability markers', 'Team colours on / off'],
-			},
-			{
-				h2: 'Aimbot & soft aim',
-				paragraphs: ['Aim help you can tune to feel natural.'],
-				list: ['Smooth aim strength', 'FOV and bone priority', 'Hotkeys mid-match'],
-			},
-			{
-				h2: 'Radar',
-				paragraphs: ['A simple 2D radar for threats outside your view.'],
-				list: ['Nearby enemy cues', 'Adjustable range', 'Works in Unrated & Competitive'],
+				h2: 'FEATURES',
+				paragraphs: ['ESP, radar, and aim tools included in one {game} license.'],
+				list: [...productInfo.featureList],
 			},
 			{
 				h2: 'Updates & support',

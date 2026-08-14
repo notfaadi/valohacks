@@ -64,7 +64,7 @@ export const blogPosts: BlogPostDefinition[] = [
 		en: {
 		slug: "valorant-skin-leaks-guide",
 		title: "Valorant Skin Leaks: Season Cosmetics Guide",
-		metaDescription: "Valorant skin leaks and shop advice — which season cosmetics are worth CP before the next reset. Save smart and skip FOMO bundles on valoranthacks.net.",
+		metaDescription: "Valorant skin leaks and shop advice — which season cosmetics are worth CP before the next reset. Save smart and skip FOMO bundles on valohacks.net.",
 		h1: "Valorant Skin Leaks Worth Your CP",
 		intro: "The next season is coming. Here is which leaked and rotating cosmetics are actually worth buying before the shop resets hard.",
 		keywords: ["valorant skin leaks","cosmetics","item shop","valorant intel","valorant cheats"],
@@ -444,7 +444,7 @@ export const blogPosts: BlogPostDefinition[] = [
 			{
 				h2: "Hacks vs cheats wording",
 				paragraphs: [
-					"Valorant hacks and valorant cheats describe the same product category for most searchers. We lead with hacks on valoranthacks.net while keeping cheats pages for buyers who use that query.",
+					"Valorant hacks and valorant cheats describe the same product category for most searchers. We lead with hacks on valohacks.net while keeping cheats pages for buyers who use that query.",
 					"Balance and anti-cheat reality still come from undefined. Product rebuild timing is on our <a href=\"/updates/\">Updates</a> page.",
 				],
 			},

@@ -12,10 +12,10 @@ export function seoPageTitle(template: string): string {
 export { brand, fillBrandTokens, seoDescription, seoTitle };
 
 const copyDefaults = {
-	tagline: 'Undetected {primaryKeyword} — ESP, aimbot, and radar for PC',
+	tagline: 'Undetected {primaryKeyword} — ESP, wallhack, aimbot, and 2D radar for PC',
 	summary:
-		'{brand} is an undetected {game} cheat package for Windows PC. Includes ESP, soft aim, and radar, with {antiCheat} maintenance after patches.',
-	heroLede: 'Hacks and cheats available — 0% detection.',
+		'{brand} is an undetected {game} cheat package for Windows PC. Includes ESP, wallhack, soft aim, 2D radar, and a Cloud DMA option, with {antiCheat} maintenance after patches.',
+	heroLede: 'Valorant hacks with aimbot, wallhack ESP, and 2D radar — Cloud DMA option available.',
 	blogLabel: '{game} Intel',
 	ctaBuy: 'Buy now',
 	ctaBuyShort: 'Buy',
@@ -39,9 +39,9 @@ const copyDefaults = {
 } as const;
 
 const seoDefaults = {
-	homeTitle: '{brand} | Undetected {primaryKeyword}',
+	homeTitle: 'Undetected {primaryKeyword} | ESP, Aimbot & Wallhack',
 	homeDescription:
-		'{primaryKeyword} for Windows PC — ESP, aimbot, and radar with {antiCheat} maintenance. Compare plans and buy.',
+		'Buy undetected {primaryKeyword} for Windows PC. ESP, wallhack, aimbot, and 2D radar with {antiCheat} updates plus Cloud DMA. Compare plans and buy.',
 	featuresTitle: '{game} Features | {brand}',
 	featuresDescription:
 		'Everything in one {game} license for Windows PC — ESP, aimbot, radar, and patch updates.',
@@ -121,23 +121,44 @@ export const productInfo = {
 	plans: brand.plans.map((p) => ({ ...p })),
 	currency: brand.currency,
 	heroLede: fillBrandTokens(brandCopy.heroLede),
+	productDetails: {
+		heading: 'Product Details',
+		body: fillBrandTokens(
+			'{brand} is an undetected ESP and awareness toolkit for competitive play. See players, utility, and spike state through a stream-proof overlay with regular Vanguard-focused updates and 24/7 support.',
+		),
+	},
+	/** Homepage FEATURES grid — two columns of 7. Do not add Warzone leftovers here. */
+	featureList: [
+		'Player ESP',
+		'Health & Armor Bars',
+		'Name ESP',
+		'Weapon ESP',
+		'Ability ESP',
+		'Radar Hack',
+		'FOV Circle (Private+)',
+		'Bone ESP',
+		'Distance ESP',
+		'Box ESP',
+		'Agent ESP',
+		'Spike ESP',
+		'Advanced Aimbot (Private+)',
+		'Smoothing Control (Private+)',
+	],
 	features: {
 		esp: [
-			'Enemy player ESP / wallhack',
-			'Vehicle and threat cues',
-			'Loot and contract markers',
-			'Distance readouts',
-			'Toggleable ESP categories',
-			'Team and enemy colours',
+			'Player ESP',
+			'Health & Armor Bars',
+			'Name ESP',
+			'Weapon ESP',
+			'Ability ESP',
+			'Bone ESP',
+			'Distance ESP',
+			'Box ESP',
+			'Agent ESP',
+			'Spike ESP',
 		],
-		aimbot: [
-			'Soft aim and aimbot controls',
-			'Smoothness and FOV settings',
-			'Bone priority',
-			'Hotkeys mid-match',
-			'Per-weapon profiles',
-		],
-		radar: ['2D radar overlay', 'Adjustable range', 'Works in Unrated and Competitive-style modes'],
+		aimbot: ['FOV Circle (Private+)', 'Advanced Aimbot (Private+)', 'Smoothing Control (Private+)'],
+		radar: ['Radar Hack'],
 		general: [
 			fillBrandTokens('{antiCheat} maintenance after patches'),
 			'Digital delivery after checkout',

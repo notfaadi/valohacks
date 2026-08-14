@@ -19,21 +19,20 @@ const chips = [
 ] as const;
 
 const heroSrc = siteConfig.heroImage || '/images/hero-banner.webp';
-const heroPng = heroSrc.replace(/\.webp$/i, '.png');
 ---
 
 <section class="hero" aria-label={siteConfig.name}>
-	<div class="hero__media" aria-hidden="true">
+	<div class="hero__media">
 		<picture>
 			<source srcset={heroSrc} type="image/webp" />
 			<img
-				src={heroPng}
-				alt=""
+				src={heroSrc}
+				alt="Valorant hacks ESP and wallhack overlay with Reyna"
 				width={heroWidth}
 				height={heroHeight}
 				fetchpriority="high"
 				loading="eager"
-				decoding="sync"
+				decoding="async"
 			/>
 		</picture>
 	</div>
@@ -118,23 +117,27 @@ const heroPng = heroSrc.replace(/\.webp$/i, '.png');
 		--hero-pad-y: clamp(2rem, 4vw, 3rem);
 		--hero-stack: clamp(0.7rem, 1.6vw, 0.9rem);
 		position: relative;
+		z-index: 1;
 		isolation: isolate;
 		display: grid;
 		align-items: center;
 		overflow: hidden;
 		background: #050506;
-		/* Match banner ratio so cover doesn't crop/zoom the art */
-		aspect-ratio: 1024 / 358;
 		width: 100%;
-		min-height: clamp(14rem, 30vw, 22rem);
-		max-height: min(28rem, 62vh);
-		height: auto;
+		min-height: 100vh;
+		min-height: 100dvh;
+		min-height: 100svh;
+		height: 100vh;
+		height: 100dvh;
+		height: 100svh;
+		max-height: none;
 	}
 
 	.hero__media {
 		position: absolute;
 		inset: 0;
 		z-index: 0;
+		background: #050506;
 	}
 
 	.hero__media picture,
@@ -146,7 +149,7 @@ const heroPng = heroSrc.replace(/\.webp$/i, '.png');
 
 	.hero__media img {
 		object-fit: cover;
-		object-position: center center;
+		object-position: 80% 50%;
 		image-rendering: -webkit-optimize-contrast;
 		transform: translateZ(0);
 		animation: hero-in 0.9s ease-out both;
@@ -159,10 +162,10 @@ const heroPng = heroSrc.replace(/\.webp$/i, '.png');
 		pointer-events: none;
 		background: linear-gradient(
 			90deg,
-			rgba(5, 5, 6, 0.78) 0%,
-			rgba(5, 5, 6, 0.52) 34%,
-			rgba(5, 5, 6, 0.18) 58%,
-			transparent 74%
+			rgba(8, 4, 6, 0.78) 0%,
+			rgba(8, 4, 6, 0.48) 26%,
+			rgba(8, 4, 6, 0.16) 46%,
+			transparent 64%
 		);
 	}
 
@@ -171,8 +174,7 @@ const heroPng = heroSrc.replace(/\.webp$/i, '.png');
 		z-index: 2;
 		padding-block: var(--hero-pad-y);
 		align-self: center;
-		/* Sit a touch above true center so title reads mid-image */
-		transform: translateY(clamp(-1.5rem, -3vw, -0.35rem));
+		transform: none;
 		display: grid;
 		grid-template-columns: minmax(0, 1fr);
 		justify-items: start;
@@ -355,21 +357,22 @@ const heroPng = heroSrc.replace(/\.webp$/i, '.png');
 		}
 
 		.hero__content {
-			transform: translateY(clamp(-1.5rem, -3vw, -0.35rem));
+			transform: none;
 		}
 	}
 
 	@media (max-width: 900px) {
 		.hero {
-			min-height: clamp(13rem, 34vw, 20rem);
+			min-height: 100svh;
+			height: 100svh;
 			max-height: none;
 		}
 	}
 
 	@media (max-width: 760px) {
 		.hero {
-			aspect-ratio: auto;
-			min-height: min(68svh, 28rem);
+			min-height: 100svh;
+			height: 100svh;
 			max-height: none;
 			display: flex;
 			flex-direction: column;
@@ -378,16 +381,16 @@ const heroPng = heroSrc.replace(/\.webp$/i, '.png');
 
 		.hero__media img {
 			object-fit: cover;
-			object-position: 72% 28%;
+			object-position: 85% 50%;
 		}
 
 		.hero__veil {
 			background: linear-gradient(
 				180deg,
-				rgba(5, 5, 6, 0.08) 0%,
-				rgba(5, 5, 6, 0.28) 32%,
-				rgba(5, 5, 6, 0.82) 68%,
-				rgba(5, 5, 6, 0.96) 100%
+				rgba(5, 5, 6, 0.1) 0%,
+				rgba(5, 5, 6, 0.18) 36%,
+				rgba(5, 5, 6, 0.72) 70%,
+				rgba(5, 5, 6, 0.94) 100%
 			);
 		}
 
@@ -432,7 +435,8 @@ const heroPng = heroSrc.replace(/\.webp$/i, '.png');
 
 	@media (max-width: 480px) {
 		.hero {
-			min-height: min(62svh, 24rem);
+			min-height: 100svh;
+			height: 100svh;
 		}
 
 		.hero__brand {
@@ -462,7 +466,8 @@ const heroPng = heroSrc.replace(/\.webp$/i, '.png');
 
 	@media (max-height: 480px) and (orientation: landscape) {
 		.hero {
-			min-height: auto;
+			min-height: 100dvh;
+			height: 100dvh;
 			padding-block: 0.75rem;
 		}
 

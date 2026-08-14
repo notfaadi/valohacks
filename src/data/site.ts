@@ -125,11 +125,11 @@ export const homeFaqs: readonly FaqItem[] = [
 	faq({
 		question: 'What is included — ESP, wallhack, radar, or Aimbot?',
 		answer:
-			'{brand} bundles ESP wallhack, loot markers, 2D radar cues, and configurable Aimbot in one license. See Features for the full list.',
+			'{brand} bundles player ESP, spike and ability reads, radar, and configurable Aimbot in one license. See Features for the full list.',
 		slug: 'esp-wallhack-radar-or-aimbot',
 		seoTitle: 'What Is Included: ESP, Wallhack, Radar, Aimbot | FAQ',
 		seoDescription:
-			'One {brand} license includes ESP wallhack, loot markers, 2D radar cues, and configurable Aimbot for Windows PC.',
+			'One {brand} license includes player ESP, spike and ability reads, radar, and configurable Aimbot for Windows PC.',
 	}),
 	faq({
 		question: 'How are licenses delivered?',

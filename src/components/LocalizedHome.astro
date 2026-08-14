@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
+import ProductDetails from '../components/ProductDetails.astro';
+import FeaturesList from '../components/FeaturesList.astro';
 import HomeReviews from '../components/HomeReviews.astro';
 import HomeSeo from '../components/HomeSeo.astro';
 import SiteFooter from '../components/SiteFooter.astro';
@@ -10,7 +12,7 @@ import { getLocalizedPath } from '../data/i18n/routing';
 import type { LocaleCode } from '../data/i18n/locales';
 import { homeFaqs, homeSeo, productInfo, siteConfig, seoKeywords, customerReviewStats, customerReviews } from '../data/site';
 import { valorantImages } from '../data/valorant';
-import { heroPreloadSrc, heroSizes } from '../lib/responsive-images';
+import { heroPreloadSrc, heroSizes, heroSrcSet } from '../lib/responsive-images';
 
 interface Props {
 	locale: LocaleCode;
@@ -68,6 +70,7 @@ const extraGraph: Record<string, unknown>[] = [
 		image: heroImage,
 		brand: { '@type': 'Brand', name: productInfo.brand },
 		keywords: seoKeywords.join(', '),
+		featureList: [...productInfo.featureList],
 		offers: {
 			'@type': 'AggregateOffer',
 			lowPrice: Math.min(...productInfo.plans.map((p) => p.price)).toFixed(2),
@@ -113,11 +116,14 @@ const extraGraph: Record<string, unknown>[] = [
 	breadcrumbs={[{ label: ui.nav.home }]}
 	extraGraph={locale === 'en' ? extraGraph : extraGraph.filter((n) => n['@type'] !== 'FAQPage')}
 	lcpImage={heroPreloadSrc}
+	lcpImageSrcSet={heroSrcSet}
 	lcpImageSizes={heroSizes}
 >
 	<Navbar locale={locale} pageId="home" />
 	<main class="home">
 		<Hero locale={locale} />
+		<ProductDetails />
+		<FeaturesList />
 		<HomeReviews />
 		<div class="home__seo">
 			{

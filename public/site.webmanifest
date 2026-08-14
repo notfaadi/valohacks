@@ -4,8 +4,8 @@
   "description": "Undetected valorant hacks — ESP, aimbot, and radar for PC",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0f1419",
-  "theme_color": "#0f1419",
+  "background_color": "#10080c",
+  "theme_color": "#10080c",
   "icons": [
     {
       "src": "/favicon.png",

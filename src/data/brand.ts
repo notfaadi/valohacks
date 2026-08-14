@@ -9,11 +9,11 @@ export const brand = {
 	/** Short product label if needed */
 	shortName: 'Valorant',
 	/** Canonical origin — no trailing slash */
-	url: 'https://valoranthacks.net',
+	url: 'https://valohacks.net',
 	locale: 'en',
 	market: 'Worldwide',
-	supportEmail: 'support@valoranthacks.net',
-	checkoutUrl: 'https://zadeyo.com/go/AMAN?to=%2Fproducts%2Fwarzone',
+	supportEmail: 'support@valohacks.net',
+	checkoutUrl: 'https://zadeyo.com/go/AMAN?to=%2Fproducts%2Fvalorant',
 
 	/** Game this template instance targets */
 	game: 'Valorant',
@@ -40,12 +40,12 @@ export const brand = {
 	 * Edit in Brand Studio → Colors (tones are fully customizable).
 	 */
 	theme: {
-		accent: '#ff4655',
-		bg: '#0f1419',
-		soft: '#fd4556',
-		deep: '#bd3944',
-		hover: '#ff6b77',
-		panel: '#111823',
+		accent: '#d00729',
+		bg: '#10080c',
+		soft: '#d00729',
+		deep: '#d00729',
+		hover: '#d00729',
+		panel: '#181115',
 	},
 
 	/**
@@ -70,8 +70,9 @@ export const brand = {
 	 * Aim ~50–60 chars titles, ~140–160 chars descriptions.
 	 */
 	seo: {
-		homeTitle: '{brand} | Undetected {primaryKeyword}',
-		homeDescription: '{primaryKeyword} for Windows PC - ESP, aimbot, and ESP with {antiCheat} maintenance. Compare plans and buy.',
+		homeTitle: 'Undetected {primaryKeyword} | ESP, Aimbot & Wallhack',
+		homeDescription:
+			'Buy undetected {primaryKeyword} for Windows PC. ESP, wallhack, aimbot, and 2D radar with {antiCheat} updates plus Cloud DMA. Compare plans and buy.',
 		featuresTitle: '{game} Features | {brand}',
 		featuresDescription: 'Everything in one {game} license for Windows PC -- ESP, aimbot, radar, and patch updates.',
 		storeTitle: '{game} Store | {brand}',
@@ -94,9 +95,10 @@ export const brand = {
 
 	/** On-page marketing copy (tokens allowed) */
 	copy: {
-		tagline: 'Undetected {primaryKeyword} -- ESP, aimbot, and ESP for PC',
-		summary: '{brand} is an undetected {game} cheat package for Windows PC. Includes ESP, soft aim, and ESP, with {antiCheat} maintenance after patches.',
-		heroLede: 'Hacks and cheats available - 0% detection.',
+		tagline: 'Undetected {primaryKeyword} -- ESP, wallhack, aimbot, and 2D radar for PC',
+		summary:
+			'{brand} is an undetected {game} cheat package for Windows PC. Includes ESP, wallhack, soft aim, 2D radar, and a Cloud DMA option, with {antiCheat} maintenance after patches.',
+		heroLede: 'Valorant hacks with aimbot, wallhack ESP, and 2D radar — Cloud DMA option available.',
 		blogLabel: '{game} Intel',
 		ctaBuy: 'Buy now',
 		ctaBuyShort: 'Buy',

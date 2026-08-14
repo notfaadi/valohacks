@@ -136,20 +136,20 @@ export const enPages = {
 		sections: [
 			section(
 				'ESP wallhack and visibility features',
-				'Enemy player ESP wallhack, vehicle and supply-drop threat cues, loot and chest markers, distance readouts, snaplines, and toggleable ESP categories for BR-critical overlays only.',
+				'Player ESP, Health & Armor Bars, Name ESP, Weapon ESP, Ability ESP, Bone ESP, Distance ESP, Box ESP, Agent ESP, and Spike ESP — stream-proof overlays for Competitive and Unrated.',
 				'Team and enemy colour coding supports Competitive and Unrated. Deep-dive the <a href="/valorant-esp/">ESP page</a> and <a href="/valorant-wallhack/">wallhack guide</a> for category-level detail.',
-				`Map and loot systems evolve with ${EXT.activision} season updates — toggleable ESP categories keep overlays useful when POIs rotate.`,
+				`Agent and map updates come from ${EXT.activision} — ESP categories stay useful when the roster or sites rotate.`,
 			),
 			section(
 				'Radar hack and Aimbot controls',
-				'2D radar overlay with directional threat cues, configurable range for rotations and final circles, plus Aimbot smoothness, FOV, bone priority, hotkeys, and per-weapon profiles.',
+				'Radar Hack plus FOV Circle (Private+), Advanced Aimbot (Private+), and Smoothing Control (Private+) so you can tune aim help without stacking separate tools.',
 				'All tools share in-client toggles so you can adjust ESP, radar, and Aimbot during live Valorant sessions. See <a href="/valorant-radar-hack/">radar</a> and <a href="/valorant-aimbot/">Aimbot</a> for settings walkthroughs.',
 				'Prefer a menu-first workflow? The <a href="/valorant-mod-menu/">mod menu page</a> explains mid-match toggles without alt-tabbing.',
 			),
 			section(
 				'Licensing, delivery, and Vanguard maintenance',
 				'Monthly ($35) and lifetime ($150) licenses with instant digital delivery. Vanguard maintenance rebuilds publish on the <a href="/updates/">Updates page</a> after anti-cheat or game patches.',
-				`Monitor ${EXT.status} on patch days, then confirm rebuild notes before you queue. Setup and billing help lives on <a href="/support/">Support</a> and support@valoranthacks.net.`,
+				`Monitor ${EXT.status} on patch days, then confirm rebuild notes before you queue. Setup and billing help lives on <a href="/support/">Support</a> and support@valohacks.net.`,
 				'Next step: compare plans on <a href="/pricing/">Pricing</a> or read <a href="/undetected-valorant-cheats/">how undetected maintenance works</a>.',
 			),
 		],
@@ -281,7 +281,7 @@ export const enPages = {
 			section(
 				'Delivery, pricing, and support',
 				'Licenses deliver digitally after payment confirmation. Monthly is $35; lifetime is $150 USD — see <a href="/pricing/">Pricing</a>.',
-				'Contact support@valoranthacks.net or the <a href="/support/">Support page</a> with order details for setup or billing help. First launch steps are on <a href="/setup/">Setup</a>.',
+				'Contact support@valohacks.net or the <a href="/support/">Support page</a> with order details for setup or billing help. First launch steps are on <a href="/setup/">Setup</a>.',
 				'Refund eligibility is covered in the <a href="/refund-policy/">Refund Policy</a>.',
 			),
 		],
@@ -314,7 +314,7 @@ export const enPages = {
 			section(
 				'Self-service resources',
 				'Setup guide, Features list, Updates log, Refund Policy, and Terms of Use are linked from the footer. Vanguard bypass notes live on the dedicated <a href="/vanguard-bypass/">Vanguard page</a>.',
-				'Email: support@valoranthacks.net',
+				'Email: support@valohacks.net',
 				'Ready to purchase or renew? Open <a href="/pricing/">Pricing</a>. Need feature detail first? See <a href="/features/">Features</a>.',
 			),
 		],
@@ -480,7 +480,7 @@ export const enPages = {
 				'Before you buy in 2026',
 				'Read the <a href="/valorant-hacks/">Valorant hacks</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.',
 				'Also compare the <a href="/best-valorant-cheats/">best Valorant cheats</a> checklist, <a href="/blog/valorant-cheats-2026-whats-new/">2026 blog guide</a>, and <a href="/faq/">FAQ</a>.',
-				'Support is available at support@valoranthacks.net via the <a href="/support/">Support page</a>.',
+				'Support is available at support@valohacks.net via the <a href="/support/">Support page</a>.',
 			),
 		],
 	},
@@ -757,9 +757,9 @@ export const enPages = {
 	privacy: {
 		title: 'Privacy Policy | Valorant Hacks',
 		description:
-			'Privacy policy for Valorant Hacks. How we handle support emails, order data, and checkout for valorant cheats licenses on valoranthacks.net.',
+			'Privacy policy for Valorant Hacks. How we handle support emails, order data, and checkout for valorant cheats licenses on valohacks.net.',
 		h1: 'Privacy Policy',
-		intro: 'How Valorant Hacks handles information when you browse valoranthacks.net or contact support about a Valorant license.',
+		intro: 'How Valorant Hacks handles information when you browse valohacks.net or contact support about a Valorant license.',
 		imageAlt: 'Valorant hacks privacy policy',
 		galleryTitle: 'Valorant Hacks legal resources',
 		ctaPrimary: 'Email support',
@@ -779,8 +779,8 @@ export const enPages = {
 			),
 			section(
 				'Your choices and contact',
-				'You may request correction or deletion of support email data by contacting support@valoranthacks.net with your request details.',
-				'Policy updates publish on this page. Continued use of valoranthacks.net after updates means you accept the revised policy. Also see <a href="/terms/">Terms of Use</a> and <a href="/refund-policy/">Refund Policy</a>.',
+				'You may request correction or deletion of support email data by contacting support@valohacks.net with your request details.',
+				'Policy updates publish on this page. Continued use of valohacks.net after updates means you accept the revised policy. Also see <a href="/terms/">Terms of Use</a> and <a href="/refund-policy/">Refund Policy</a>.',
 			),
 		],
 	},
@@ -809,7 +809,7 @@ export const enPages = {
 			),
 			section(
 				'How to request a refund',
-				'Email support@valoranthacks.net with subject "Refund Request", your order ID, purchase date, and issue summary — or use the <a href="/support/">Support page</a>.',
+				'Email support@valohacks.net with subject "Refund Request", your order ID, purchase date, and issue summary — or use the <a href="/support/">Support page</a>.',
 				'Approved refunds process back to the original payment method when possible. Pricing details live on <a href="/pricing/">Pricing</a>.',
 			),
 		],
@@ -817,9 +817,9 @@ export const enPages = {
 	terms: {
 		title: 'Terms of Use 2026 | Valorant Hacks Rules',
 		description:
-			'Terms of use for valoranthacks.net and Valorant Hacks licenses. Usage rules, anti-cheat risk, and liability for PC and controller cheats.',
+			'Terms of use for valohacks.net and Valorant Hacks licenses. Usage rules, anti-cheat risk, and liability for PC and controller cheats.',
 		h1: 'Terms of Use',
-		intro: 'Terms governing use of valoranthacks.net and Valorant Hacks licenses for Valorant on Windows PC.',
+		intro: 'Terms governing use of valohacks.net and Valorant Hacks licenses for Valorant on Windows PC.',
 		imageAlt: 'Valorant hacks terms of use',
 		galleryTitle: 'Valorant Hacks legal pages',
 		ctaPrimary: 'Email support',
@@ -839,7 +839,7 @@ export const enPages = {
 			section(
 				'Changes and governing law',
 				'We may update these terms by posting revisions on this page. Continued use after changes constitutes acceptance.',
-				'Contact support@valoranthacks.net for questions. Related policies: <a href="/privacy-policy/">Privacy</a> and <a href="/refund-policy/">Refunds</a>.',
+				'Contact support@valohacks.net for questions. Related policies: <a href="/privacy-policy/">Privacy</a> and <a href="/refund-policy/">Refunds</a>.',
 			),
 		],
 	},

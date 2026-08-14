@@ -1,6 +1,6 @@
-﻿const CANONICAL_ORIGIN = 'https://valoranthacks.net';
-const APEX_HOST = 'valoranthacks.net';
-const WWW_HOST = 'www.valoranthacks.net';
+﻿const CANONICAL_ORIGIN = 'https://valohacks.net';
+const APEX_HOST = 'valohacks.net';
+const WWW_HOST = 'www.valohacks.net';
 
 /** Legacy domains → canonical apex (301). */
 const LEGACY_HOSTS = new Set([
@@ -18,6 +18,8 @@ const LEGACY_HOSTS = new Set([
 	'www.valorantscheats.com',
 	'valorantscheats.xyz',
 	'www.valorantscheats.xyz',
+	'valoranthacks.net',
+	'www.valoranthacks.net',
 ]);
 
 // Keep in sync with public/_redirects (which preserves query strings by default, as we do below).
