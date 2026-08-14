@@ -253,7 +253,7 @@ export const customerReviews = [
 		handle: 'ctrl_player99',
 		rating: 4,
 		text: "finally a valorant cheat that doesn't feel like garbage on controller. soft aim with xbox pad works, had to tweak fov a bit. menu navigation with pad is kinda awkward but doable",
-		short: "finally a valorant cheat that doesn't feel like garbage on controller. soft aim with xbox pad works"
+		short: "finally a valorant cheat that doesn't feel like garbage on controller. soft aim with xbox pad works",
 		slug: 'valorant-controller-soft-aim-review-ctrl-player99',
 		seoTitle: 'Controller Soft Aim by @ctrl_player99 — 4/5 | {brand}',
 		seoDescription:
