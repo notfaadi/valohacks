@@ -40,21 +40,21 @@ export const trustSignals = {
 } as const;
 
 export const seoLandingPages = [
-	{ label: fillBrandTokens('{game} hacks'), href: '/warzone-hacks/' },
-	{ label: fillBrandTokens('{game} cheats'), href: '/warzone-cheats-2026/' },
-	{ label: fillBrandTokens('{game} esp'), href: '/warzone-esp/' },
-	{ label: fillBrandTokens('{game} aimbot'), href: '/warzone-aimbot/' },
-	{ label: fillBrandTokens('{game} hack download'), href: '/warzone-cheat-download/' },
-	{ label: fillBrandTokens('Undetected {primaryKeyword}'), href: '/undetected-warzone-cheats/' },
-	{ label: fillBrandTokens('{game} wallhack'), href: '/warzone-wallhack/' },
-	{ label: fillBrandTokens('{game} radar hack'), href: '/warzone-radar-hack/' },
+	{ label: fillBrandTokens('{game} hacks'), href: '/valorant-hacks/' },
+	{ label: fillBrandTokens('{game} cheats'), href: '/valorant-cheats-2026/' },
+	{ label: fillBrandTokens('{game} esp'), href: '/valorant-esp/' },
+	{ label: fillBrandTokens('{game} aimbot'), href: '/valorant-aimbot/' },
+	{ label: fillBrandTokens('{game} hack download'), href: '/valorant-cheat-download/' },
+	{ label: fillBrandTokens('Undetected {primaryKeyword}'), href: '/undetected-valorant-cheats/' },
+	{ label: fillBrandTokens('{game} wallhack'), href: '/valorant-wallhack/' },
+	{ label: fillBrandTokens('{game} radar hack'), href: '/valorant-radar-hack/' },
 ] as const;
 
 export const mainNav = [
 	{ label: 'Home', href: '/' },
-	{ label: 'Hacks', href: '/warzone-hacks/' },
-	{ label: 'Aimbot', href: '/warzone-aimbot/' },
-	{ label: 'ESP', href: '/warzone-esp/' },
+	{ label: 'Hacks', href: '/valorant-hacks/' },
+	{ label: 'Aimbot', href: '/valorant-aimbot/' },
+	{ label: 'ESP', href: '/valorant-esp/' },
 	{ label: 'Features', href: '/features/' },
 	{ label: 'Pricing', href: '/pricing/' },
 	{ label: 'Setup', href: '/setup/' },
@@ -72,14 +72,14 @@ export const footerNav = [
 
 export const footerExplore = [
 	{ label: fillBrandTokens('{brand} home'), href: '/' },
-	{ label: fillBrandTokens('{game} hacks pillar'), href: '/warzone-hacks/' },
-	{ label: fillBrandTokens('Undetected {game} hacks'), href: '/undetected-warzone-cheats/' },
-	{ label: fillBrandTokens('{game} wallhack ESP'), href: '/warzone-wallhack/' },
-	{ label: fillBrandTokens('{game} radar hack'), href: '/warzone-radar-hack/' },
-	{ label: fillBrandTokens('{antiCheat} bypass guide'), href: '/ricochet-bypass/' },
-	{ label: fillBrandTokens('{game} cheats 2026'), href: '/warzone-cheats-2026/' },
-	{ label: fillBrandTokens('{game} Aimbot controls'), href: '/warzone-aimbot/' },
-	{ label: fillBrandTokens('{game} ESP overlays'), href: '/warzone-esp/' },
+	{ label: fillBrandTokens('{game} hacks pillar'), href: '/valorant-hacks/' },
+	{ label: fillBrandTokens('Undetected {game} hacks'), href: '/undetected-valorant-cheats/' },
+	{ label: fillBrandTokens('{game} wallhack ESP'), href: '/valorant-wallhack/' },
+	{ label: fillBrandTokens('{game} radar hack'), href: '/valorant-radar-hack/' },
+	{ label: fillBrandTokens('{antiCheat} bypass guide'), href: '/vanguard-bypass/' },
+	{ label: fillBrandTokens('{game} cheats 2026'), href: '/valorant-cheats-2026/' },
+	{ label: fillBrandTokens('{game} Aimbot controls'), href: '/valorant-aimbot/' },
+	{ label: fillBrandTokens('{game} ESP overlays'), href: '/valorant-esp/' },
 	{ label: fillBrandTokens('Full {game} hack feature list'), href: '/features/' },
 	{ label: 'Monthly & lifetime pricing', href: '/pricing/' },
 	{ label: fillBrandTokens('{game} hack setup guide'), href: '/setup/' },
@@ -99,7 +99,7 @@ export const homeFaqs: readonly FaqItem[] = [
 		question: 'What is {brand}?',
 		answer:
 			'{brand} is an undetected {primaryKeyword} package for Windows PC — also searched as {game} cheats and {game} hack. It includes ESP wallhack, 2D radar, and aimbot controls, with {antiCheat} maintenance and setup support.',
-		slug: 'what-are-warzone-hacks',
+		slug: 'what-are-valorant-hacks',
 		seoTitle: 'What is {brand}? | FAQ',
 		seoDescription:
 			'{brand} explained: undetected ESP, radar, and aimbot for {game} on Windows PC with {antiCheat} maintenance.',
@@ -108,7 +108,7 @@ export const homeFaqs: readonly FaqItem[] = [
 		question: 'Are {primaryKeyword} undetected in 2026?',
 		answer:
 			'{brand} is maintained for {game} with rebuilds after {antiCheat} and game patches. Check the Status page before you queue. No cheat can guarantee permanent undetected status — maintenance and responsible use matter.',
-		slug: 'are-warzone-hacks-undetected-in-2026',
+		slug: 'are-valorant-hacks-undetected-in-2026',
 		seoTitle: 'Are {brand} Undetected in 2026? | FAQ',
 		seoDescription:
 			'How {brand} stays maintained after {antiCheat} patches in 2026 — and why no cheat can promise permanent undetected status.',
@@ -116,8 +116,8 @@ export const homeFaqs: readonly FaqItem[] = [
 	faq({
 		question: 'Does this work in the main game modes?',
 		answer:
-			'Yes. ESP, radar, and aimbot are built for {game} match flow — reading enemies, spotting loot, and staying aware in fights.',
-		slug: 'battle-royale-and-resurgence',
+			'Yes. ESP, radar, and aimbot are built for {game} match flow — reading enemies, holding sites, and staying aware in fights.',
+		slug: 'unrated-and-competitive',
 		seoTitle: 'Game Mode Support | FAQ',
 		seoDescription:
 			'{brand} works in the main {game} modes — ESP, radar, and aimbot for Windows PC.',
@@ -165,17 +165,17 @@ export const seoFaqs: readonly FaqItem[] = [
 	faq({
 		question: 'What is a {game} wallhack?',
 		answer:
-			'A {game} wallhack is an ESP overlay that shows enemy players, vehicles, and loot through walls. {brand} includes distance readouts, team colours, and toggleable categories.',
-		slug: 'what-is-a-warzone-wallhack',
+			'A {game} wallhack is an ESP overlay that shows enemy agents through walls. {brand} includes distance readouts, team colours, and toggleable categories.',
+		slug: 'what-is-a-valorant-wallhack',
 		seoTitle: 'What Is a {game} Wallhack? | FAQ',
 		seoDescription:
-			'A {game} wallhack is ESP that reveals players, vehicles, and loot through walls — with distance, team colours, and category toggles.',
+			'A {game} wallhack is ESP that reveals agents through walls — with distance, team colours, and category toggles.',
 	}),
 	faq({
 		question: 'Does {brand} include a radar hack?',
 		answer:
 			'Yes. {brand} includes 2D radar overlays that highlight nearby threats outside your view — useful for flanks and late-game fights.',
-		slug: 'does-warzone-hacks-include-radar-hack',
+		slug: 'does-valorant-hacks-include-radar-hack',
 		seoTitle: 'Does {brand} Include a Radar Hack? | FAQ',
 		seoDescription:
 			'Yes — {brand} includes 2D radar overlays for nearby threats outside your FOV.',
@@ -184,7 +184,7 @@ export const seoFaqs: readonly FaqItem[] = [
 		question: 'How does {antiCheat} affect {primaryKeyword}?',
 		answer:
 			'{antiCheat} monitors {game} on Windows PC. {brand} posts maintenance notes after patches that may need a rebuild. Check Status before you queue.',
-		slug: 'ricochet-anti-cheat-and-warzone-hacks',
+		slug: 'vanguard-anti-cheat-and-valorant-hacks',
 		seoTitle: 'How {antiCheat} Affects {brand} | FAQ',
 		seoDescription:
 			'{antiCheat} may require {brand} rebuilds after patches. Status notes explain the update workflow.',
@@ -193,7 +193,7 @@ export const seoFaqs: readonly FaqItem[] = [
 		question: 'Can I buy undetected {game} cheats for Windows PC?',
 		answer:
 			'Yes — {brand} sells monthly and lifetime licenses for Windows PC with ESP, radar, and aimbot in one stack. Compare plans on Store before checkout.',
-		slug: 'buy-undetected-warzone-cheats-windows-pc',
+		slug: 'buy-undetected-valorant-cheats-windows-pc',
 		seoTitle: 'Buy Undetected {game} Cheats for Windows PC | FAQ',
 		seoDescription:
 			'Buy monthly or lifetime {brand} licenses for Windows PC — ESP, radar, and aimbot in one stack. Compare pricing before checkout.',
@@ -218,7 +218,7 @@ export const customerReviews = [
 		rating: 5,
 		text: 'soft aim on the meta ar feels cracked ngl. took me like 20 mins to figure out the menu tho lol. once u get it its smooth',
 		short: 'soft aim on the meta ar feels cracked ngl. once u get the menu its smooth',
-		slug: 'warzone-soft-aim-review-xkrypt0',
+		slug: 'valorant-soft-aim-review-xkrypt0',
 		seoTitle: 'Soft Aim Review by @xKrypt0_WZ — 5/5 | {brand}',
 		seoDescription:
 			'Real {game} soft aim review from @xKrypt0_WZ: 5/5 for the meta AR soft aim in {brand}. How the aimbot menu feels after setup on Windows PC.',
@@ -228,21 +228,21 @@ export const customerReviews = [
 	reviewMeta({
 		handle: 'buildsR4K',
 		rating: 4,
-		text: "esp boxes in resurgence are actually useful, can see who's holding height before u push. radar could be bigger on 1080p — wish there was a size slider. still worth it for the price",
-		short: "esp boxes in resurgence are actually useful, can see who's holding height before u push. still worth it for the price",
-		slug: 'warzone-esp-resurgence-review-buildsr4k',
-		seoTitle: 'ESP Resurgence Review by @buildsR4K — 4/5 | {brand}',
+		text: "esp boxes in competitive are actually useful, can see who's holding height before u push. radar could be bigger on 1080p — wish there was a size slider. still worth it for the price",
+		short: "esp boxes in competitive are actually useful, can see who's holding height before u push. still worth it for the price",
+		slug: 'valorant-esp-competitive-review-buildsr4k',
+		seoTitle: 'ESP Competitive Review by @buildsR4K — 4/5 | {brand}',
 		seoDescription:
-			'{game} ESP review from @buildsR4K: 4/5 for ESP operator boxes in Resurgence with radar feedback. Honest take on undetected {game} hacks pricing and value.',
+			'{game} ESP review from @buildsR4K: 4/5 for ESP operator boxes in Competitive with radar feedback. Honest take on undetected {game} hacks pricing and value.',
 		date: '2026-07-19',
-		tag: 'Resurgence',
+		tag: 'Competitive',
 	}),
 	reviewMeta({
 		handle: 'dma_wizard',
 		rating: 5,
-		text: 'switched from a kernel only tool last season. cloud dma setup was easier than i expected, support walked me through the dma part on discord. survived the last ricochet update while my old sub got flagged. lifetime was the move',
-		short: 'cloud dma setup was easier than i expected. survived the last ricochet update while my old sub got flagged',
-		slug: 'warzone-cloud-dma-review-dma-wizard',
+		text: 'switched from a kernel only tool last season. cloud dma setup was easier than i expected, support walked me through the dma part on discord. survived the last vanguard update while my old sub got flagged. lifetime was the move',
+		short: 'cloud dma setup was easier than i expected. survived the last vanguard update while my old sub got flagged',
+		slug: 'valorant-cloud-dma-review-dma-wizard',
 		seoTitle: 'Cloud DMA Review by @dma_wizard — 5/5 | {brand}',
 		seoDescription:
 			'Cloud DMA {game} hacks review from @dma_wizard: 5/5 after surviving a {antiCheat} update that flagged a kernel-only cheat. Setup help and lifetime license experience.',
@@ -252,9 +252,9 @@ export const customerReviews = [
 	reviewMeta({
 		handle: 'ctrl_player99',
 		rating: 4,
-		text: "finally a wz cheat that doesn't feel like garbage on controller. soft aim with xbox pad works, had to tweak fov a bit. menu navigation with pad is kinda awkward but doable",
-		short: "finally a wz cheat that doesn't feel like garbage on controller. soft aim with xbox pad works",
-		slug: 'warzone-controller-soft-aim-review-ctrl-player99',
+		text: "finally a valorant cheat that doesn't feel like garbage on controller. soft aim with xbox pad works, had to tweak fov a bit. menu navigation with pad is kinda awkward but doable",
+		short: "finally a valorant cheat that doesn't feel like garbage on controller. soft aim with xbox pad works"
+		slug: 'valorant-controller-soft-aim-review-ctrl-player99',
 		seoTitle: 'Controller Soft Aim by @ctrl_player99 — 4/5 | {brand}',
 		seoDescription:
 			'Controller {game} cheats review from @ctrl_player99: 4/5 for soft aim on an Xbox pad, FOV tweaks, and menu navigation in the {brand} package.',
@@ -266,7 +266,7 @@ export const customerReviews = [
 		rating: 3,
 		text: 'features are good when it works. first launch took forever bc windows defender flagged the loader — not their fault but annoying. support replied in like 2 hours and sent a fix. esp and loot markers solid in ranked, just wish setup docs were clearer upfront',
 		short: 'features are good when it works. esp and loot markers solid in ranked, just wish setup docs were clearer upfront',
-		slug: 'warzone-hack-setup-review-stormchaser07',
+		slug: 'valorant-hack-setup-review-stormchaser07',
 		seoTitle: 'Setup Review by @stormChaser_07 — 3/5 | {brand}',
 		seoDescription:
 			'Honest 3/5 {game} hacks review from @stormChaser_07: ESP and loot markers solid in ranked, but first launch and setup docs needed support help.',
@@ -278,7 +278,7 @@ export const customerReviews = [
 		rating: 5,
 		text: 'loot esp alone pays for monthly imo. contract markers + distance readouts = way faster off spawn',
 		short: 'loot esp alone pays for monthly imo. contract markers + distance readouts = way faster off spawn',
-		slug: 'warzone-loot-esp-review-lootgoblinx',
+		slug: 'valorant-loot-esp-review-lootgoblinx',
 		seoTitle: 'Loot ESP Review by @lootGoblinx — 5/5 | {brand}',
 		seoDescription:
 			'{game} loot ESP review from @lootGoblinx: 5/5 for contract markers and distance readouts off spawn. Why loot ESP alone justifies the monthly {game} hacks license.',
@@ -287,9 +287,9 @@ export const customerReviews = [
 	reviewMeta({
 		handle: 'rankedGrind42',
 		rating: 4,
-		text: 'been using since season 3. soft aim profiles per weapon is nice — smg profile vs ar profile actually makes a diff in close fights. only complaint is updates page could show eta when ricochet patches hit, had to wait a day once',
+		text: 'been using since season 3. soft aim profiles per weapon is nice — smg profile vs ar profile actually makes a diff in close fights. only complaint is updates page could show eta when vanguard patches hit, had to wait a day once',
 		short: 'soft aim profiles per weapon is nice — smg profile vs ar profile actually makes a diff in close fights',
-		slug: 'warzone-soft-aim-ranked-review-rankedgrind42',
+		slug: 'valorant-soft-aim-ranked-review-rankedgrind42',
 		seoTitle: 'Ranked Soft Aim by @rankedGrind42 — 4/5 | {brand}',
 		seoDescription:
 			'Ranked {game} soft aim review from @rankedGrind42: 4/5 for per-weapon aimbot profiles since Season 3, with feedback on {antiCheat} patch-day updates.',
@@ -299,12 +299,12 @@ export const customerReviews = [
 	reviewMeta({
 		handle: 'vanLifeWZ',
 		rating: 5,
-		text: 'radar saved me so many times during gulag fights. seeing the third party before they slide in is huge in squads. boxes + radar combo is clean',
-		short: 'radar saved me so many times during gulag fights. boxes + radar combo is clean',
-		slug: 'warzone-radar-hack-review-vanlifewz',
+		text: 'radar saved me so many times during clutch fights. seeing the third party before they slide in is huge in squads. boxes + radar combo is clean',
+		short: 'radar saved me so many times during clutch fights. boxes + radar combo is clean',
+		slug: 'valorant-radar-hack-review-vanlifewz',
 		seoTitle: 'Radar Hack Review by @vanLifeWZ — 5/5 | {brand}',
 		seoDescription:
-			'{game} radar hack review from @vanLifeWZ: 5/5 for 2D radar during gulag fights and spotting third parties in squads with ESP boxes.',
+			'{game} radar hack review from @vanLifeWZ: 5/5 for 2D radar during clutch fights and spotting third parties in squads with ESP boxes.',
 		date: '2026-07-28',
 		tag: 'Squads',
 	}),
@@ -313,19 +313,19 @@ export const customerReviews = [
 		rating: 4,
 		text: 'every cheat goes down on patch day, thats life. difference here is they actually posted on updates within a few hours last patch. was back online next morning. my old provider left me hanging for 4 days once so yeah',
 		short: 'every cheat goes down on patch day, thats life. difference here is they actually posted on updates within a few hours',
-		slug: 'warzone-ricochet-update-review-patchdaymike',
+		slug: 'valorant-vanguard-update-review-patchdaymike',
 		seoTitle: '{antiCheat} Patch Review by @patchDayMike — 4/5 | {brand}',
 		seoDescription:
 			'{antiCheat} patch-day review from @patchDayMike: 4/5 for how fast {brand} posts maintenance updates and gets the undetected cheat back online after patches.',
 		date: '2026-06-09',
-		tag: 'Ricochet updates',
+		tag: 'Vanguard updates',
 	}),
 	reviewMeta({
 		handle: 'snipezOnly_',
 		rating: 5,
 		text: 'sniper soft aim profile + esp for tag = chef kiss. dont @ me',
 		short: 'sniper soft aim profile + esp for tag = chef kiss. dont @ me',
-		slug: 'warzone-sniper-soft-aim-review-snipezonly',
+		slug: 'valorant-sniper-soft-aim-review-snipezonly',
 		seoTitle: 'Sniper Soft Aim by @snipezOnly_ — 5/5 | {brand}',
 		seoDescription:
 			'{game} sniper soft aim review from @snipezOnly_: 5/5 for the sniper aimbot profile paired with ESP tagging in the {brand} package.',

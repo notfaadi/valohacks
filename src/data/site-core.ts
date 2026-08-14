@@ -137,7 +137,7 @@ export const productInfo = {
 			'Hotkeys mid-match',
 			'Per-weapon profiles',
 		],
-		radar: ['2D radar overlay', 'Adjustable range', 'Works in BR and Resurgence-style modes'],
+		radar: ['2D radar overlay', 'Adjustable range', 'Works in Unrated and Competitive-style modes'],
 		general: [
 			fillBrandTokens('{antiCheat} maintenance after patches'),
 			'Digital delivery after checkout',

@@ -1,11 +1,11 @@
 {
-  "name": "Warzone Hacks",
-  "short_name": "Warzone",
-  "description": "Undetected warzone hacks — ESP, aimbot, and radar for PC",
+  "name": "Valorant Hacks",
+  "short_name": "Valorant",
+  "description": "Undetected valorant hacks — ESP, aimbot, and radar for PC",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0d0d0d",
-  "theme_color": "#0d0d0d",
+  "background_color": "#0f1419",
+  "theme_color": "#0f1419",
   "icons": [
     {
       "src": "/favicon.png",

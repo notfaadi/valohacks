@@ -49,8 +49,8 @@ export const simplePageCopy: Partial<Record<PageId, SimplePageCopy>> = {
 		sections: [
 			{
 				h2: 'ESP & wallhack',
-				paragraphs: ['See players, loot, and vehicles through walls.'],
-				list: ['Player boxes & distance', 'Loot and contract markers', 'Team colours on / off'],
+				paragraphs: ['See players and utility through walls.'],
+				list: ['Player boxes & distance', 'Spike and ability markers', 'Team colours on / off'],
 			},
 			{
 				h2: 'Aimbot & soft aim',
@@ -60,7 +60,7 @@ export const simplePageCopy: Partial<Record<PageId, SimplePageCopy>> = {
 			{
 				h2: 'Radar',
 				paragraphs: ['A simple 2D radar for threats outside your view.'],
-				list: ['Nearby enemy cues', 'Adjustable range', 'Works in BR & Resurgence'],
+				list: ['Nearby enemy cues', 'Adjustable range', 'Works in Unrated & Competitive'],
 			},
 			{
 				h2: 'Updates & support',
@@ -102,7 +102,7 @@ export const simplePageCopy: Partial<Record<PageId, SimplePageCopy>> = {
 		intro: brandCopy.statusIntro,
 		ctaPrimary: brandCopy.ctaBuy,
 		ctaSecondary: 'Undetected guide',
-		ctaSecondaryHref: '/undetected-warzone-cheats/',
+		ctaSecondaryHref: '/undetected-valorant-cheats/',
 		galleryTitle: 'In-game look',
 		sections: [
 			{

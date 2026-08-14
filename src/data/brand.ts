@@ -5,26 +5,26 @@
  */
 export const brand = {
 	/** Public brand name (nav, footer, H1 hero, schema Organization) */
-	name: 'Warzone Hacks',
+	name: 'Valorant Hacks',
 	/** Short product label if needed */
-	shortName: 'Warzone',
+	shortName: 'Valorant',
 	/** Canonical origin — no trailing slash */
-	url: 'https://warzonehacks.net',
+	url: 'https://valoranthacks.net',
 	locale: 'en',
 	market: 'Worldwide',
-	supportEmail: 'support@warzonehacks.net',
+	supportEmail: 'support@valoranthacks.net',
 	checkoutUrl: 'https://zadeyo.com/go/AMAN?to=%2Fproducts%2Fwarzone',
 
 	/** Game this template instance targets */
-	game: 'Warzone',
+	game: 'Valorant',
 	/** Anti-cheat name used in Status / FAQ copy */
-	antiCheat: 'RICOCHET',
+	antiCheat: 'Vanguard',
 
 	logo: '/images/warzone-hacks-logo.webp',
 	logoRaster: '/images/warzone-hacks-logo.png',
 	logoRasterWidth: 512,
 	logoRasterHeight: 512,
-	logoAlt: 'Warzone hacks logo',
+	logoAlt: 'Valorant hacks logo',
 	defaultOgImage: '/images/hero-banner.webp',
 	heroImage: '/images/hero-banner.webp',
 
@@ -40,12 +40,12 @@ export const brand = {
 	 * Edit in Brand Studio → Colors (tones are fully customizable).
 	 */
 	theme: {
-		accent: '#8b5cf6',
-		bg: '#0d0d0d',
-		soft: '#a78bfa',
-		deep: '#5b21b6',
-		hover: '#9f7aea',
-		panel: '#09080c',
+		accent: '#ff4655',
+		bg: '#0f1419',
+		soft: '#fd4556',
+		deep: '#bd3944',
+		hover: '#ff6b77',
+		panel: '#111823',
 	},
 
 	/**
@@ -53,15 +53,15 @@ export const brand = {
 	 * Keep 5–8 terms.
 	 */
 	keywords: {
-		primary: 'warzone hacks',
+		primary: 'valorant hacks',
 		list: [
-			'warzone hacks',
-			'warzone esp',
-			'warzone aimbot',
-			'warzone wallhack',
-			'warzone radar',
-			'undetected warzone hacks',
-			'best warzone hacks',
+			'valorant hacks',
+			'valorant cheats',
+			'valorant esp',
+			'valorant aimbot',
+			'valorant wallhack',
+			'undetected valorant hacks',
+			'best valorant hacks',
 		] as const,
 	},
 
@@ -126,7 +126,7 @@ export const brand = {
 	 */
 	sitemap: {
 		/** YYYY-MM-DD — Brand Studio can bump this on save to refresh crawl dates */
-		contentLastmod: '2026-08-10',
+		contentLastmod: '2026-08-14',
 		blogImageTitle: '{brand} blog',
 		blogImageCaption: 'Tips and updates for {primaryKeyword}',
 		reviewsImageTitle: '{brand} reviews',

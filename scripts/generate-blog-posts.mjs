@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Generates src/data/blog/posts.generated.ts with Warzone Intel posts.
+ * Generates src/data/blog/posts.generated.ts with Valorant Intel posts.
  * English content is the SEO source of truth for /blog/ routes.
  */
 import { writeFileSync } from 'node:fs';
@@ -13,10 +13,10 @@ const OUT = join(__dirname, '..', 'src', 'data', 'blog', 'posts.generated.ts');
 const LOCALES = ['en'];
 
 const EXT = {
-	epic: '<a href="https://www.epicgames.com/warzone" target="_blank" rel="noopener noreferrer">Activision Warzone</a>',
-	warzone: '<a href="https://www.warzone.com/" target="_blank" rel="noopener noreferrer">Warzone.com</a>',
-	status: '<a href="https://status.epicgames.com/" target="_blank" rel="noopener noreferrer">Activision Status</a>',
-	competitive: '<a href="https://www.warzone.com/competitive" target="_blank" rel="noopener noreferrer">Warzone Competitive</a>',
+	epic: '<a href="https://playvalorant.com" target="_blank" rel="noopener noreferrer">Riot Games Valorant</a>',
+	valorant: '<a href="https://playvalorant.com/" target="_blank" rel="noopener noreferrer">Valorant.com</a>',
+	status: '<a href="https://status.riotgames.com/" target="_blank" rel="noopener noreferrer">Riot Games Status</a>',
+	competitive: '<a href="https://playvalorant.com" target="_blank" rel="noopener noreferrer">Valorant Competitive</a>',
 };
 
 /** @typedef {{ h2: string, paragraphs: string[] }} Section */
@@ -31,21 +31,21 @@ const sources = [
 		updated: '2026-08-01',
 		category: 'Patch Notes Breakdown',
 		featured: false,
-		slug: 'warzone-patch-notes-guide',
-		title: 'Warzone Patch Notes: Buffs, Nerfs & Vaults',
+		slug: 'valorant-patch-notes-guide',
+		title: 'Valorant Patch Notes: Buffs, Nerfs & Vaults',
 		metaDescription:
-			'Warzone patch notes guide — buffs, nerfs, and vaults that reshape ranked loadouts. After Ricochet patches, check warzone hacks and warzone cheats updates.',
-		h1: 'Warzone Patch Notes: Buffs, Nerfs, and Vaults',
+			'Valorant patch notes guide — buffs, nerfs, and vaults that reshape ranked loadouts. After Vanguard patches, check valorant hacks and valorant cheats updates.',
+		h1: 'Valorant Patch Notes: Buffs, Nerfs, and Vaults',
 		intro:
 			'Stop skimming patch notes. Here is how buffs, nerfs, and vaults actually reshuffle the loot pool and your ranked loadout priorities.',
-		keywords: ['warzone patch notes', 'buffs', 'nerfs', 'vaults', 'loot pool', 'warzone intel'],
-		imageAlt: 'Warzone patch notes breakdown of buffs nerfs and vaults for ranked loadouts',
+		keywords: ['valorant patch notes', 'buffs', 'nerfs', 'vaults', 'loot pool', 'valorant intel'],
+		imageAlt: 'Valorant patch notes breakdown of buffs nerfs and vaults for ranked loadouts',
 		sections: [
 			{
 				h2: 'Read patches like a player, not a spectator',
 				paragraphs: [
 					'Most players misread patch notes by chasing the loudest bullet point. A small SMG nerf gets a rant video while a quiet mobility tweak silently rewires mid-game. The best ranked grinders treat patches like accountants — what changed in expected value?',
-					`Official notes publish through ${EXT.warzone} and ${EXT.activision}. Use those primary sources first, then translate ricocheth line into inventory decisions for your playlist.`,
+					`Official notes publish through ${EXT.valorant} and ${EXT.activision}. Use those primary sources first, then translate vanguardh line into inventory decisions for your playlist.`,
 					'Pro Tip — Three-question filter: For every note ask: (1) Does this change my drop path? (2) Does this change my 5-slot priority? (3) Does this change my fight distance? If all three are no, ignore the drama.',
 				],
 			},
@@ -53,13 +53,13 @@ const sources = [
 				h2: 'Buff, nerf, and vault framework',
 				paragraphs: [
 					'Vaults are binary — remove the item from your mental loot pool immediately. Heavy nerfs demote a weapon from core to flex. Light nerfs keep a gun if your accuracy is above lobby average. Buffs deserve a 10-game test before full buy-in. New items need spawn rate and best distance learning first.',
-					'If a meta AR takes a minor bloom or damage trim, it can still be S-tier on expected value — see our <a href="/blog/warzone-weapon-tier-list/">Warzone weapon tier list</a>. If a shotgun loses substantial headshot multiplier, close-range TTK windows shift the same day.',
+					'If a meta AR takes a minor bloom or damage trim, it can still be S-tier on expected value — see our <a href="/blog/valorant-weapon-tier-list/">Valorant weapon tier list</a>. If a shotgun loses substantial headshot multiplier, close-range TTK windows shift the same day.',
 				],
 			},
 			{
 				h2: 'How notes reshuffle loadout priority',
 				paragraphs: [
-					'When mid-range ARs are strong, prioritize rarity on AR earlier in loot routes. When mobility is nerfed or vaulted, uncontested chains with shorter hops beat hot drops that require escapes. When heals are buffed, aggressive third-parties become safer — which powers strategies in our <a href="/blog/warzone-resurgence-aggressive-strategies/">Resurgence aggression guide</a>.',
+					'When mid-range ARs are strong, prioritize rarity on AR earlier in loot routes. When mobility is nerfed or vaulted, uncontested chains with shorter hops beat hot drops that require escapes. When heals are buffed, aggressive third-parties become safer — which powers strategies in our <a href="/blog/valorant-competitive-aggressive-strategies/">Competitive aggression guide</a>.',
 					'Also separate balance patches from cosmetic and shop notes. Skin leaks are fun; they do not change TTK. Keep patch-day focus on weapons, healing, movement, and map POI changes.',
 				],
 			},
@@ -67,35 +67,35 @@ const sources = [
 				h2: 'Late-season checklist and next steps',
 				paragraphs: [
 					'Post-patch checklist: skim official notes for vaults first, update your shotgun/AR/mobility/heals spine, play 10 intentional test games, revisit tier-list assumptions, and adjust drop routes if mobility or loot changed.',
-					`On big update mornings, confirm ${EXT.status} is healthy before blaming your settings. If you also use warzone hacks in-match, check <a href="/updates/">Warzone Hacks Updates</a> after Ricochet anti-cheat patches.`,
+					`On big update mornings, confirm ${EXT.status} is healthy before blaming your settings. If you also use valorant hacks in-match, check <a href="/updates/">Valorant Hacks Updates</a> after Vanguard patches.`,
 					'Try This Today: Open the latest official patch notes and highlight vaults. Rewrite your 5-slot priority on paper. Queue a focused 5-game test block and note which fights felt different at 30–60m vs 0–15m.',
 				],
 			},
 		],
 	},
 	{
-		id: 'warzone-skin-leaks',
+		id: 'valorant-skin-leaks',
 		imageKey: 'headerArt',
 		published: '2026-07-27',
 		updated: '2026-08-01',
 		category: 'Cosmetics & Skins',
 		featured: false,
-		slug: 'warzone-skin-leaks-guide',
-		title: 'Warzone Skin Leaks: Season Cosmetics Guide',
+		slug: 'valorant-skin-leaks-guide',
+		title: 'Valorant Skin Leaks: Season Cosmetics Guide',
 		metaDescription:
-			'Warzone skin leaks and shop advice — which season cosmetics are worth CP before the next reset. Save smart and skip FOMO bundles on warzonehacks.net.',
-		h1: 'Warzone Skin Leaks Worth Your CP',
+			'Valorant skin leaks and shop advice — which season cosmetics are worth CP before the next reset. Save smart and skip FOMO bundles on valoranthacks.net.',
+		h1: 'Valorant Skin Leaks Worth Your CP',
 		intro:
 			'The next season is coming. Here is which leaked and rotating cosmetics are actually worth buying before the shop resets hard.',
-		keywords: ['warzone skin leaks', 'cosmetics', 'item shop', 'warzone intel', 'warzone cheats'],
-		imageAlt: 'Warzone season skin leaks and cosmetics shopping guide',
+		keywords: ['valorant skin leaks', 'cosmetics', 'item shop', 'valorant intel', 'valorant cheats'],
+		imageAlt: 'Valorant season skin leaks and cosmetics shopping guide',
 		sections: [
 			{
 				h2: 'Stop impulse buying before Season 4',
 				paragraphs: [
 					'Most players blow V-Bucks the week before a new season and then cannot buy the Battle Pass. Controversial take: most Item Shop impulse buys do not improve your win rate or locker happiness a month later.',
-					`Shop rotations and Battle Pass exclusives are official through ${EXT.warzone}. Leaks are entertainment — not a shopping list. Use them to decide what to skip.`,
-					'Pro Tip — Locker performance: Pros pick clean silhouettes. Busy outfits can hide enemy outlines in chaotic Resurgence endgames. Style is cool; readability wins games.',
+					`Shop rotations and Battle Pass exclusives are official through ${EXT.valorant}. Leaks are entertainment — not a shopping list. Use them to decide what to skip.`,
+					'Pro Tip — Locker performance: Pros pick clean silhouettes. Busy outfits can hide enemy outlines in chaotic Competitive endgames. Style is cool; readability wins games.',
 				],
 			},
 			{
@@ -109,35 +109,35 @@ const sources = [
 				h2: 'Leak watchlist and shop ritual',
 				paragraphs: [
 					'Treat late-season leak waves as theme previews, not confirmed shop dates. If a high-demand collab leaks, decide budget before it hits — not during the five-minute panic.',
-					'Daily reset ritual: open shop for 60 seconds, check wishlist, leave. Liquidity is power at season transitions. For competitive readability tips, pair this with our <a href="/blog/warzone-pro-settings-guide/">pro settings breakdown</a>.',
+					'Daily reset ritual: open shop for 60 seconds, check wishlist, leave. Liquidity is power at season transitions. For competitive readability tips, pair this with our <a href="/blog/valorant-pro-settings-guide/">pro settings breakdown</a>.',
 					'Try This Today: Write a 5-skin wishlist max. Set a V-Bucks floor you will not spend below until Season 4. Skip one FOMO bundle on purpose this week.',
 				],
 			},
 		],
 	},
 	{
-		id: 'warzone-weapon-tier-list',
+		id: 'valorant-weapon-tier-list',
 		imageKey: 'aimbotCombat',
 		published: '2026-07-25',
 		updated: '2026-08-01',
 		category: 'Weapon Tier Lists',
 		featured: true,
-		slug: 'warzone-weapon-tier-list',
-		title: 'Warzone Weapon Tier List: Best Guns Ranked',
+		slug: 'valorant-weapon-tier-list',
+		title: 'Valorant Weapon Tier List: Best Guns Ranked',
 		metaDescription:
-			'Warzone weapon tier list with data-backed TTK analysis — best ARs, SMGs, and loadout pairings for ranked and Resurgence. Pair with warzone hacks ESP reads.',
-		h1: 'Warzone Weapon Tier List: Best Guns Ranked',
+			'Valorant weapon tier list with data-backed TTK analysis — best ARs, SMGs, and loadout pairings for ranked and Competitive. Pair with valorant hacks ESP reads.',
+		h1: 'Valorant Weapon Tier List: Best Guns Ranked',
 		intro:
 			'Community tier lists underrate meta ARs. The damage-per-mag and mid-range TTK numbers say otherwise.',
-		keywords: ['warzone tier list', 'warzone weapons', 'ttk', 'warzone meta', 'warzone intel'],
-		imageAlt: 'Warzone weapon tier list data analysis for best guns in ranked',
+		keywords: ['valorant tier list', 'valorant weapons', 'ttk', 'valorant meta', 'valorant intel'],
+		imageAlt: 'Valorant weapon tier list data analysis for best guns in ranked',
 		sections: [
 			{
 				h2: 'Why the Hammer AR belongs in S-tier',
 				paragraphs: [
 					"Creator tier lists are entertainment, not science. They rank flashy mythics while the Hammer AR quietly prints mid-range eliminations because damage-per-second consistency beats higher-ceiling guns average players cannot control.",
-					'S-tier means best expected value across 100 ranked fights. Hammer wins at 30–70 meters — the distances where Resurgence and endgame actually happen. Shotguns own 0–15m. Snipers own 80m+. Everything between is AR country.',
-					`Confirm live values after patches on ${EXT.warzone}. Hierarchy logic stays useful even when decimals nudge.`,
+					'S-tier means best expected value across 100 ranked fights. Hammer wins at 30–70 meters — the distances where Competitive and endgame actually happen. Shotguns own 0–15m. Snipers own 80m+. Everything between is AR country.',
+					`Confirm live values after patches on ${EXT.valorant}. Hierarchy logic stays useful even when decimals nudge.`,
 					'Pro Tip — Spray discipline: Pros tap or micro-burst until bloom settles, then commit. Treat Hammer like a laser until the enemy wide-peeks — then dump.',
 				],
 			},
@@ -146,42 +146,42 @@ const sources = [
 				paragraphs: [
 					'Working purple/gold Hammer-style numbers: body ~33–36, head ~50–58, 6-bullet controlled spray ~198–216, 8-bullet dump ~264–288. The real metric is damage before disengage — magazine pressure forgives a whiffed first burst.',
 					'First-shot accuracy is the hidden S-tier stat. Cadence: peek → 3–4 bullets → jiggle back → re-peek. Do not stand still for ego sprays unless the enemy is healing.',
-					'Pair this mid-range plan with loot discipline from our <a href="/blog/warzone-loot-routes-guide/">Warzone loot routes guide</a>.',
+					'Pair this mid-range plan with loot discipline from our <a href="/blog/valorant-loot-routes-guide/">Valorant loot routes guide</a>.',
 				],
 			},
 			{
 				h2: 'Loadout pairings, mistakes, and practice',
 				paragraphs: [
-					'Core: meta AR + high-burst shotgun + mobility + heals. In Resurgence, this supports the laddering strategies in our <a href="/blog/warzone-resurgence-aggressive-strategies/">aggression guide</a>.',
+					'Core: meta AR + high-burst shotgun + mobility + heals. In Competitive, this supports the laddering strategies in our <a href="/blog/valorant-competitive-aggressive-strategies/">aggression guide</a>.',
 					'Common mistakes: full-spraying from 80m+, re-peeking the same pixel, swapping to SMG at 40m out of habit, never practicing crouch-spray in Creative.',
 					'Try This Today: Prioritize Hammer for 10 games. Count your first four bullets in every mid fight. If you die inside 15m without shotgun out, fix loadout timing — not the AR.',
-					'Players who also use aim-assist tooling can review <a href="/warzone-aimbot/">Warzone Aimbot</a> profiles after they lock a sens — mechanics first, tools second.',
+					'Players who also use aim-assist tooling can review <a href="/valorant-aimbot/">Valorant Aimbot</a> profiles after they lock a sens — mechanics first, tools second.',
 				],
 			},
 		],
 	},
 	{
-		id: 'warzone-resurgence-meta',
+		id: 'valorant-competitive-meta',
 		imageKey: 'battleRoyaleCombat',
 		published: '2026-07-22',
 		updated: '2026-08-01',
-		category: 'Resurgence',
+		category: 'Competitive',
 		featured: true,
-		slug: 'warzone-resurgence-aggressive-strategies',
-		title: 'Warzone Resurgence Meta: 5 Aggressive Strategies',
+		slug: 'valorant-competitive-aggressive-strategies',
+		title: 'Valorant Competitive Meta: 5 Aggressive Strategies',
 		metaDescription:
-			'Break the passive Warzone Resurgence meta with 5 aggressive strategies — timings, damage windows, and fight paths that win ranked. Pair with warzone ESP reads.',
-		h1: 'Warzone Resurgence Meta: 5 Aggressive Strategies',
+			'Break the passive Valorant Competitive meta with 5 aggressive strategies — timings, damage windows, and fight paths that win ranked. Pair with valorant ESP reads.',
+		h1: 'Valorant Competitive Meta: 5 Aggressive Strategies',
 		intro:
-			'Passive third-partying is dead weight. These five aggressive Resurgence strategies flip mid-game fights before the lobby even rotates.',
-		keywords: ['warzone resurgence', 'warzone ranked', 'aggressive strategies', 'warzone meta', 'warzone esp'],
-		imageAlt: 'Warzone Resurgence aggressive fight meta strategies for ranked',
+			'Passive third-partying is dead weight. These five aggressive Competitive strategies flip mid-game fights before the lobby even rotates.',
+		keywords: ['valorant competitive', 'valorant ranked', 'aggressive strategies', 'valorant meta', 'valorant esp'],
+		imageAlt: 'Valorant Competitive aggressive fight meta strategies for ranked',
 		sections: [
 			{
-				h2: 'Why the Resurgence meta feels soft',
+				h2: 'Why the Competitive meta feels soft',
 				paragraphs: [
-					'Most Resurgence players wait behind a rock for the last two teams to trade, then spray into a mess. That soft meta is why ranks stall. Strong fighters manufacture first-shot advantage and leave before the third party arrives.',
-					'A clean first-shot AR spray at 40–55 meters can delete 80–120 HP before the opponent ads. That window is the game. Information tools like <a href="/warzone-esp/">Warzone ESP</a> help — but aggression still needs cover discipline.',
+					'Most Competitive players wait behind a rock for the last two teams to trade, then spray into a mess. That soft meta is why ranks stall. Strong fighters manufacture first-shot advantage and leave before the third party arrives.',
+					'A clean first-shot AR spray at 40–55 meters can delete 80–120 HP before the opponent ads. That window is the game. Information tools like <a href="/valorant-esp/">Valorant ESP</a> help — but aggression still needs cover discipline.',
 					'Pro Tip — Decide your exit before you swing. Take a 150+ damage window, then hard disengage with mobility before the usual 4–7 second third-party clock.',
 				],
 			},
@@ -197,28 +197,28 @@ const sources = [
 				h2: 'Warmup checklist and next guides',
 				paragraphs: [
 					'Before ranked: 10 minutes aim or peek maps, loadout priority AR + shotgun + mobility + heals, two POIs with strong cover ladders, and a 10-game first-shot aggression block.',
-					'Pair this article with <a href="/blog/warzone-loot-routes-guide/">loot routes</a>, <a href="/blog/warzone-weapon-tier-list/">weapon tiers</a>, and <a href="/blog/warzone-warmup-maps-ranked/">warmup maps</a>.',
-					'Try This Today: Queue Resurgence and force first contact when you have shield + AR. Track whether you disengaged before the 7-second third-party window.',
+					'Pair this article with <a href="/blog/valorant-loot-routes-guide/">loot routes</a>, <a href="/blog/valorant-weapon-tier-list/">weapon tiers</a>, and <a href="/blog/valorant-warmup-maps-ranked/">warmup maps</a>.',
+					'Try This Today: Queue Competitive and force first contact when you have shield + AR. Track whether you disengaged before the 7-second third-party window.',
 				],
 			},
 		],
 	},
 	{
-		id: 'warzone-tournament-meta',
+		id: 'valorant-tournament-meta',
 		imageKey: 'rebootFight',
 		published: '2026-07-20',
 		updated: '2026-08-01',
 		category: 'Esports & Tournaments',
 		featured: false,
-		slug: 'warzone-tournament-meta-guide',
-		title: 'Warzone Tournament Meta: What Winners Drop',
+		slug: 'valorant-tournament-meta-guide',
+		title: 'Valorant Tournament Meta: What Winners Drop',
 		metaDescription:
-			'Warzone tournament meta guide — what pro winners drop, how they loot, and which mid-game habits translate to your ranked climb in 2026. Pair with warzone hacks.',
-		h1: 'Warzone Tournament Meta: What Winners Drop and Why',
+			'Valorant tournament meta guide — what pro winners drop, how they loot, and which mid-game habits translate to your ranked climb in 2026. Pair with valorant hacks.',
+		h1: 'Valorant Tournament Meta: What Winners Drop and Why',
 		intro:
 			'Tournament winners are not lucky drop gods. Here is what their POIs, loadouts, and mid-game habits actually optimize for.',
-		keywords: ['warzone esports', 'tournament drops', 'warzone meta', 'warzone intel', 'warzone cheats'],
-		imageAlt: 'Warzone tournament meta watch drop spots and loadout patterns',
+		keywords: ['valorant esports', 'tournament drops', 'valorant meta', 'valorant intel', 'valorant cheats'],
+		imageAlt: 'Valorant tournament meta watch drop spots and loadout patterns',
 		sections: [
 			{
 				h2: 'Watch tournament film like a coach',
@@ -231,35 +231,35 @@ const sources = [
 				h2: 'Drop EV and loadout patterns',
 				paragraphs: [
 					'Score every POI on contest rate, loot quality by ~2:00, zone pain, exit path, and split potential. Edge POIs with clean exits often beat sexy mid POIs that look good on stream.',
-					'Expect shotgun + mid AR + mobility + heals as the spine. Mythics are taken when free, not forced — matching our <a href="/blog/warzone-weapon-tier-list/">weapon tier list</a>.',
+					'Expect shotgun + mid AR + mobility + heals as the spine. Mythics are taken when free, not forced — matching our <a href="/blog/valorant-weapon-tier-list/">weapon tier list</a>.',
 				],
 			},
 			{
 				h2: 'What translates to ranked',
 				paragraphs: [
 					'Translate loot-timer discipline, loadout spine, early rotates, and selective fights. Do not blindly mirror a trio drop in solo queue.',
-					'Winners rotate early enough to choose sides. Zone edge pressure from our <a href="/blog/warzone-resurgence-aggressive-strategies/">Resurgence guide</a> shows up constantly in endgames.',
+					'Winners rotate early enough to choose sides. Zone edge pressure from our <a href="/blog/valorant-competitive-aggressive-strategies/">Competitive guide</a> shows up constantly in endgames.',
 					'Try This Today: Watch 15 minutes of a winner VOD with five timestamps. Steal one mid-game habit only. Run it for a 6-game ranked block.',
 				],
 			},
 		],
 	},
 	{
-		id: 'warzone-loot-routes',
+		id: 'valorant-loot-routes',
 		imageKey: 'battleRoyaleIslandMap',
 		published: '2026-07-18',
 		updated: '2026-08-01',
-		category: 'Battle Royale Meta',
+		category: 'Unrated Meta',
 		featured: true,
-		slug: 'warzone-loot-routes-guide',
-		title: 'Warzone Loot Routes: Full Loadout Every Spawn',
+		slug: 'valorant-loot-routes-guide',
+		title: 'Valorant Loot Routes: Full Loadout Every Spawn',
 		metaDescription:
-			'High-percentage Warzone loot routes that leave spawn with gold guns, full plates, and loadout drops — ranked drop paths that win mid-game fights in 2026.',
-		h1: 'Warzone Loot Routes: Full Loadout Every Spawn',
+			'High-percentage Valorant loot routes that leave spawn with gold guns, full plates, and loadout drops — ranked drop paths that win mid-game fights in 2026.',
+		h1: 'Valorant Loot Routes: Full Loadout Every Spawn',
 		intro:
 			'Winning starts before the first fight. These loot routes consistently convert drops into gold loadouts and full heals.',
-		keywords: ['warzone loot routes', 'warzone drops', 'gold loot', 'warzone ranked', 'warzone esp'],
-		imageAlt: 'Warzone secret loot routes full gold spawn guide for ranked',
+		keywords: ['valorant loot routes', 'valorant drops', 'gold loot', 'valorant ranked', 'valorant esp'],
+		imageAlt: 'Valorant secret loot routes full gold spawn guide for ranked',
 		sections: [
 			{
 				h2: 'The real ranked bottleneck is early inventory',
@@ -274,40 +274,40 @@ const sources = [
 				paragraphs: [
 					'Route A — contested edge POI (3–6 players): land outer roof loot, snake inward, leave before late third parties (~2 minutes). Route B — uncontested three-POI chain: sacrifice early kills for purple/gold inventory by minute three. Route C — mid-map surge: loot vacuum piles 90–150 seconds after hot drops empty.',
 					'Timing targets: 0–20s first gun, 20–50s clear cluster, 50–80s chests + minis, 80–120s upgrade or leave. Slot priority: shotgun, AR, mobility, heals, flex.',
-					`POI names rotate with ${EXT.warzone} seasons — keep the geometry, not the landmark brand.`,
+					`POI names rotate with ${EXT.valorant} seasons — keep the geometry, not the landmark brand.`,
 				],
 			},
 			{
 				h2: 'Convert gold guns into wins',
 				paragraphs: [
-					'Pair these routes with <a href="/blog/warzone-resurgence-aggressive-strategies/">Resurgence aggression</a> and <a href="/blog/warzone-weapon-tier-list/">weapon tiers</a>. Leave spawn rich so mid-game becomes a skill check.',
-					'If you use loot ESP markers in practice, read <a href="/warzone-esp/">Warzone ESP</a> for category toggles — then still run the timer so habits stay sharp without overlays.',
+					'Pair these routes with <a href="/blog/valorant-competitive-aggressive-strategies/">Competitive aggression</a> and <a href="/blog/valorant-weapon-tier-list/">weapon tiers</a>. Leave spawn rich so mid-game becomes a skill check.',
+					'If you use loot ESP markers in practice, read <a href="/valorant-esp/">Valorant ESP</a> for category toggles — then still run the timer so habits stay sharp without overlays.',
 					'Try This Today: Run one uncontested chain for 8 games. Screenshot inventory at 2:30 and compare rarities before adding a contested edge day.',
 				],
 			},
 		],
 	},
 	{
-		id: 'warzone-pro-settings',
+		id: 'valorant-pro-settings',
 		imageKey: 'cheatsPackage',
 		published: '2026-07-12',
 		updated: '2026-08-01',
 		category: 'Pro Player Setups',
 		featured: false,
-		slug: 'warzone-pro-settings-guide',
-		title: 'Warzone Pro Settings: Champion Setup Guide',
+		slug: 'valorant-pro-settings-guide',
+		title: 'Valorant Pro Settings: Champion Setup Guide',
 		metaDescription:
-			'Warzone pro settings guide — sensitivity ranges, binds philosophy, and practice routines for ranked and Resurgence in 2026. Pair with warzone ESP reads.',
-		h1: 'Warzone Pro Settings: Champion-Inspired Setup',
+			'Valorant pro settings guide — sensitivity ranges, binds philosophy, and practice routines for ranked and Competitive in 2026. Pair with valorant ESP reads.',
+		h1: 'Valorant Pro Settings: Champion-Inspired Setup',
 		intro:
 			'You do not need exact pro digits — you need champion settings philosophy. Here is a setup you can adapt today.',
-		keywords: ['warzone settings', 'warzone sensitivity', 'pro setup', 'warzone ranked', 'warzone hacks'],
-		imageAlt: 'Warzone pro player sensitivity settings and setup guide',
+		keywords: ['valorant settings', 'valorant sensitivity', 'pro setup', 'valorant ranked', 'valorant hacks'],
+		imageAlt: 'Valorant pro player sensitivity settings and setup guide',
 		sections: [
 			{
 				h2: 'Settings remove friction — they are not magic',
 				paragraphs: [
-					"Copying a world champion's settings will not make you a world champion. Copying stable sens, low clutter, rricochethable binds, and a ruthless warmup removes friction so aim and decisions can improve.",
+					"Copying a world champion's settings will not make you a world champion. Copying stable sens, low clutter, rvanguardhable binds, and a ruthless warmup removes friction so aim and decisions can improve.",
 					'Pro Tip — Change one variable at a time. Never retune sens, binds, and HUD the same night.',
 				],
 			},
@@ -322,175 +322,175 @@ const sources = [
 			{
 				h2: 'Champion-style practice routine',
 				paragraphs: [
-					'0–10 minutes aim tracker, 10–20 peek or movement drills, 20–30 realistic fights, then ranked. Pair with our <a href="/blog/warzone-warmup-maps-ranked/">warmup map categories</a>.',
-					'If you later configure Aimbot smoothness for practice tooling, start from <a href="/warzone-soft-aim/">soft aim</a> after your raw sens is locked — never chase both variables at once.',
+					'0–10 minutes aim tracker, 10–20 peek or movement drills, 20–30 realistic fights, then ranked. Pair with our <a href="/blog/valorant-warmup-maps-ranked/">warmup map categories</a>.',
+					'If you later configure Aimbot smoothness for practice tooling, start from <a href="/valorant-soft-aim/">soft aim</a> after your raw sens is locked — never chase both variables at once.',
 					'Try This Today: Write dpi + sens, adjust at most once by a small percent, then play 5 games without touching settings again.',
 				],
 			},
 		],
 	},
 	{
-		id: 'warzone-warmup-maps',
+		id: 'valorant-warmup-maps',
 		imageKey: 'playerEsp',
 		published: '2026-07-08',
 		updated: '2026-08-01',
 		category: 'Warmup & Practice',
 		featured: false,
-		slug: 'warzone-warmup-maps-ranked',
-		title: 'Warzone Warmup Routine: 10 Maps Before Ranked',
+		slug: 'valorant-warmup-maps-ranked',
+		title: 'Valorant Warmup Routine: 10 Maps Before Ranked',
 		metaDescription:
-			'Ten Warzone warmup map categories and a 25-minute routine pros use before ranked — aim, peeks, movement, and Resurgence fight reps for 2026.',
-		h1: 'Warzone Warmup Maps Pros Use Before Ranked',
+			'Ten Valorant warmup map categories and a 25-minute routine pros use before ranked — aim, peeks, movement, and Competitive fight reps for 2026.',
+		h1: 'Valorant Warmup Maps Pros Use Before Ranked',
 		intro:
 			'Stop freezing in first fight. These warmup categories get your mechanics hot before you touch ranked.',
-		keywords: ['warzone warmup', 'aim trainers', 'warzone ranked', 'warzone meta', 'warzone hacks'],
-		imageAlt: 'Warzone warmup maps and routine pros use before ranked',
+		keywords: ['valorant warmup', 'aim trainers', 'valorant ranked', 'valorant meta', 'valorant hacks'],
+		imageAlt: 'Valorant warmup maps and routine pros use before ranked',
 		sections: [
 			{
 				h2: 'Warmups win Elo before the queue starts',
 				paragraphs: [
 					'Your first two ranked fights often decide whether a session tilts. Pros arrive sharp from Creative — another 40 pub stomps is a worse warmup than 20 focused minutes.',
-					`Find current island codes in Creative via ${EXT.warzone}. We list durable categories because brittle codes die every season update.`,
+					`Find current island codes in Creative via ${EXT.valorant}. We list durable categories because brittle codes die every season update.`,
 					'Pro Tip — Keep a sticky core playlist. Swap one map per week, not every day.',
 				],
 			},
 			{
 				h2: '25-minute routine and ten map categories',
 				paragraphs: [
-					'0–8 min aim tracker. 8–15 min edit course or Resurgence peek map. 15–22 min realistic fight / box fight / zone wars. 22–25 min reset, then ranked.',
-					'Categories: pure aim tracker, shotgun scenarios, mid-range AR tracking (Hammer practice), piece control/edits, Resurgence cover peeks, realistic 1v1s, zone wars, reload/swap timing, movement tech, scrim-style multi-fight maps.',
-					'Resurgence mains should replace edit courses with double-peek ladders from our <a href="/blog/warzone-resurgence-aggressive-strategies/">aggression guide</a>.',
+					'0–8 min aim tracker. 8–15 min edit course or Competitive peek map. 15–22 min realistic fight / box fight / zone wars. 22–25 min reset, then ranked.',
+					'Categories: pure aim tracker, shotgun scenarios, mid-range AR tracking (Hammer practice), piece control/edits, Competitive cover peeks, realistic 1v1s, zone wars, reload/swap timing, movement tech, scrim-style multi-fight maps.',
+					'Competitive mains should replace edit courses with double-peek ladders from our <a href="/blog/valorant-competitive-aggressive-strategies/">aggression guide</a>.',
 				],
 			},
 			{
 				h2: 'Mistakes that waste warmup time',
 				paragraphs: [
 					'Only melting easy bots, ignoring mid-range, warming up 90 minutes then playing two tilted games, and changing binds mid-warmup all waste Elo.',
-					'After mechanics are hot, information tools like <a href="/warzone-radar-hack/">radar hack</a> or <a href="/warzone-esp/">ESP</a> are optional overlays — they do not replace a cold shotgun timing. For the full stack overview, see <a href="/warzone-hacks/">Warzone hacks</a>.',
+					'After mechanics are hot, information tools like <a href="/valorant-radar-hack/">radar hack</a> or <a href="/valorant-esp/">ESP</a> are optional overlays — they do not replace a cold shotgun timing. For the full stack overview, see <a href="/valorant-hacks/">Valorant hacks</a>.',
 					'Try This Today: Favorite four maps across aim, peeks, fights, and endgame. Run the 25-minute block, then play only six ranked games.',
 				],
 			},
 		],
 	},
 	{
-		id: 'warzone-hacks-complete-guide',
+		id: 'valorant-hacks-complete-guide',
 		imageKey: 'battleRoyaleCombat',
 		published: '2026-07-31',
 		updated: '2026-08-01',
-		category: 'Warzone Hacks',
+		category: 'Valorant Hacks',
 		featured: true,
-		slug: 'warzone-hacks-complete-guide-2026',
-		title: 'Warzone Hacks 2026: Complete Undetected Guide',
+		slug: 'valorant-hacks-complete-guide-2026',
+		title: 'Valorant Hacks 2026: Complete Undetected Guide',
 		metaDescription:
-			'Complete warzone hacks guide for PC and controllers — ESP boxes, soft aim, cloud DMA, and Ricochet maintenance in 2026. Compare the full package and buy.',
-		h1: 'Warzone Hacks 2026: The Complete Undetected Guide',
+			'Complete valorant hacks guide for PC and controllers — ESP boxes, soft aim, cloud DMA, and Vanguard maintenance in 2026. Compare the full package and buy.',
+		h1: 'Valorant Hacks 2026: The Complete Undetected Guide',
 		intro:
-			'Searching for Warzone hacks in 2026? This guide covers ESP wallhack, Aimbot, radar, undetected maintenance, and how warzone cheats searchers map to the same Windows PC package.',
-		keywords: ['warzone hacks', 'undetected warzone hacks', 'warzone cheats', 'esp', 'aimbot', 'ricochet'],
-		imageAlt: 'Warzone hacks complete guide showing ESP wallhack and Aimbot for 2026',
+			'Searching for Valorant hacks in 2026? This guide covers ESP wallhack, Aimbot, radar, undetected maintenance, and how valorant cheats searchers map to the same Windows PC package.',
+		keywords: ['valorant hacks', 'undetected valorant hacks', 'valorant cheats', 'esp', 'aimbot', 'vanguard'],
+		imageAlt: 'Valorant hacks complete guide showing ESP wallhack and Aimbot for 2026',
 		sections: [
 			{
-				h2: 'What Warzone hacks actually include',
+				h2: 'What Valorant hacks actually include',
 				paragraphs: [
-					'Warzone hacks usually mean visibility plus combat assist: player ESP wallhack, loot markers, 2D radar threat cues, and configurable Aimbot. Buyers who type warzone cheats are looking for the same stack — different wording, same BR loop.',
-					`Official seasons and client updates publish through ${EXT.activision} and ${EXT.warzone}. Anti-cheat context lives on Ricochet anti-cheat. Our <a href="/warzone-hacks/">Warzone hacks pillar</a> is the commercial landing; this post is the long-form explainer.`,
+					'Valorant hacks usually mean visibility plus combat assist: player ESP wallhack, loot markers, 2D radar threat cues, and configurable Aimbot. Buyers who type valorant cheats are looking for the same stack — different wording, same BR loop.',
+					`Official seasons and client updates publish through ${EXT.activision} and ${EXT.valorant}. Anti-cheat context lives on Vanguard. Our <a href="/valorant-hacks/">Valorant hacks pillar</a> is the commercial landing; this post is the long-form explainer.`,
 					'Pro Tip — One license, full loop: Prefer a maintained package over stacking single-feature downloads that break on every patch.',
 				],
 			},
 			{
 				h2: 'ESP, wallhack, Aimbot, and radar roles',
 				paragraphs: [
-					'ESP/wallhack answers where squads and loot sit. Radar covers flanks outside FOV. Aimbot covers firefight consistency once you commit. Soft aim profiles help when you want smoother tracking — see <a href="/warzone-soft-aim/">soft aim</a> and <a href="/warzone-aimbot/">Aimbot controls</a>.',
-					'Deep pages: <a href="/warzone-esp/">Warzone ESP</a>, <a href="/warzone-wallhack/">wallhack</a>, <a href="/warzone-radar-hack/">radar hack</a>, <a href="/warzone-aimbot-hack/">aimbot hack</a>, and <a href="/warzone-esp-hack/">ESP hack</a>.',
+					'ESP/wallhack answers where squads and loot sit. Radar covers flanks outside FOV. Aimbot covers firefight consistency once you commit. Soft aim profiles help when you want smoother tracking — see <a href="/valorant-soft-aim/">soft aim</a> and <a href="/valorant-aimbot/">Aimbot controls</a>.',
+					'Deep pages: <a href="/valorant-esp/">Valorant ESP</a>, <a href="/valorant-wallhack/">wallhack</a>, <a href="/valorant-radar-hack/">radar hack</a>, <a href="/valorant-aimbot-hack/">aimbot hack</a>, and <a href="/valorant-esp-hack/">ESP hack</a>.',
 				],
 			},
 			{
-				h2: 'Undetected Warzone hacks and Ricochet patches',
+				h2: 'Undetected Valorant hacks and Vanguard patches',
 				paragraphs: [
-					'Undetected Warzone hacks require rebuilds after Ricochet anti-cheat and major Warzone updates. No vendor can promise permanent undetected status — check <a href="/updates/">Updates</a> before you queue.',
-					`On patch mornings confirm ${EXT.status}, then read our <a href="/ricochet-bypass/">Ricochet bypass guide</a> and <a href="/blog/undetected-warzone-hacks-ricochet/">undetected EAC notes</a>.`,
+					'Undetected Valorant hacks require rebuilds after Vanguard and major Valorant updates. No vendor can promise permanent undetected status — check <a href="/updates/">Updates</a> before you queue.',
+					`On patch mornings confirm ${EXT.status}, then read our <a href="/vanguard-bypass/">Vanguard bypass guide</a> and <a href="/blog/undetected-valorant-hacks-vanguard/">undetected EAC notes</a>.`,
 					'Try This Today: Open the hacks pillar, skim Features, compare Pricing ($35 monthly / $150 lifetime), and bookmark Updates for the next Epic patch.',
 				],
 			},
 			{
 				h2: 'Next steps — pricing, setup, and cheats pages',
 				paragraphs: [
-					'Ready to buy? Start at the <a href="/warzone-hacks/">Warzone hacks pillar page</a>, then <a href="/pricing/">Pricing</a> and <a href="/setup/">Setup</a>. Prefer cheats wording? Read <a href="/warzone-cheats-2026/">warzone cheats 2026</a> and <a href="/blog/call-of-duty-warzone-cheats-buyers-guide/">cheats buyers guide</a>.',
+					'Ready to buy? Start at the <a href="/valorant-hacks/">Valorant hacks pillar page</a>, then <a href="/pricing/">Pricing</a> and <a href="/setup/">Setup</a>. Prefer cheats wording? Read <a href="/valorant-cheats-2026/">valorant cheats 2026</a> and <a href="/blog/valorant-cheats-buyers-guide/">cheats buyers guide</a>.',
 					'Support: include your order ID on the <a href="/support/">Support</a> page after checkout.',
 				],
 			},
 		],
 	},
 	{
-		id: 'call-of-duty-warzone-cheats-buyers-guide',
+		id: 'valorant-cheats-buyers-guide',
 		imageKey: 'cheatsPackage',
 		published: '2026-07-30',
 		updated: '2026-08-01',
-		category: 'Warzone Cheats',
+		category: 'Valorant Cheats',
 		featured: true,
-		slug: 'call-of-duty-warzone-cheats-buyers-guide',
-		title: 'Warzone Cheats Buyers Guide: What to Check',
+		slug: 'valorant-cheats-buyers-guide',
+		title: 'Valorant Cheats Buyers Guide: What to Check',
 		metaDescription:
-			'Warzone cheats buyers guide for PC and controllers — ESP boxes, soft aim, cloud DMA, pricing, and Ricochet status. Compare warzone hacks before checkout.',
-		h1: 'Warzone Cheats Buyers Guide: What Matters in 2026',
+			'Valorant cheats buyers guide for PC and controllers — ESP boxes, soft aim, cloud DMA, pricing, and Vanguard status. Compare valorant hacks before checkout.',
+		h1: 'Valorant Cheats Buyers Guide: What Matters in 2026',
 		intro:
-			'Shopping for warzone cheats? Use this checklist for ESP wallhack, Aimbot, radar, Ricochet maintenance, and license length — then cross-check the Warzone hacks pillar before checkout.',
-		keywords: ['warzone cheats', 'best warzone cheats', 'warzone hacks', 'buyers guide', 'undetected'],
-		imageAlt: 'Warzone cheats buyers guide checklist for ESP Aimbot and pricing',
+			'Shopping for valorant cheats? Use this checklist for ESP wallhack, Aimbot, radar, Vanguard maintenance, and license length — then cross-check the Valorant hacks pillar before checkout.',
+		keywords: ['valorant cheats', 'best valorant cheats', 'valorant hacks', 'buyers guide', 'undetected'],
+		imageAlt: 'Valorant cheats buyers guide checklist for ESP Aimbot and pricing',
 		sections: [
 			{
 				h2: 'Buyer checklist before you pay',
 				paragraphs: [
-					'Confirm Windows PC support, Ricochet maintenance cadence, ESP + Aimbot + radar in one license, clear pricing, and a live Updates log. Skip tools that only ship a wallhack with no rebuild notes.',
-					'Primary commercial pages: <a href="/best-warzone-cheats/">best Warzone cheats</a>, <a href="/warzone-cheats-2026/">cheats 2026</a>, and <a href="/warzone-hacks/">Warzone hacks</a> (hacks is the main brand keyword).',
+					'Confirm Windows PC support, Vanguard maintenance cadence, ESP + Aimbot + radar in one license, clear pricing, and a live Updates log. Skip tools that only ship a wallhack with no rebuild notes.',
+					'Primary commercial pages: <a href="/best-valorant-cheats/">best Valorant cheats</a>, <a href="/valorant-cheats-2026/">cheats 2026</a>, and <a href="/valorant-hacks/">Valorant hacks</a> (hacks is the main brand keyword).',
 				],
 			},
 			{
 				h2: 'Hacks vs cheats wording',
 				paragraphs: [
-					'Warzone hacks and warzone cheats describe the same product category for most searchers. We lead with hacks on warzonehacks.net while keeping cheats pages for buyers who use that query.',
+					'Valorant hacks and valorant cheats describe the same product category for most searchers. We lead with hacks on valoranthacks.net while keeping cheats pages for buyers who use that query.',
 					`Balance and anti-cheat reality still come from ${EXT.activision}. Product rebuild timing is on our <a href="/updates/">Updates</a> page.`,
 				],
 			},
 			{
 				h2: 'Feature pages worth opening',
 				paragraphs: [
-					'Open <a href="/warzone-esp/">ESP</a>, <a href="/warzone-aimbot/">Aimbot</a>, <a href="/features/">Features</a>, and <a href="/pricing/">Pricing</a> before you buy. Delivery and activation steps live on <a href="/setup/">Setup</a>.',
-					'Related reading: <a href="/blog/warzone-hacks-complete-guide-2026/">hacks complete guide</a> and <a href="/blog/warzone-cheats-2026-whats-new/">cheats 2026 what\'s new</a>.',
+					'Open <a href="/valorant-esp/">ESP</a>, <a href="/valorant-aimbot/">Aimbot</a>, <a href="/features/">Features</a>, and <a href="/pricing/">Pricing</a> before you buy. Delivery and activation steps live on <a href="/setup/">Setup</a>.',
+					'Related reading: <a href="/blog/valorant-hacks-complete-guide-2026/">hacks complete guide</a> and <a href="/blog/valorant-cheats-2026-whats-new/">cheats 2026 what\'s new</a>.',
 					'Try This Today: Write your must-have list (ESP categories, Aimbot smoothness, lifetime vs monthly), then compare against Features once.',
 				],
 			},
 		],
 	},
 	{
-		id: 'warzone-cheats-2026-whats-new',
+		id: 'valorant-cheats-2026-whats-new',
 		imageKey: 'hero',
 		published: '2026-07-28',
 		updated: '2026-08-01',
-		category: 'Warzone Cheats',
+		category: 'Valorant Cheats',
 		featured: false,
-		slug: 'warzone-cheats-2026-whats-new',
-		title: 'Warzone Cheats 2026: What Changed This Year',
+		slug: 'valorant-cheats-2026-whats-new',
+		title: 'Valorant Cheats 2026: What Changed This Year',
 		metaDescription:
-			'Warzone cheats 2026 overview — ESP boxes, soft aim, and cloud DMA for PC and controllers with Ricochet maintenance. Pair with the hacks pillar before buying.',
-		h1: 'Warzone Cheats 2026: What Buyers Need Now',
+			'Valorant cheats 2026 overview — ESP boxes, soft aim, and cloud DMA for PC and controllers with Vanguard maintenance. Pair with the hacks pillar before buying.',
+		h1: 'Valorant Cheats 2026: What Buyers Need Now',
 		intro:
-			'Warzone cheats 2026 searches spike every season. Here is what still matters: maintained ESP wallhack, Aimbot profiles, radar awareness, and rebuilds after Ricochet anti-cheat patches.',
-		keywords: ['warzone cheats 2026', 'warzone hacks', 'ricochet', 'esp', 'aimbot'],
-		imageAlt: 'Warzone cheats 2026 overview for undetected ESP and Aimbot buyers',
+			'Valorant cheats 2026 searches spike every season. Here is what still matters: maintained ESP wallhack, Aimbot profiles, radar awareness, and rebuilds after Vanguard patches.',
+		keywords: ['valorant cheats 2026', 'valorant hacks', 'vanguard', 'esp', 'aimbot'],
+		imageAlt: 'Valorant cheats 2026 overview for undetected ESP and Aimbot buyers',
 		sections: [
 			{
 				h2: 'Why 2026 buyers still need maintenance',
 				paragraphs: [
-					'Season maps, weapons, and Ricochet updates still break stale tools. A 2026-ready package publishes rebuild notes — not a frozen prior-year build.',
-					`Track official messaging on ${EXT.warzone}, then confirm product status on <a href="/updates/">Updates</a> and <a href="/warzone-cheats-2026/">the cheats 2026 landing</a>.`,
+					'Season maps, weapons, and Vanguard updates still break stale tools. A 2026-ready package publishes rebuild notes — not a frozen prior-year build.',
+					`Track official messaging on ${EXT.valorant}, then confirm product status on <a href="/updates/">Updates</a> and <a href="/valorant-cheats-2026/">the cheats 2026 landing</a>.`,
 				],
 			},
 			{
 				h2: 'Keyword map: cheats 2026 ↔ hacks',
 				paragraphs: [
-					'Use the <a href="/warzone-cheats-2026/">Warzone cheats 2026 guide</a> for cheats-year intent and the <a href="/warzone-hacks/">Warzone hacks pillar page</a> for the primary hacks intent. Both point to the same ESP + Aimbot + radar stack.',
-					'Also see <a href="/blog/warzone-hacks-complete-guide-2026/">hacks guide</a> and <a href="/undetected-warzone-cheats/">undetected status</a>.',
+					'Use the <a href="/valorant-cheats-2026/">Valorant cheats 2026 guide</a> for cheats-year intent and the <a href="/valorant-hacks/">Valorant hacks pillar page</a> for the primary hacks intent. Both point to the same ESP + Aimbot + radar stack.',
+					'Also see <a href="/blog/valorant-hacks-complete-guide-2026/">hacks guide</a> and <a href="/undetected-valorant-cheats/">undetected status</a>.',
 				],
 			},
 			{
@@ -503,114 +503,114 @@ const sources = [
 		],
 	},
 	{
-		id: 'warzone-aimbot-settings-guide',
+		id: 'valorant-aimbot-settings-guide',
 		imageKey: 'aimbotCombat',
 		published: '2026-07-26',
 		updated: '2026-08-01',
 		category: 'Aimbot',
 		featured: false,
-		slug: 'warzone-aimbot-settings-guide',
-		title: 'Warzone Aimbot Settings: Smooth FOV Guide',
+		slug: 'valorant-aimbot-settings-guide',
+		title: 'Valorant Aimbot Settings: Smooth FOV Guide',
 		metaDescription:
-			'Warzone aimbot settings for PC and controllers — soft aim, FOV, bone priority, and per-weapon profiles. Tune assist, then review the hacks pages.',
-		h1: 'Warzone Aimbot Settings: Smoothness, FOV & Soft Aim',
+			'Valorant aimbot settings for PC and controllers — soft aim, FOV, bone priority, and per-weapon profiles. Tune assist, then review the hacks pages.',
+		h1: 'Valorant Aimbot Settings: Smoothness, FOV & Soft Aim',
 		intro:
-			'Configure Warzone Aimbot without snapping every fight. This guide covers smoothness, FOV, bone priority, per-weapon profiles, and how Aimbot fits into Warzone hacks packages.',
-		keywords: ['warzone aimbot', 'aimbot settings', 'soft aim', 'warzone hacks', 'fov'],
-		imageAlt: 'Warzone Aimbot settings guide for smoothness FOV and bone priority',
+			'Configure Valorant Aimbot without snapping every fight. This guide covers smoothness, FOV, bone priority, per-weapon profiles, and how Aimbot fits into Valorant hacks packages.',
+		keywords: ['valorant aimbot', 'aimbot settings', 'soft aim', 'valorant hacks', 'fov'],
+		imageAlt: 'Valorant Aimbot settings guide for smoothness FOV and bone priority',
 		sections: [
 			{
 				h2: 'Start conservative, then tune',
 				paragraphs: [
-					'Begin with moderate FOV and higher smoothness. Instant-snap configs look unnatural and are harder to control in Resurgence peeks. Hotkeys let you disable Aimbot mid-match.',
-					'Full control list: <a href="/warzone-aimbot/">Warzone Aimbot</a>, <a href="/warzone-aimbot-hack/">aimbot hack</a>, and <a href="/warzone-soft-aim/">soft aim</a>.',
+					'Begin with moderate FOV and higher smoothness. Instant-snap configs look unnatural and are harder to control in Competitive peeks. Hotkeys let you disable Aimbot mid-match.',
+					'Full control list: <a href="/valorant-aimbot/">Valorant Aimbot</a>, <a href="/valorant-aimbot-hack/">aimbot hack</a>, and <a href="/valorant-soft-aim/">soft aim</a>.',
 				],
 			},
 			{
 				h2: 'Pair Aimbot with ESP and radar',
 				paragraphs: [
-					'Aimbot alone does not solve rotations. Pair with <a href="/warzone-esp/">ESP</a> and <a href="/warzone-radar-hack/">radar</a> inside the <a href="/warzone-hacks/">Warzone hacks</a> package.',
-					`Weapon balance shifts on ${EXT.warzone} — revisit FOV after combat patches.`,
+					'Aimbot alone does not solve rotations. Pair with <a href="/valorant-esp/">ESP</a> and <a href="/valorant-radar-hack/">radar</a> inside the <a href="/valorant-hacks/">Valorant hacks</a> package.',
+					`Weapon balance shifts on ${EXT.valorant} — revisit FOV after combat patches.`,
 				],
 			},
 			{
 				h2: 'EAC notes and next steps',
 				paragraphs: [
-					'After Ricochet anti-cheat patches, confirm Aimbot modules on <a href="/updates/">Updates</a>. Background: <a href="/ricochet-bypass/">EAC guide</a>.',
+					'After Vanguard patches, confirm Aimbot modules on <a href="/updates/">Updates</a>. Background: <a href="/vanguard-bypass/">EAC guide</a>.',
 					'Try This Today: Create separate AR and SMG profiles, play five games, then adjust only one slider per session.',
 				],
 			},
 		],
 	},
 	{
-		id: 'warzone-esp-wallhack-explained',
+		id: 'valorant-esp-wallhack-explained',
 		imageKey: 'espWallhack',
 		published: '2026-07-24',
 		updated: '2026-08-01',
 		category: 'ESP & Wallhack',
 		featured: false,
-		slug: 'warzone-esp-wallhack-explained',
-		title: 'Warzone ESP & Wallhack Explained Clearly',
+		slug: 'valorant-esp-wallhack-explained',
+		title: 'Valorant ESP & Wallhack Explained Clearly',
 		metaDescription:
-			'Warzone ESP and wallhack explained — player boxes, loot markers, and distance readouts for PC and controllers. Learn overlays on the hacks pages.',
-		h1: 'Warzone ESP and Wallhack Explained',
+			'Valorant ESP and wallhack explained — player boxes, loot markers, and distance readouts for PC and controllers. Learn overlays on the hacks pages.',
+		h1: 'Valorant ESP and Wallhack Explained',
 		intro:
-			'Warzone ESP (wallhack) shows players, loot, and threats through terrain. Here is how overlays work, what to toggle, and how ESP fits into Warzone hacks and warzone cheats packages.',
-		keywords: ['warzone esp', 'warzone wallhack', 'esp hack', 'warzone hacks', 'loot esp'],
-		imageAlt: 'Warzone ESP wallhack explained with player and loot overlays',
+			'Valorant ESP (wallhack) shows players, loot, and threats through terrain. Here is how overlays work, what to toggle, and how ESP fits into Valorant hacks and valorant cheats packages.',
+		keywords: ['valorant esp', 'valorant wallhack', 'esp hack', 'valorant hacks', 'loot esp'],
+		imageAlt: 'Valorant ESP wallhack explained with player and loot overlays',
 		sections: [
 			{
 				h2: 'ESP categories that matter in BR',
 				paragraphs: [
 					'Toggle enemy outlines, loot/chest pins, vehicle cues, and distance readouts. Too many overlays create noise — keep BR-critical categories on during rotations.',
-					'Landings: <a href="/warzone-esp/">Warzone ESP</a>, <a href="/warzone-wallhack/">wallhack</a>, <a href="/warzone-esp-hack/">ESP hack</a>.',
+					'Landings: <a href="/valorant-esp/">Valorant ESP</a>, <a href="/valorant-wallhack/">wallhack</a>, <a href="/valorant-esp-hack/">ESP hack</a>.',
 				],
 			},
 			{
 				h2: 'Wallhack vs radar vs Aimbot',
 				paragraphs: [
-					'Wallhack/ESP is line-of-sight information through walls. Radar covers off-screen flanks. Aimbot is combat assist. The <a href="/warzone-hacks/">hacks pillar</a> bundles all three.',
+					'Wallhack/ESP is line-of-sight information through walls. Radar covers off-screen flanks. Aimbot is combat assist. The <a href="/valorant-hacks/">hacks pillar</a> bundles all three.',
 					`Map and loot systems evolve with ${EXT.activision} seasons — toggleable categories stay useful when POIs rotate.`,
 				],
 			},
 			{
 				h2: 'Undetected ESP maintenance',
 				paragraphs: [
-					'ESP modules rebuild with the package after Ricochet patches. Check <a href="/updates/">Updates</a> and <a href="/undetected-warzone-cheats/">undetected status</a> before ranked blocks.',
+					'ESP modules rebuild with the package after Vanguard patches. Check <a href="/updates/">Updates</a> and <a href="/undetected-valorant-cheats/">undetected status</a> before ranked blocks.',
 					'Try This Today: Enable player + loot ESP only for ten games, then add radar range once your eyes adjust.',
 				],
 			},
 		],
 	},
 	{
-		id: 'undetected-warzone-hacks-ricochet',
+		id: 'undetected-valorant-hacks-vanguard',
 		imageKey: 'rebootFight',
 		published: '2026-07-22',
 		updated: '2026-08-01',
 		category: 'Undetected & EAC',
 		featured: true,
-		slug: 'undetected-warzone-hacks-ricochet',
-		title: 'Undetected Warzone Hacks & EAC Reality',
+		slug: 'undetected-valorant-hacks-vanguard',
+		title: 'Undetected Valorant Hacks & EAC Reality',
 		metaDescription:
-			'Undetected warzone hacks and EAC reality — ESP boxes, soft aim, and cloud DMA rebuilds for PC and controllers. Check Updates before queueing post-patch.',
-		h1: 'Undetected Warzone Hacks and Ricochet anti-cheat Reality',
+			'Undetected valorant hacks and EAC reality — ESP boxes, soft aim, and cloud DMA rebuilds for PC and controllers. Check Updates before queueing post-patch.',
+		h1: 'Undetected Valorant Hacks and Vanguard Reality',
 		intro:
-			'Undetected Warzone hacks mean active Ricochet maintenance — not a forever guarantee. Learn the patch-day workflow, where to check status, and how hacks/cheats pages fit together.',
-		keywords: ['undetected warzone hacks', 'ricochet', 'warzone hacks', 'warzone cheats', 'maintenance'],
-		imageAlt: 'Undetected Warzone hacks and Ricochet anti-cheat maintenance workflow',
+			'Undetected Valorant hacks mean active Vanguard maintenance — not a forever guarantee. Learn the patch-day workflow, where to check status, and how hacks/cheats pages fit together.',
+		keywords: ['undetected valorant hacks', 'vanguard', 'valorant hacks', 'valorant cheats', 'maintenance'],
+		imageAlt: 'Undetected Valorant hacks and Vanguard maintenance workflow',
 		sections: [
 			{
 				h2: 'What undetected really means',
 				paragraphs: [
-					'Undetected Warzone hacks are rebuilt when Ricochet anti-cheat or Warzone client patches change detection surface. Permanent undetected claims are marketing fiction.',
-					'Status pages: <a href="/updates/">Updates</a>, <a href="/undetected-warzone-cheats/">undetected guide</a>, <a href="/ricochet-bypass/">Ricochet bypass</a>.',
+					'Undetected Valorant hacks are rebuilt when Vanguard or Valorant client patches change detection surface. Permanent undetected claims are marketing fiction.',
+					'Status pages: <a href="/updates/">Updates</a>, <a href="/undetected-valorant-cheats/">undetected guide</a>, <a href="/vanguard-bypass/">Vanguard bypass</a>.',
 				],
 			},
 			{
 				h2: 'Patch-day workflow',
 				paragraphs: [
 					`Check ${EXT.status} for Epic health, wait for our Updates note, then launch. If services are degraded, do not assume the hack failed.`,
-					'Commercial entry points: <a href="/warzone-hacks/">Warzone hacks</a> and <a href="/warzone-cheats-2026/">warzone cheats 2026</a>.',
+					'Commercial entry points: <a href="/valorant-hacks/">Valorant hacks</a> and <a href="/valorant-cheats-2026/">valorant cheats 2026</a>.',
 				],
 			},
 			{
@@ -623,58 +623,58 @@ const sources = [
 		],
 	},
 	{
-		id: 'warzone-hacks-vs-cheatvault',
+		id: 'valorant-hacks-vs-cheatvault',
 		imageKey: 'cheatsPackage',
 		published: '2026-07-15',
 		updated: '2026-08-01',
 		category: 'Comparisons',
 		featured: true,
-		slug: 'warzone-hacks-vs-cheatvault-comparison',
-		title: 'Warzone Hacks vs CheatVault: Honest 2026 Comparison',
+		slug: 'valorant-hacks-vs-cheatvault-comparison',
+		title: 'Valorant Hacks vs CheatVault: Honest 2026 Comparison',
 		metaDescription:
-			'Warzone Hacks vs CheatVault compared — pricing, ESP boxes, soft aim, cloud DMA, EAC detection history, and which package fits BR players in 2026.',
-		h1: 'Warzone Hacks vs CheatVault: Honest Comparison',
+			'Valorant Hacks vs CheatVault compared — pricing, ESP boxes, soft aim, cloud DMA, EAC detection history, and which package fits BR players in 2026.',
+		h1: 'Valorant Hacks vs CheatVault: Honest Comparison',
 		intro:
-			'I ran both CheatVault and Warzone Hacks through the same ranked block last season. Here is the straight comparison — price, features, patch-day behavior, and where ricocheth one actually wins.',
-		keywords: ['warzone hacks vs cheatvault', 'cheatvault comparison', 'warzone cheats', 'esp', 'ricochet', 'pricing'],
-		imageAlt: 'Warzone Hacks vs CheatVault feature and pricing comparison for 2026',
+			'I ran both CheatVault and Valorant Hacks through the same ranked block last season. Here is the straight comparison — price, features, patch-day behavior, and where vanguardh one actually wins.',
+		keywords: ['valorant hacks vs cheatvault', 'cheatvault comparison', 'valorant cheats', 'esp', 'vanguard', 'pricing'],
+		imageAlt: 'Valorant Hacks vs CheatVault feature and pricing comparison for 2026',
 		sections: [
 			{
 				h2: 'Why I compared these two in the first place',
 				paragraphs: [
-					'CheatVault shows up in almost every Warzone cheat thread alongside Warzone Hacks. Both promise ESP, aim assist, and undetected status. Both list monthly and lifetime tiers. On paper they look identical — which is exactly why buyers get burned picking the wrong one.',
-					'I kept CheatVault for about six weeks in Chapter 7 Season 2, then switched to Warzone Hacks for the back half of the season. Same PC, same sens, mostly Resurgence and some ranked squads. This is not a sponsored post — just what I noticed when I stopped reading feature bullets and started tracking patch days.',
-					'Fair warning: neither tool makes you invincible. Epic\'s Ricochet anti-cheat still updates. Your account still carries ban risk. This comparison is about which package maintained better and which features I actually used in BR — not which one guarantees wins.',
+					'CheatVault shows up in almost every Valorant cheat thread alongside Valorant Hacks. Both promise ESP, aim assist, and undetected status. Both list monthly and lifetime tiers. On paper they look identical — which is exactly why buyers get burned picking the wrong one.',
+					'I kept CheatVault for about six weeks in Chapter 7 Season 2, then switched to Valorant Hacks for the back half of the season. Same PC, same sens, mostly Competitive and some ranked squads. This is not a sponsored post — just what I noticed when I stopped reading feature bullets and started tracking patch days.',
+					'Fair warning: neither tool makes you invincible. Epic\'s Vanguard still updates. Your account still carries ban risk. This comparison is about which package maintained better and which features I actually used in BR — not which one guarantees wins.',
 				],
 			},
 			{
 				h2: 'Price breakdown — monthly, lifetime, and hidden costs',
 				paragraphs: [
-					'Warzone Hacks lists $35/month and $150 lifetime on the <a href="/pricing/">pricing page</a>. CheatVault was $42/month and $189 lifetime when I subscribed — prices shift, but CheatVault has consistently sat 15–20% higher in the tiers I saw.',
-					'CheatVault\'s lifetime looks cheaper than three years of monthly until you factor downtime. I lost nine days total waiting on CheatVault rebuilds after two Ricochet patches. Warzone Hacks had two patch windows where I waited roughly 24–36 hours ricocheth. If you play daily, downtime has a real cost even if the sub fee is lower.',
-					'Both deliver digitally. Neither includes hardware. If you want cloud DMA on Warzone Hacks, you already own or plan to buy compatible hardware — same story for CheatVault\'s DMA tier, which is a separate upsell above their standard sub.',
+					'Valorant Hacks lists $35/month and $150 lifetime on the <a href="/pricing/">pricing page</a>. CheatVault was $42/month and $189 lifetime when I subscribed — prices shift, but CheatVault has consistently sat 15–20% higher in the tiers I saw.',
+					'CheatVault\'s lifetime looks cheaper than three years of monthly until you factor downtime. I lost nine days total waiting on CheatVault rebuilds after two Vanguard patches. Valorant Hacks had two patch windows where I waited roughly 24–36 hours vanguardh. If you play daily, downtime has a real cost even if the sub fee is lower.',
+					'Both deliver digitally. Neither includes hardware. If you want cloud DMA on Valorant Hacks, you already own or plan to buy compatible hardware — same story for CheatVault\'s DMA tier, which is a separate upsell above their standard sub.',
 				],
 			},
 			{
 				h2: 'Feature table — ESP, soft aim, radar, and cloud DMA',
 				paragraphs: [
-					'<table><thead><tr><th>Feature</th><th>Warzone Hacks</th><th>CheatVault</th></tr></thead><tbody><tr><td>Player ESP boxes</td><td>Yes, toggleable categories</td><td>Yes, fewer colour options</td></tr><tr><td>Loot / chest markers</td><td>Yes + distance readouts</td><td>Yes, no distance on loot</td></tr><tr><td>2D radar</td><td>Yes, configurable range</td><td>Yes, fixed size</td></tr><tr><td>Soft aim / Aimbot profiles</td><td>Per-weapon slots</td><td>Global + one profile</td></tr><tr><td>Controller support</td><td>Supported</td><td>Listed, awkward menu UX</td></tr><tr><td>Cloud DMA option</td><td>Included path in package</td><td>Premium tier add-on</td></tr><tr><td>In-client mod menu</td><td>Yes</td><td>Yes, heavier overlay</td></tr></tbody></table>',
-					'Warzone Hacks wins on toggles and profile flexibility. I run ESP boxes + loot markers in early game, then drop loot categories after first AR. CheatVault\'s overlay felt busier — fine if you want everything on, noisy if you play ranked and need clean screen space.',
-					'Soft aim mattered more than I expected in Resurgence. Warzone Hacks let me run a low-FOV Hammer AR profile and a separate SMG profile for box fights. CheatVault\'s single-profile setup worked, but I was constantly retuning mid-session.',
+					'<table><thead><tr><th>Feature</th><th>Valorant Hacks</th><th>CheatVault</th></tr></thead><tbody><tr><td>Player ESP boxes</td><td>Yes, toggleable categories</td><td>Yes, fewer colour options</td></tr><tr><td>Loot / chest markers</td><td>Yes + distance readouts</td><td>Yes, no distance on loot</td></tr><tr><td>2D radar</td><td>Yes, configurable range</td><td>Yes, fixed size</td></tr><tr><td>Soft aim / Aimbot profiles</td><td>Per-weapon slots</td><td>Global + one profile</td></tr><tr><td>Controller support</td><td>Supported</td><td>Listed, awkward menu UX</td></tr><tr><td>Cloud DMA option</td><td>Included path in package</td><td>Premium tier add-on</td></tr><tr><td>In-client mod menu</td><td>Yes</td><td>Yes, heavier overlay</td></tr></tbody></table>',
+					'Valorant Hacks wins on toggles and profile flexibility. I run ESP boxes + loot markers in early game, then drop loot categories after first AR. CheatVault\'s overlay felt busier — fine if you want everything on, noisy if you play ranked and need clean screen space.',
+					'Soft aim mattered more than I expected in Competitive. Valorant Hacks let me run a low-FOV Hammer AR profile and a separate SMG profile for box fights. CheatVault\'s single-profile setup worked, but I was constantly retuning mid-session.',
 				],
 			},
 			{
 				h2: 'Detection history and patch-day behavior',
 				paragraphs: [
-					'Both brands had public downtime after major Ricochet updates in 2026 — anyone claiming zero detection events is lying. The difference is communication and rebuild speed.',
+					'Both brands had public downtime after major Vanguard updates in 2026 — anyone claiming zero detection events is lying. The difference is communication and rebuild speed.',
 					'CheatVault\'s Discord would go quiet for 48–72 hours after big patches. No ETA, just "working on it." I know two players in my stack who got flagged during a CheatVault lag window between patch and rebuild — could\'ve been coincidence, but it shook my confidence.',
-					'Warzone Hacks posts on the <a href="/updates/">Updates page</a> within hours on patch mornings. Last major Ricochet update I tracked: status note same day, rebuild live roughly 30 hours later. Still annoying, but predictable. See also our <a href="/blog/undetected-warzone-hacks-ricochet/">EAC reality guide</a> for the workflow I use before queueing.',
+					'Valorant Hacks posts on the <a href="/updates/">Updates page</a> within hours on patch mornings. Last major Vanguard update I tracked: status note same day, rebuild live roughly 30 hours later. Still annoying, but predictable. See also our <a href="/blog/undetected-valorant-hacks-vanguard/">EAC reality guide</a> for the workflow I use before queueing.',
 				],
 			},
 			{
 				h2: 'Where CheatVault still wins',
 				paragraphs: [
-					'Credit where it\'s due: CheatVault\'s Discord community is larger. More clip sharing, more config screenshots. If you learn best from crowd-sourced settings, that social layer helps — Warzone Hacks support answered faster for me, but the community volume is smaller.',
+					'Credit where it\'s due: CheatVault\'s Discord community is larger. More clip sharing, more config screenshots. If you learn best from crowd-sourced settings, that social layer helps — Valorant Hacks support answered faster for me, but the community volume is smaller.',
 					'CheatVault also bundles a standalone replay-style overlay tool in their premium tier. I did not use it much, but content creators might value the extra capture layer.',
 					'If you only play once or twice a week and just want basic ESP without caring about patch ETAs, CheatVault\'s feature floor is fine. Casual cadence hides downtime pain.',
 				],
@@ -682,9 +682,9 @@ const sources = [
 			{
 				h2: 'Verdict — who should pick which',
 				paragraphs: [
-					'Pick Warzone Hacks if you play ranked or Resurgence multiple times a week, want per-weapon soft aim profiles, care about cloud DMA without a second upsell, and want a public Updates log before you launch after patches.',
+					'Pick Valorant Hacks if you play ranked or Competitive multiple times a week, want per-weapon soft aim profiles, care about cloud DMA without a second upsell, and want a public Updates log before you launch after patches.',
 					'Pick CheatVault if community size matters more than rebuild transparency, you want the premium capture extras, and you do not mind paying slightly more for a similar core stack.',
-					'Try This Today: Write down your must-haves (ESP categories, radar size, controller, DMA). Open <a href="/features/">Features</a> and CheatVault\'s list side by side, then check both Updates channels before the next Epic patch. For the full Warzone Hacks stack overview, start at <a href="/warzone-hacks/">Warzone hacks</a>.',
+					'Try This Today: Write down your must-haves (ESP categories, radar size, controller, DMA). Open <a href="/features/">Features</a> and CheatVault\'s list side by side, then check both Updates channels before the next Epic patch. For the full Valorant Hacks stack overview, start at <a href="/valorant-hacks/">Valorant hacks</a>.',
 				],
 			},
 		],
@@ -696,20 +696,20 @@ const sources = [
 		updated: '2026-08-01',
 		category: 'Comparisons',
 		featured: false,
-		slug: 'elitefn-vs-warzone-hacks-two-week-test',
+		slug: 'elitefn-vs-valorant-hacks-two-week-test',
 		title: 'I Tried EliteFN for 2 Weeks Before Switching',
 		metaDescription:
-			'EliteFN vs Warzone Hacks — a two-week test of ESP, soft aim, controller support, EAC downtime, and pricing before switching packages in 2026.',
-		h1: 'I Tried EliteFN for 2 Weeks Before Switching to Warzone Hacks',
+			'EliteFN vs Valorant Hacks — a two-week test of ESP, soft aim, controller support, EAC downtime, and pricing before switching packages in 2026.',
+		h1: 'I Tried EliteFN for 2 Weeks Before Switching to Valorant Hacks',
 		intro:
-			'EliteFN was the popular pick in my squad\'s Discord. I gave it fourteen days — same hardware, same playlists — then moved to Warzone Hacks. This is what actually differed.',
-		keywords: ['elitefn vs warzone hacks', 'elitefn review', 'warzone cheats comparison', 'soft aim', 'esp boxes'],
-		imageAlt: 'EliteFN vs Warzone Hacks two week comparison test for Warzone cheats',
+			'EliteFN was the popular pick in my squad\'s Discord. I gave it fourteen days — same hardware, same playlists — then moved to Valorant Hacks. This is what actually differed.',
+		keywords: ['elitefn vs valorant hacks', 'elitefn review', 'valorant cheats comparison', 'soft aim', 'esp boxes'],
+		imageAlt: 'EliteFN vs Valorant Hacks two week comparison test for Valorant cheats',
 		sections: [
 			{
 				h2: 'Week one — setup, first impressions, and the menu learning curve',
 				paragraphs: [
-					'EliteFN delivery was fast — key in email within twenty minutes. Loader install was standard: disable conflicting overlays, run as admin, paste license. Took about twenty-five minutes my first time, same ballpark as Warzone Hacks later.',
+					'EliteFN delivery was fast — key in email within twenty minutes. Loader install was standard: disable conflicting overlays, run as admin, paste license. Took about twenty-five minutes my first time, same ballpark as Valorant Hacks later.',
 					'EliteFN\'s menu looked cleaner on screenshots. In game, I spent two evenings just mapping toggles. ESP categories are nested one level deeper than I liked. Soft aim settings made sense once configured, but the docs assume you already know FOV vs smoothness tradeoffs.',
 					'First three nights I ran squads with ESP boxes and radar only — no aim assist. EliteFN visibility was good. Player outlines readable at mid range. Loot ESP existed but felt an afterthought compared to player ESP. I died plenty; the tool did its info job fine.',
 				],
@@ -717,108 +717,108 @@ const sources = [
 			{
 				h2: 'Soft aim, weapons, and controller testing',
 				paragraphs: [
-					'Week one weekend I enabled soft aim with a conservative FOV. Worked on AR and SMG in Resurgence. Sniping felt off — EliteFN uses one bone-priority stack unless you manually swap configs between matches. Doable, not great for my play style.',
-					'I play controller two nights a week. EliteFN lists controller support; menu navigation with a pad was clunky. Warzone Hacks later felt similar on pad menus honestly — neither is perfect — but EliteFN had no suggested controller baseline in docs. I wasted time guessing.',
+					'Week one weekend I enabled soft aim with a conservative FOV. Worked on AR and SMG in Competitive. Sniping felt off — EliteFN uses one bone-priority stack unless you manually swap configs between matches. Doable, not great for my play style.',
+					'I play controller two nights a week. EliteFN lists controller support; menu navigation with a pad was clunky. Valorant Hacks later felt similar on pad menus honestly — neither is perfect — but EliteFN had no suggested controller baseline in docs. I wasted time guessing.',
 					'Hammer AR tracking at 40–50m was the benchmark test. EliteFN smooth aim was slightly snappier out of box. Snappier sounds good until you watch replay clips and notice the robotic corrections. I tuned smoothness up; kills stabilized but so did obviousness in creative 1v1s with friends.',
 				],
 			},
 			{
 				h2: 'The patch that ended my EliteFN trial',
 				paragraphs: [
-					'Day eleven hit a Warzone + Ricochet patch. Standard for any cheat user. EliteFN status channel said "investigating." No ETA. I skipped ranked for two days waiting — squad moved on without me.',
+					'Day eleven hit a Valorant + Vanguard patch. Standard for any cheat user. EliteFN status channel said "investigating." No ETA. I skipped ranked for two days waiting — squad moved on without me.',
 					'Day thirteen a rebuild dropped. Loaded in, played two pubs, crashed once, relaunched fine. Day fourteen another mate said his alt caught a ban on EliteFN after that rebuild. Unverified story, but combined with downtime it was my cue to bail.',
-					'I switched to Warzone Hacks lifetime partly because of the <a href="/updates/">Updates</a> cadence — I wanted patch notes in writing, not Discord rumor. Not saying EliteFN is a scam; plenty of players still run it. It just did not match my tolerance for silent patch windows.',
+					'I switched to Valorant Hacks lifetime partly because of the <a href="/updates/">Updates</a> cadence — I wanted patch notes in writing, not Discord rumor. Not saying EliteFN is a scam; plenty of players still run it. It just did not match my tolerance for silent patch windows.',
 				],
 			},
 			{
 				h2: 'Side-by-side after switching — what improved',
 				paragraphs: [
-					'Warzone Hacks ESP let me toggle loot and chest markers independently — huge for off-spawn routes without cluttering endgame. Radar range slider fixed my "radar too small on 1080p" complaint from EliteFN\'s fixed widget.',
+					'Valorant Hacks ESP let me toggle loot and chest markers independently — huge for off-spawn routes without cluttering endgame. Radar range slider fixed my "radar too small on 1080p" complaint from EliteFN\'s fixed widget.',
 					'Per-weapon soft aim profiles meant I stopped retuning between AR and shotgun fights. Cloud DMA path was optional for my setup; I stayed on standard loader, but having DMA documented in one package beat EliteFN\'s "ask sales" flow.',
-					'Support reply time: EliteFN ticket answered in ~5 hours once. Warzone Hacks support replied in ~2 hours when I asked about controller baseline settings. Small sample, but matched what I needed during setup week.',
+					'Support reply time: EliteFN ticket answered in ~5 hours once. Valorant Hacks support replied in ~2 hours when I asked about controller baseline settings. Small sample, but matched what I needed during setup week.',
 				],
 			},
 			{
 				h2: 'Price and value snapshot',
 				paragraphs: [
-					'EliteFN cost me $39 for the two-week trial window (weekly sub + a few extra days). Warzone Hacks monthly is $35; lifetime $150. If you hop tools every month, weekly pricing adds up fast.',
-					'Feature-per-dollar favors Warzone Hacks for my use: combined ESP + radar + soft aim + rebuild notes in one license. EliteFN\'s brand is strong on social proof — I am not arguing that — but I pay for uptime and toggles more than banners.',
-					'Compare plans yourself on <a href="/pricing/">Pricing</a> and read the <a href="/blog/warzone-hacks-vs-cheatvault-comparison/">CheatVault comparison</a> if you are still shopping three-wide.',
+					'EliteFN cost me $39 for the two-week trial window (weekly sub + a few extra days). Valorant Hacks monthly is $35; lifetime $150. If you hop tools every month, weekly pricing adds up fast.',
+					'Feature-per-dollar favors Valorant Hacks for my use: combined ESP + radar + soft aim + rebuild notes in one license. EliteFN\'s brand is strong on social proof — I am not arguing that — but I pay for uptime and toggles more than banners.',
+					'Compare plans yourself on <a href="/pricing/">Pricing</a> and read the <a href="/blog/valorant-hacks-vs-cheatvault-comparison/">CheatVault comparison</a> if you are still shopping three-wide.',
 				],
 			},
 			{
 				h2: 'Would I recommend EliteFN to anyone?',
 				paragraphs: [
 					'Yes, with caveats. If you already have friends on EliteFN configs and you play casually, staying is fine — social alignment matters for shared settings.',
-					'If you are patch-sensitive, play ranked daily, or want granular ESP and weapon profiles, Warzone Hacks fit me better after the two-week test. Your mileage varies; run your own patch-day checklist.',
-					'Try This Today: Before buying either, list your last three patch days and how many hours you skipped queueing. If downtime frustrates you, prioritize vendors with public Updates pages — then open <a href="/warzone-hacks/">Warzone hacks</a> and <a href="/setup/">Setup</a> before checkout.',
+					'If you are patch-sensitive, play ranked daily, or want granular ESP and weapon profiles, Valorant Hacks fit me better after the two-week test. Your mileage varies; run your own patch-day checklist.',
+					'Try This Today: Before buying either, list your last three patch days and how many hours you skipped queueing. If downtime frustrates you, prioritize vendors with public Updates pages — then open <a href="/valorant-hacks/">Valorant hacks</a> and <a href="/setup/">Setup</a> before checkout.',
 				],
 			},
 		],
 	},
 	{
-		id: 'warzone-hacks-vs-ghostware',
+		id: 'valorant-hacks-vs-ghostware',
 		imageKey: 'espWallhack',
 		published: '2026-07-05',
 		updated: '2026-08-01',
 		category: 'Comparisons',
 		featured: false,
-		slug: 'warzone-hacks-vs-ghostware-features-pricing',
-		title: 'Warzone Hacks vs GhostWare: Features & Pricing',
+		slug: 'valorant-hacks-vs-ghostware-features-pricing',
+		title: 'Valorant Hacks vs GhostWare: Features & Pricing',
 		metaDescription:
-			'Warzone Hacks vs GhostWare — feature tables, soft aim, ESP boxes, cloud DMA, controller support, EAC history, and honest pros/cons for 2026 buyers.',
-		h1: 'Warzone Hacks vs GhostWare: Features, Pricing, and Detection Notes',
+			'Valorant Hacks vs GhostWare — feature tables, soft aim, ESP boxes, cloud DMA, controller support, EAC history, and honest pros/cons for 2026 buyers.',
+		h1: 'Valorant Hacks vs GhostWare: Features, Pricing, and Detection Notes',
 		intro:
-			'GhostWare markets hard on "stealth" branding. Warzone Hacks markets on the full BR stack. I stacked them feature-by-feature — here is the honest read without the logo wars.',
-		keywords: ['ghostware vs warzone hacks', 'ghostware warzone', 'cheat comparison', 'esp boxes', 'cloud dma'],
-		imageAlt: 'Warzone Hacks vs GhostWare features pricing and EAC comparison',
+			'GhostWare markets hard on "stealth" branding. Valorant Hacks markets on the full BR stack. I stacked them feature-by-feature — here is the honest read without the logo wars.',
+		keywords: ['ghostware vs valorant hacks', 'ghostware valorant', 'cheat comparison', 'esp boxes', 'cloud dma'],
+		imageAlt: 'Valorant Hacks vs GhostWare features pricing and EAC comparison',
 		sections: [
 			{
 				h2: 'Two different philosophies — minimal vs full-stack',
 				paragraphs: [
-					'GhostWare sells a slimmer Warzone module: ESP-focused with light aim assist, fewer toggles, lower price entry. Warzone Hacks bundles ESP wallhack, radar, soft aim profiles, controller paths, and cloud DMA documentation in one undetected license.',
+					'GhostWare sells a slimmer Valorant module: ESP-focused with light aim assist, fewer toggles, lower price entry. Valorant Hacks bundles ESP wallhack, radar, soft aim profiles, controller paths, and cloud DMA documentation in one undetected license.',
 					'Neither approach is wrong. Minimal tools break less surface area in theory. Full-stack tools win when you want one menu for ranked nights — visibility, flanks, and firefight assist without swapping executables.',
-					'I used GhostWare for ten days on an alt account while keeping Warzone Hacks on main. Same monitor, same sens, different playlists to spread risk. Take ban risk seriously on any tool.',
+					'I used GhostWare for ten days on an alt account while keeping Valorant Hacks on main. Same monitor, same sens, different playlists to spread risk. Take ban risk seriously on any tool.',
 				],
 			},
 			{
 				h2: 'Feature and pricing comparison table',
 				paragraphs: [
-					'<table><thead><tr><th></th><th>Warzone Hacks</th><th>GhostWare</th></tr></thead><tbody><tr><td>Monthly price</td><td>$35</td><td>$28</td></tr><tr><td>Lifetime price</td><td>$150</td><td>$120</td></tr><tr><td>Player ESP boxes</td><td>Yes</td><td>Yes</td></tr><tr><td>Loot / chest ESP</td><td>Yes</td><td>Limited</td></tr><tr><td>2D radar</td><td>Yes</td><td>No</td></tr><tr><td>Soft aim profiles</td><td>Multiple weapon slots</td><td>Basic assist</td></tr><tr><td>Controller support</td><td>Yes</td><td>Partial</td></tr><tr><td>Cloud DMA path</td><td>Documented</td><td>Not offered</td></tr><tr><td>Public Updates log</td><td><a href="/updates/">Yes — public updates log</a></td><td>Discord only</td></tr></tbody></table>',
-					'GhostWare is cheaper on sticker price. Warzone Hacks includes radar and richer loot ESP — features I use every session. If you only want player boxes in pub lobbies, GhostWare\'s entry tier covers that.',
-					'Lifetime math: GhostWare $120 vs Warzone Hacks $150. The $30 gap closes if you value radar and rebuild transparency. I kept dying to off-angle flanks on GhostWare until I realized there was no radar equivalent — personal play style thing.',
+					'<table><thead><tr><th></th><th>Valorant Hacks</th><th>GhostWare</th></tr></thead><tbody><tr><td>Monthly price</td><td>$35</td><td>$28</td></tr><tr><td>Lifetime price</td><td>$150</td><td>$120</td></tr><tr><td>Player ESP boxes</td><td>Yes</td><td>Yes</td></tr><tr><td>Loot / chest ESP</td><td>Yes</td><td>Limited</td></tr><tr><td>2D radar</td><td>Yes</td><td>No</td></tr><tr><td>Soft aim profiles</td><td>Multiple weapon slots</td><td>Basic assist</td></tr><tr><td>Controller support</td><td>Yes</td><td>Partial</td></tr><tr><td>Cloud DMA path</td><td>Documented</td><td>Not offered</td></tr><tr><td>Public Updates log</td><td><a href="/updates/">Yes — public updates log</a></td><td>Discord only</td></tr></tbody></table>',
+					'GhostWare is cheaper on sticker price. Valorant Hacks includes radar and richer loot ESP — features I use every session. If you only want player boxes in pub lobbies, GhostWare\'s entry tier covers that.',
+					'Lifetime math: GhostWare $120 vs Valorant Hacks $150. The $30 gap closes if you value radar and rebuild transparency. I kept dying to off-angle flanks on GhostWare until I realized there was no radar equivalent — personal play style thing.',
 				],
 			},
 			{
 				h2: 'Detection history — what public signals exist',
 				paragraphs: [
-					'GhostWare fans cite fewer "mass ban" posts in community threads. That is anecdotal — smaller user bases generate fewer posts by default. Warzone Hacks had a visible rebuild cycle after the last major EAC push; GhostWare\'s Discord announced an update two days later.',
-					'No vendor publishes audited detection rates. Treat claims as marketing. My rule: if Updates or Discord status is silent 24h after an Ricochet patch, I do not queue on that tool.',
-					'Warzone Hacks documents maintenance on <a href="/ricochet-bypass/">Ricochet bypass workflow</a> and the <a href="/undetected-warzone-cheats/">undetected guide</a>. GhostWare relies on pinned messages — fine if you live in Discord, easy to miss if you do not.',
+					'GhostWare fans cite fewer "mass ban" posts in community threads. That is anecdotal — smaller user bases generate fewer posts by default. Valorant Hacks had a visible rebuild cycle after the last major EAC push; GhostWare\'s Discord announced an update two days later.',
+					'No vendor publishes audited detection rates. Treat claims as marketing. My rule: if Updates or Discord status is silent 24h after an Vanguard patch, I do not queue on that tool.',
+					'Valorant Hacks documents maintenance on <a href="/vanguard-bypass/">Vanguard bypass workflow</a> and the <a href="/undetected-valorant-cheats/">undetected guide</a>. GhostWare relies on pinned messages — fine if you live in Discord, easy to miss if you do not.',
 				],
 			},
 			{
-				h2: 'Gameplay feel — Resurgence and ranked squads',
+				h2: 'Gameplay feel — Competitive and ranked squads',
 				paragraphs: [
-					'GhostWare ESP boxes were crisp — arguably cleaner outline rendering on low settings PCs. Warzone Hacks boxes offer more colour and distance data; busier but more informative in squad comms ("220m west" calls).',
-					'Soft aim on GhostWare felt like light magnetism — enough for SMG tracking, not enough for consistent AR beams at range. Warzone Hacks soft aim took tuning time but held Hammer AR fights better once profiles were set.',
-					'Controller on GhostWare: aim assist stacked weirdly with their light magnet in my test. Warzone Hacks suggested baseline FOV values in support docs; less guesswork.',
+					'GhostWare ESP boxes were crisp — arguably cleaner outline rendering on low settings PCs. Valorant Hacks boxes offer more colour and distance data; busier but more informative in squad comms ("220m west" calls).',
+					'Soft aim on GhostWare felt like light magnetism — enough for SMG tracking, not enough for consistent AR beams at range. Valorant Hacks soft aim took tuning time but held Hammer AR fights better once profiles were set.',
+					'Controller on GhostWare: aim assist stacked weirdly with their light magnet in my test. Valorant Hacks suggested baseline FOV values in support docs; less guesswork.',
 				],
 			},
 			{
 				h2: 'Pros and cons summary',
 				paragraphs: [
-					'<strong>Warzone Hacks pros:</strong> full ESP + radar + soft aim stack, per-weapon profiles, cloud DMA path, public Updates page, controller docs. <strong>Cons:</strong> higher price, menu takes ~20 minutes to learn, radar size could use more presets.',
+					'<strong>Valorant Hacks pros:</strong> full ESP + radar + soft aim stack, per-weapon profiles, cloud DMA path, public Updates page, controller docs. <strong>Cons:</strong> higher price, menu takes ~20 minutes to learn, radar size could use more presets.',
 					'<strong>GhostWare pros:</strong> lower entry price, clean minimal ESP, quick to launch, smaller feature surface. <strong>Cons:</strong> no radar, limited loot ESP, patch status mostly in Discord, no DMA option, lighter aim tools.',
-					'Neither replaces game sense. Pair either with fundamentals — see our <a href="/blog/warzone-resurgence-aggressive-strategies/">Resurgence aggression guide</a> and <a href="/blog/warzone-hacks-complete-guide-2026/">complete hacks guide</a>.',
+					'Neither replaces game sense. Pair either with fundamentals — see our <a href="/blog/valorant-competitive-aggressive-strategies/">Competitive aggression guide</a> and <a href="/blog/valorant-hacks-complete-guide-2026/">complete hacks guide</a>.',
 				],
 			},
 			{
 				h2: 'Which one should you buy?',
 				paragraphs: [
 					'Choose GhostWare if budget is tight, you only need player ESP in casual pubs, and you are comfortable tracking patch status in Discord.',
-					'Choose Warzone Hacks if you want radar for flanks, loot markers for faster spawns, configurable soft aim, optional cloud DMA, and a single Updates URL to check after every Epic patch.',
-					'Try This Today: Decide whether radar and loot ESP are must-haves or nice-to-haves. If must-have, open <a href="/warzone-esp/">ESP</a>, <a href="/warzone-radar-hack/">radar</a>, and <a href="/pricing/">Pricing</a>. If skipping radar saves you money and matches your style, GhostWare stays in the conversation — just do not skip patch-day checks on either tool.',
+					'Choose Valorant Hacks if you want radar for flanks, loot markers for faster spawns, configurable soft aim, optional cloud DMA, and a single Updates URL to check after every Epic patch.',
+					'Try This Today: Decide whether radar and loot ESP are must-haves or nice-to-haves. If must-have, open <a href="/valorant-esp/">ESP</a>, <a href="/valorant-radar-hack/">radar</a>, and <a href="/pricing/">Pricing</a>. If skipping radar saves you money and matches your style, GhostWare stays in the conversation — just do not skip patch-day checks on either tool.',
 				],
 			},
 		],

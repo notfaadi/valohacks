@@ -15,7 +15,7 @@ export type PageSitemapMeta = {
 /**
  * SEO priority and crawl hints per page — keyed by PageId (single source of truth).
  * English URLs use `priority`; localized URLs use `i18nPriority`.
- * `lastmod` reflects when ricocheth page's content actually changed — do NOT reset all
+ * `lastmod` reflects when each page's content actually changed — do NOT reset all
  * pages to the same date on deploy, only bump pages whose content was edited.
  */
 export const pageSitemapMeta: Record<PageId, PageSitemapMeta> = {
@@ -32,9 +32,9 @@ export const pageSitemapMeta: Record<PageId, PageSitemapMeta> = {
 	'unlock-all': { priority: 0.94, changefreq: 'weekly', i18nPriority: 0.84, lastmod: '2026-07-21' },
 	wallhack: { priority: 0.97, changefreq: 'weekly', i18nPriority: 0.86, lastmod: '2026-07-27' },
 	radar: { priority: 0.97, changefreq: 'weekly', i18nPriority: 0.86, lastmod: '2026-07-26' },
-	'ricochet': { priority: 0.96, changefreq: 'weekly', i18nPriority: 0.85, lastmod: '2026-07-31' },
-	'warzone-esp': { priority: 0.95, changefreq: 'weekly', i18nPriority: 0.85, lastmod: '2026-07-28' },
-	'warzone-aimbot': { priority: 0.95, changefreq: 'weekly', i18nPriority: 0.85, lastmod: '2026-07-29' },
+	'vanguard': { priority: 0.96, changefreq: 'weekly', i18nPriority: 0.85, lastmod: '2026-07-31' },
+	'valorant-esp': { priority: 0.95, changefreq: 'weekly', i18nPriority: 0.85, lastmod: '2026-07-28' },
+	'valorant-aimbot': { priority: 0.95, changefreq: 'weekly', i18nPriority: 0.85, lastmod: '2026-07-29' },
 	pricing: { priority: 0.95, changefreq: 'weekly', i18nPriority: 0.85, lastmod: '2026-07-30' },
 	features: { priority: 0.9, changefreq: 'weekly', i18nPriority: 0.84, lastmod: '2026-07-22' },
 	setup: { priority: 0.9, changefreq: 'weekly', i18nPriority: 0.84, lastmod: '2026-07-18' },

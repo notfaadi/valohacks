@@ -1,5 +1,5 @@
 import { siteConfig } from '../site';
-import { warzoneImages } from '../warzone';
+import { valorantImages } from '../valorant';
 import { blogSitemapImageMeta } from '../brand-sitemap';
 import {
 	defaultLocale,
@@ -12,16 +12,16 @@ import type { BlogImageKey, BlogPostDefinition, BlogTranslation, ResolvedBlogPos
 import { blogPosts as rawBlogPosts } from './posts.generated';
 
 const imageMap: Record<BlogImageKey, string> = {
-	hero: warzoneImages.hero,
-	espWallhack: warzoneImages.espWallhack,
-	aimbotCombat: warzoneImages.aimbotCombat,
-	squadFight: warzoneImages.aimbotSkeleton,
-	headerArt: warzoneImages.playerEsp,
-	cheatsPackage: warzoneImages.cheatsCombat,
-	playerEsp: warzoneImages.playerEsp,
-	rebootFight: warzoneImages.aimbotCombat,
-	battleRoyaleCombat: warzoneImages.cheatsCombat,
-	battleRoyaleIslandMap: warzoneImages.hero,
+	hero: valorantImages.hero,
+	espWallhack: valorantImages.espWallhack,
+	aimbotCombat: valorantImages.aimbotCombat,
+	squadFight: valorantImages.aimbotSkeleton,
+	headerArt: valorantImages.playerEsp,
+	cheatsPackage: valorantImages.cheatsCombat,
+	playerEsp: valorantImages.playerEsp,
+	rebootFight: valorantImages.aimbotCombat,
+	battleRoyaleCombat: valorantImages.cheatsCombat,
+	battleRoyaleIslandMap: valorantImages.hero,
 };
 
 function expandTranslations(
@@ -205,7 +205,7 @@ export function getBlogSitemapEntriesForLocale(locale: LocaleCode) {
 	for (const post of blogPosts) {
 		const t = post.translations[locale];
 		const imageSrc = getBlogImageSrc(post.imageKey);
-		const isProductPost = /Warzone Hacks|Warzone Cheats|Aimbot|ESP|Undetected|Comparisons/i.test(
+		const isProductPost = /Valorant Hacks|Valorant Cheats|Aimbot|ESP|Undetected|Comparisons/i.test(
 			post.category,
 		);
 		entries.push({

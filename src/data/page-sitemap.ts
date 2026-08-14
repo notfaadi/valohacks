@@ -1,5 +1,5 @@
 import { siteConfig } from './site';
-import { warzoneImages } from './warzone';
+import { valorantImages } from './valorant';
 import { englishPaths, pageIds, type PageId } from './i18n/routing';
 import { pageSitemapMeta } from './sitemap-meta';
 import {
@@ -31,34 +31,34 @@ const img = (path: string, title: string, caption: string): SitemapImage => ({
 });
 
 /**
- * One screenshot per page — paths stay in warzoneImages; titles/captions from brand tokens.
+ * One screenshot per page — paths stay in valorantImages; titles/captions from brand tokens.
  */
 const pageImageSrcById: Record<PageId, string> = {
-	home: warzoneImages.hero,
-	'warzone-esp': warzoneImages.playerEsp,
-	'warzone-aimbot': warzoneImages.aimbotCombat,
-	features: warzoneImages.aimbotSkeleton,
-	pricing: warzoneImages.cheatsCombat,
-	setup: warzoneImages.playerEsp,
-	updates: warzoneImages.hero,
-	faq: warzoneImages.aimbotSkeleton,
-	support: warzoneImages.cheatsCombat,
-	undetected: warzoneImages.espWallhack,
-	wallhack: warzoneImages.espWallhack,
-	radar: warzoneImages.playerEsp,
-	ricochet: warzoneImages.aimbotCombat,
-	'cheats-2026': warzoneImages.hero,
-	hacks: warzoneImages.cheatsCombat,
-	'cheat-download': warzoneImages.cheatsCombat,
-	'mod-menu': warzoneImages.playerEsp,
-	'soft-aim': warzoneImages.aimbotSkeleton,
-	'best-cheats': warzoneImages.hero,
-	'aimbot-hack': warzoneImages.aimbotSkeleton,
-	'esp-hack': warzoneImages.espWallhack,
-	'unlock-all': warzoneImages.playerEsp,
-	privacy: warzoneImages.aimbotCombat,
-	refund: warzoneImages.cheatsCombat,
-	terms: warzoneImages.aimbotSkeleton,
+	home: valorantImages.hero,
+	'valorant-esp': valorantImages.playerEsp,
+	'valorant-aimbot': valorantImages.aimbotCombat,
+	features: valorantImages.aimbotSkeleton,
+	pricing: valorantImages.cheatsCombat,
+	setup: valorantImages.playerEsp,
+	updates: valorantImages.hero,
+	faq: valorantImages.aimbotSkeleton,
+	support: valorantImages.cheatsCombat,
+	undetected: valorantImages.espWallhack,
+	wallhack: valorantImages.espWallhack,
+	radar: valorantImages.playerEsp,
+	vanguard: valorantImages.aimbotCombat,
+	'cheats-2026': valorantImages.hero,
+	hacks: valorantImages.cheatsCombat,
+	'cheat-download': valorantImages.cheatsCombat,
+	'mod-menu': valorantImages.playerEsp,
+	'soft-aim': valorantImages.aimbotSkeleton,
+	'best-cheats': valorantImages.hero,
+	'aimbot-hack': valorantImages.aimbotSkeleton,
+	'esp-hack': valorantImages.espWallhack,
+	'unlock-all': valorantImages.playerEsp,
+	privacy: valorantImages.aimbotCombat,
+	refund: valorantImages.cheatsCombat,
+	terms: valorantImages.aimbotSkeleton,
 };
 
 for (const pageId of pageIds) {

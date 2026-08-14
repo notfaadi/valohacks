@@ -46,9 +46,9 @@ const defaultImages: BrandSitemapImage[] = [
 
 /** Per-page image title/caption templates for the English urlset. */
 const pageImageTemplates: Record<PageId, { title: string; caption: string }> = {
-	home: { title: '{primaryKeyword}', caption: 'ESP, aimbot, and radar for Warzone on PC' },
-	'warzone-esp': { title: '{primaryKeyword} ESP', caption: 'See players through walls with {primaryKeyword}' },
-	'warzone-aimbot': { title: '{primaryKeyword} aimbot', caption: 'Aimbot view in {primaryKeyword}' },
+	home: { title: '{primaryKeyword}', caption: 'ESP, aimbot, and radar for Valorant on PC' },
+	'valorant-esp': { title: '{primaryKeyword} ESP', caption: 'See players through walls with {primaryKeyword}' },
+	'valorant-aimbot': { title: '{primaryKeyword} aimbot', caption: 'Aimbot view in {primaryKeyword}' },
 	features: { title: '{primaryKeyword} features', caption: 'What you get with {primaryKeyword}' },
 	pricing: { title: '{primaryKeyword} plans', caption: 'Monthly and lifetime {primaryKeyword} plans' },
 	setup: { title: '{primaryKeyword} setup', caption: 'How to set up {primaryKeyword} on PC' },
@@ -58,7 +58,7 @@ const pageImageTemplates: Record<PageId, { title: string; caption: string }> = {
 	undetected: { title: 'Undetected {primaryKeyword}', caption: 'Safe status notes for {primaryKeyword}' },
 	wallhack: { title: '{primaryKeyword} wallhack', caption: 'See through walls with {primaryKeyword}' },
 	radar: { title: '{primaryKeyword} radar', caption: 'Radar map in {primaryKeyword}' },
-	ricochet: { title: '{antiCheat} and {primaryKeyword}', caption: '{primaryKeyword} after a Ricochet update' },
+	vanguard: { title: '{antiCheat} and {primaryKeyword}', caption: '{primaryKeyword} after a Vanguard update' },
 	'cheats-2026': { title: '{primaryKeyword} 2026', caption: '{primaryKeyword} buyer guide for 2026' },
 	hacks: { title: '{primaryKeyword}', caption: '{primaryKeyword} ESP, aimbot, and radar' },
 	'cheat-download': { title: '{primaryKeyword} download', caption: 'Get {primaryKeyword} after you buy' },

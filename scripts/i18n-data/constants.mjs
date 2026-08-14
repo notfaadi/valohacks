@@ -6,17 +6,17 @@ export const LOCALES = [
 ];
 
 export const PAGE_IDS = [
-	'home', 'warzone-esp', 'warzone-aimbot', 'features', 'pricing', 'setup',
-	'updates', 'faq', 'support', 'undetected', 'wallhack', 'radar', 'ricochet',
+	'home', 'valorant-esp', 'valorant-aimbot', 'features', 'pricing', 'setup',
+	'updates', 'faq', 'support', 'undetected', 'wallhack', 'radar', 'vanguard',
 	'cheats-2026', 'hacks', 'cheat-download', 'mod-menu', 'soft-aim', 'best-cheats',
 	'aimbot-hack', 'esp-hack', 'unlock-all', 'privacy', 'refund', 'terms',
 ];
 
-/** Hero image per page — six unique Warzone cheat screenshots (primary pages each get a distinct file). */
+/** Hero image per page — six unique Valorant cheat screenshots (primary pages each get a distinct file). */
 export const HERO_IMAGES = {
 	home: '/images/warzone-esp-player-tags.webp',
-	'warzone-esp': '/images/warzone-esp-radar.webp',
-	'warzone-aimbot': '/images/warzone-aimbot-sniper.webp',
+	'valorant-esp': '/images/warzone-esp-radar.webp',
+	'valorant-aimbot': '/images/warzone-aimbot-sniper.webp',
 	features: '/images/warzone-aimbot-skeleton.webp',
 	pricing: '/images/warzone-cheats-combat.webp',
 	setup: '/images/warzone-esp-radar.webp',
@@ -26,7 +26,7 @@ export const HERO_IMAGES = {
 	undetected: '/images/warzone-wallhack-skeleton.webp',
 	wallhack: '/images/warzone-wallhack-skeleton.webp',
 	radar: '/images/warzone-esp-radar.webp',
-	ricochet: '/images/warzone-aimbot-sniper.webp',
+	vanguard: '/images/warzone-aimbot-sniper.webp',
 	'cheats-2026': '/images/warzone-esp-player-tags.webp',
 	hacks: '/images/warzone-cheats-combat.webp',
 	'cheat-download': '/images/warzone-cheats-combat.webp',
@@ -70,7 +70,7 @@ export type LocaleUi = {
 \t\theaderArt: string; cheatsPackage: string; rebootFight: string; battleRoyale: string; battleRoyaleIsland: string;
 \t};
 };
-export type PageId = 'home' | 'warzone-esp' | 'warzone-aimbot' | 'features' | 'pricing' | 'setup' | 'updates' | 'faq' | 'support' | 'undetected' | 'wallhack' | 'radar' | 'ricochet' | 'cheats-2026' | 'hacks' | 'cheat-download' | 'mod-menu' | 'soft-aim' | 'best-cheats' | 'aimbot-hack' | 'esp-hack' | 'unlock-all' | 'privacy' | 'refund' | 'terms';
+export type PageId = 'home' | 'valorant-esp' | 'valorant-aimbot' | 'features' | 'pricing' | 'setup' | 'updates' | 'faq' | 'support' | 'undetected' | 'wallhack' | 'radar' | 'vanguard' | 'cheats-2026' | 'hacks' | 'cheat-download' | 'mod-menu' | 'soft-aim' | 'best-cheats' | 'aimbot-hack' | 'esp-hack' | 'unlock-all' | 'privacy' | 'refund' | 'terms';
 `;
 
 /** Clamp meta strings to SEO limits without ugly ellipsis. */
@@ -101,7 +101,7 @@ export function stripZadeyoFromMeta(text) {
 		.replace(/\s*Zadeyo delivery\.?/gi, ' instant digital delivery.')
 		.replace(/\s*and Zadeyo delivery\.?/gi, ' and instant digital delivery.')
 		.replace(/\|\s*Instant Zadeyo Delivery/g, '| Instant Digital Delivery')
-		.replace(/Buy on Zadeyo/g, 'Buy Warzone Hacks')
+		.replace(/Buy on Zadeyo/g, 'Buy Valorant Hacks')
 		.replace(/\s{2,}/g, ' ')
 		.trim();
 }
@@ -123,8 +123,8 @@ export function section(h2, ...args) {
 
 /** Authoritative external citation helpers (open in new tab). */
 export const EXT = {
-	activision: '<a href="https://www.callofduty.com/warzone" target="_blank" rel="noopener noreferrer">Call of Duty Warzone</a>',
-	warzone: '<a href="https://www.callofduty.com/warzone" target="_blank" rel="noopener noreferrer">Call of Duty Warzone</a>',
-	status: '<a href="https://support.activision.com/" target="_blank" rel="noopener noreferrer">Activision Support</a>',
-	ricochet: '<a href="https://www.callofduty.com/ricochet" target="_blank" rel="noopener noreferrer">Ricochet Anti-Cheat</a>',
+	activision: '<a href="https://playvalorant.com" target="_blank" rel="noopener noreferrer">Valorant</a>',
+	valorant: '<a href="https://playvalorant.com" target="_blank" rel="noopener noreferrer">Valorant</a>',
+	status: '<a href="https://support.riotgames.com/" target="_blank" rel="noopener noreferrer">Riot Games Support</a>',
+	vanguard: '<a href="https://playvalorant.com" target="_blank" rel="noopener noreferrer">Vanguard</a>',
 };

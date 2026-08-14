@@ -5,7 +5,7 @@ import { getLocalizedPath, localizeInternalHref } from '../data/i18n/routing';
 import type { LocaleCode } from '../data/i18n/locales';
 import { productInfo, seoFaqs, siteConfig } from '../data/site';
 import { absoluteFaqUrl, getFaqPath } from '../data/faq';
-import { warzoneImages } from '../data/warzone';
+import { valorantImages } from '../data/valorant';
 import { simplePageCopy } from '../data/i18n/simple-pages';
 
 interface Props {
@@ -41,7 +41,7 @@ const introEditByPage: Partial<Record<PageId, string>> = {
 	faq: 'faqIntro',
 };
 const introEdit = locale === 'en' ? introEditByPage[pageId] : undefined;
-const gallery = warzoneImages.product.slice(0, 3).map((img) => ({
+const gallery = valorantImages.product.slice(0, 3).map((img) => ({
 	src: img.src,
 	alt: img.alt,
 }));
@@ -87,7 +87,7 @@ const eyebrowByPage: Partial<Record<PageId, string>> = {
 	intro={intro}
 	introEdit={introEdit}
 	eyebrow={eyebrowByPage[pageId]}
-	heroImage={siteConfig.heroImage || warzoneImages.hero}
+	heroImage={siteConfig.heroImage || valorantImages.hero}
 	heroAlt={siteConfig.name}
 	gallery={gallery}
 	galleryTitle={galleryTitle}

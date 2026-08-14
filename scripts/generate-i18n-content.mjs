@@ -51,8 +51,8 @@ function buildI18nContent() {
 
 		// Validate required page keys
 		const requiredPages = [
-			'home', 'warzone-esp', 'warzone-aimbot', 'features', 'pricing', 'setup',
-			'updates', 'faq', 'support', 'undetected', 'wallhack', 'radar', 'ricochet',
+			'home', 'valorant-esp', 'valorant-aimbot', 'features', 'pricing', 'setup',
+			'updates', 'faq', 'support', 'undetected', 'wallhack', 'radar', 'vanguard',
 			'cheats-2026', 'hacks', 'cheat-download', 'mod-menu', 'soft-aim', 'best-cheats',
 			'aimbot-hack', 'esp-hack', 'unlock-all', 'privacy', 'refund', 'terms',
 		];
