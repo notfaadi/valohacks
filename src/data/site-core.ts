@@ -124,7 +124,7 @@ export const productInfo = {
 	productDetails: {
 		heading: 'Product Details',
 		body: fillBrandTokens(
-			'{brand} is an undetected ESP and awareness toolkit for competitive play. See players, utility, and spike state through a stream-proof overlay with regular Vanguard-focused updates and 24/7 support.',
+			'{brand} is undetected {primaryKeyword} for Windows PC. See players, utility, and spike state through a stream-proof overlay with regular {antiCheat} updates and 24/7 support.',
 		),
 	},
 	/** Homepage FEATURES grid — two columns of 7. Do not add Warzone leftovers here. */

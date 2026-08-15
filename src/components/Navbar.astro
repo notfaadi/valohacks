@@ -102,7 +102,7 @@ const isActive = (href: string) => {
 			<a
 				href={siteConfig.checkoutUrl}
 				class="site-tools__buy"
-				rel="noopener noreferrer"
+				rel="nofollow noopener noreferrer"
 				aria-label={buyShort}
 			>
 				<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -155,7 +155,7 @@ const isActive = (href: string) => {
 				<div class="site-panel__lang">
 					<LanguageSwitcher pageId={pageId} currentLocale={locale} />
 				</div>
-				<a href={siteConfig.checkoutUrl} class="site-panel__buy" rel="noopener noreferrer">
+				<a href={siteConfig.checkoutUrl} class="site-panel__buy" rel="nofollow noopener noreferrer">
 					<span data-edit="ctaBuy">{fillBrandTokens(brandCopy.ctaBuy)}</span>
 				</a>
 			</div>
@@ -212,6 +212,7 @@ const isActive = (href: string) => {
 		align-items: center;
 		gap: 0.35rem;
 		height: 2.15rem;
+		max-width: 12rem;
 		padding: 0 0.75rem;
 		border: 1px solid var(--line-soft);
 		border-radius: 999px;
@@ -222,6 +223,7 @@ const isActive = (href: string) => {
 		letter-spacing: 0.02em;
 		list-style: none;
 		cursor: pointer;
+		appearance: auto;
 		transition:
 			color 0.15s ease,
 			background 0.15s ease,

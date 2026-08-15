@@ -83,7 +83,7 @@ const categories = [
 		<header class="home-seo__faq-head">
 			<div>
 				<p class="home-seo__eyebrow">FAQ</p>
-				<h3 id="home-faq-title">Before you buy</h3>
+				<h2 id="home-faq-title">Before you buy</h2>
 				<p class="home-seo__faq-lede">Delivery, detection status, and what is included.</p>
 			</div>
 			<a class="home-seo__faq-link" href="/faq/">All answers</a>
@@ -99,7 +99,7 @@ const categories = [
 						<div class="home-seo__item-body">
 							<p>{item.answer}</p>
 							<a class="home-seo__item-link" href={getFaqPath(item.slug)}>
-								Open full page
+								{`Read FAQ: ${item.question}`}
 							</a>
 						</div>
 					</details>
@@ -259,7 +259,7 @@ const categories = [
 		border-bottom: 1px solid var(--line-soft);
 	}
 
-	.home-seo__faq-head h3 {
+	.home-seo__faq-head h2 {
 		margin: 0.15rem 0 0;
 		font-family: var(--font-display);
 		font-size: clamp(1.05rem, 1.8vw, 1.2rem);
