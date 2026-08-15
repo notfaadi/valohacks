@@ -1,4 +1,4 @@
-name = "valohacks"
+name = "valohack"
 compatibility_date = "2026-01-01"
 # Pages Git / `wrangler pages deploy` output
 pages_build_output_dir = "./dist"

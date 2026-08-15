@@ -18,8 +18,8 @@
 		"preview": "astro preview",
 		"validate:sitemaps": "node scripts/validate-sitemaps.mjs",
 		"generate:i18n": "node scripts/generate-i18n-content.mjs",
-		"deploy": "npm run build && wrangler pages deploy dist --project-name=valohacks",
-		"pages:deploy": "wrangler pages deploy dist --project-name=valohacks",
+		"deploy": "npm run build && wrangler pages deploy dist --project-name=valohack",
+		"pages:deploy": "wrangler pages deploy dist --project-name=valohack",
 		"wrangler:deploy": "npm run build && wrangler deploy",
 		"astro": "astro"
 	},
