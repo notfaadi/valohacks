@@ -20,6 +20,7 @@
 		"generate:i18n": "node scripts/generate-i18n-content.mjs",
 		"deploy": "npm run build && wrangler pages deploy dist --project-name=valohacks",
 		"pages:deploy": "wrangler pages deploy dist --project-name=valohacks",
+		"wrangler:deploy": "npm run build && wrangler deploy",
 		"astro": "astro"
 	},
 	"dependencies": {

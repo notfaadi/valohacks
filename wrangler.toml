@@ -1,6 +1,13 @@
 name = "valohacks"
 compatibility_date = "2026-01-01"
-pages_build_output_dir = "dist"
+# Pages Git / `wrangler pages deploy` output
+pages_build_output_dir = "./dist"
 
+# Workers Builds / dashboard `npx wrangler deploy` looks here
 [assets]
 directory = "./dist"
+
+# Cloudflare CI leaves Build command empty and only runs `npx wrangler deploy`.
+# Wrangler must create dist before it uploads assets.
+[build]
+command = "npm run build"
