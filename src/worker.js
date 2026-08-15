@@ -6,6 +6,7 @@ import { handleCanonicalFetch } from './lib/canonical-host.js';
  */
 export default {
 	async fetch(request, env) {
+		// Always decide host/HTTPS before touching static assets.
 		return handleCanonicalFetch(request, (req) => env.ASSETS.fetch(req));
 	},
 };

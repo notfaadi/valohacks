@@ -12,3 +12,21 @@ run_worker_first = true
 # Cloudflare CI leaves Build command empty and only runs `npx wrangler deploy`.
 [build]
 command = "npm run build"
+
+# Bind BOTH hosts so www is not a second live site.
+# custom_domain lets Wrangler create the www DNS record on deploy.
+[[routes]]
+pattern = "valohacks.net"
+custom_domain = true
+
+[[routes]]
+pattern = "www.valohacks.net"
+custom_domain = true
+
+[[routes]]
+pattern = "valohacks.net/*"
+zone_name = "valohacks.net"
+
+[[routes]]
+pattern = "www.valohacks.net/*"
+zone_name = "valohacks.net"

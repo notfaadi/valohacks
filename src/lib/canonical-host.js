@@ -164,15 +164,24 @@ function redirectResponse(location) {
 	return new Response(null, { status: 301, headers });
 }
 
+function requestHost(request, url) {
+	const header = (request.headers.get('host') || '').split(':')[0].trim().toLowerCase();
+	return header || url.hostname.toLowerCase();
+}
+
+function isWwwHost(host) {
+	return host === WWW_HOST || host.startsWith('www.');
+}
+
 /** 301 to https://valohacks.net + path/query when host or protocol is wrong. */
 export function canonicalRedirect(request) {
 	const url = new URL(request.url);
-	const host = url.hostname.toLowerCase();
+	const host = requestHost(request, url);
 	const proto = getClientProtocol(request);
 
 	const isLegacyHost = LEGACY_HOSTS.has(host);
-	const isProductionHost = host === APEX_HOST || host === WWW_HOST || isLegacyHost;
-	const needsHostRedirect = host === WWW_HOST || isLegacyHost;
+	const isProductionHost = host === APEX_HOST || isWwwHost(host) || isLegacyHost;
+	const needsHostRedirect = isWwwHost(host) || isLegacyHost;
 	const needsHttpsRedirect = isProductionHost && proto === 'http';
 
 	if (needsHostRedirect || needsHttpsRedirect) {
