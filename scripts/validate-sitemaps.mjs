@@ -27,7 +27,8 @@ function countBrandSitemapImages() {
 	const src = readBrandSource();
 	const block = src.match(/sitemap:\s*\{([\s\S]*?)\n\t\},/);
 	if (!block) return 6;
-	return [...block[1].matchAll(/src:\s*'/g)].length || 6;
+	const srcs = [...block[1].matchAll(/src:\s*'((?:\\'|[^'])*)'/g)].map((m) => m[1]);
+	return new Set(srcs).size || 6;
 }
 
 /** dist/ for static builds; dist/client/ when a Cloudflare adapter rearranges assets. */
@@ -53,71 +54,104 @@ const IMAGE_SITEMAP_ENTRIES = countBrandSitemapImages();
 
 const BLOG_PAGES = 18; // /blog/ index + 17 posts
 const REVIEW_PAGES = 11; // /reviews/ index + 10 review detail pages
-const ENGLISH_PAGES = 25 + BLOG_PAGES + REVIEW_PAGES;
+const FAQ_PAGES = 11; // FAQ answer pages (index is in the product pages)
+/** Product pages in sitemap — excludes cannibal EN URLs that 301 to stronger pillars */
+const ENGLISH_PRODUCT_PAGES = 14;
+const ENGLISH_PAGES = ENGLISH_PRODUCT_PAGES + BLOG_PAGES + REVIEW_PAGES + FAQ_PAGES;
 const I18N_LOCALES = 21;
-const PRODUCT_PAGES_PER_LOCALE = 25;
-const BLOG_PAGES_PER_LOCALE = 18;
+/** Locale product pages also exclude the same cannibal pageIds */
+const PRODUCT_PAGES_PER_LOCALE = 14;
+const BLOG_PAGES_PER_LOCALE = 0; // Locale blog URLs 301 to EN; not in sitemaps
 const PAGES_PER_LOCALE = PRODUCT_PAGES_PER_LOCALE + BLOG_PAGES_PER_LOCALE;
 const I18N_URLS = I18N_LOCALES * PAGES_PER_LOCALE;
 const TOTAL_PAGES = ENGLISH_PAGES + I18N_URLS;
+/** Full EN HTML may still emit redirect stubs for cannibal URLs; sitemaps omit them */
+const ENGLISH_HTML_PAGES = 25 + BLOG_PAGES + REVIEW_PAGES + FAQ_PAGES;
+/** Locale HTML = product pages + blog redirect stubs (index + 17 posts) that are omitted from sitemaps */
+const LOCALE_BLOG_REDIRECT_PAGES = 18;
+const TOTAL_HTML_PAGES =
+	ENGLISH_HTML_PAGES + I18N_LOCALES * (PRODUCT_PAGES_PER_LOCALE + LOCALE_BLOG_REDIRECT_PAGES);
 const HREFLANG_PER_URL = 23;
 const SITEMAP_INDEX_ENTRIES = 1 + I18N_LOCALES + 1; // EN + locales + images
 
+/** Built HTML that intentionally 301s — allowed to be absent from sitemaps */
+const REDIRECT_ONLY_PATHS = new Set([
+	'/best-tarkov-cheats/',
+	'/tarkov-aimbot-hack/',
+	'/tarkov-esp-hack/',
+	'/tarkov-cheats-2026/',
+	'/undetected-tarkov-cheats/',
+	'/tarkov-mod-menu/',
+	'/tarkov-unlock-all/',
+	'/tarkov-soft-aim/',
+	'/tarkov-wallhack/',
+	'/tarkov-cheat-download/',
+	'/battleye-bypass/',
+]);
+
 const ENGLISH_PATHS = [
 	'/',
-	'/warzone-esp/',
-	'/warzone-aimbot/',
+	'/tarkov-esp/',
+	'/tarkov-aimbot/',
 	'/features/',
 	'/pricing/',
 	'/setup/',
 	'/updates/',
 	'/faq/',
 	'/support/',
-	'/undetected-warzone-cheats/',
-	'/warzone-wallhack/',
-	'/warzone-radar-hack/',
-	'/ricochet-bypass/',
-	'/warzone-cheats-2026/',
-	'/warzone-hacks/',
-	'/warzone-cheat-download/',
-	'/warzone-mod-menu/',
-	'/warzone-soft-aim/',
-	'/best-warzone-cheats/',
-	'/warzone-aimbot-hack/',
-	'/warzone-esp-hack/',
-	'/warzone-unlock-all/',
+	'/undetected-tarkov-cheats/',
+	'/tarkov-wallhack/',
+	'/tarkov-radar-hack/',
+	'/battleye-bypass/',
+	'/tarkov-cheats-2026/',
+	'/tarkov-cheats/',
+	'/tarkov-cheat-download/',
+	'/tarkov-mod-menu/',
+	'/tarkov-soft-aim/',
+	'/tarkov-unlock-all/',
 	'/privacy-policy/',
 	'/refund-policy/',
 	'/terms/',
 	'/blog/',
-	'/blog/warzone-resurgence-aggressive-strategies/',
-	'/blog/warzone-loot-routes-guide/',
-	'/blog/warzone-weapon-tier-list/',
-	'/blog/warzone-skin-leaks-guide/',
-	'/blog/warzone-tournament-meta-guide/',
-	'/blog/warzone-pro-settings-guide/',
-	'/blog/warzone-warmup-maps-ranked/',
-	'/blog/warzone-patch-notes-guide/',
-	'/blog/warzone-hacks-complete-guide-2026/',
-	'/blog/call-of-duty-warzone-cheats-buyers-guide/',
-	'/blog/warzone-cheats-2026-whats-new/',
-	'/blog/warzone-aimbot-settings-guide/',
-	'/blog/warzone-esp-wallhack-explained/',
-	'/blog/undetected-warzone-hacks-ricochet/',
-	'/blog/warzone-hacks-vs-cheatvault-comparison/',
-	'/blog/elitefn-vs-warzone-hacks-two-week-test/',
-	'/blog/warzone-hacks-vs-ghostware-features-pricing/',
+	'/blog/tarkov-scav-run-aggressive-strategies/',
+	'/blog/tarkov-loot-routes-guide/',
+	'/blog/tarkov-weapon-tier-list/',
+	'/blog/tarkov-skin-leaks-guide/',
+	'/blog/tarkov-tournament-meta-guide/',
+	'/blog/tarkov-pro-settings-guide/',
+	'/blog/tarkov-warmup-maps-ranked/',
+	'/blog/tarkov-patch-notes-guide/',
+	'/blog/tarkov-cheats-complete-guide-2026/',
+	'/blog/escape-from-tarkov-cheats-buyers-guide/',
+	'/blog/tarkov-cheats-2026-whats-new/',
+	'/blog/tarkov-aimbot-settings-guide/',
+	'/blog/tarkov-esp-wallhack-explained/',
+	'/blog/undetected-tarkov-cheats-battleye/',
+	'/blog/tarkov-cheats-vs-cheatvault-comparison/',
+	'/blog/elitefn-vs-tarkov-cheats-two-week-test/',
+	'/blog/tarkov-cheats-vs-ghostware-features-pricing/',
 	'/reviews/',
-	'/reviews/warzone-soft-aim-review-xkrypt0/',
-	'/reviews/warzone-esp-resurgence-review-buildsr4k/',
-	'/reviews/warzone-cloud-dma-review-dma-wizard/',
-	'/reviews/warzone-controller-soft-aim-review-ctrl-player99/',
-	'/reviews/warzone-hack-setup-review-stormchaser07/',
-	'/reviews/warzone-loot-esp-review-lootgoblinx/',
-	'/reviews/warzone-soft-aim-ranked-review-rankedgrind42/',
-	'/reviews/warzone-radar-hack-review-vanlifewz/',
-	'/reviews/warzone-ricochet-update-review-patchdaymike/',
-	'/reviews/warzone-sniper-soft-aim-review-snipezonly/',
+	'/reviews/tarkov-soft-aim-review-xkrypt0/',
+	'/reviews/tarkov-esp-scav-run-review-buildsr4k/',
+	'/reviews/tarkov-cloud-dma-review-dma-wizard/',
+	'/reviews/tarkov-soft-aim-review-ctrl-player99/',
+	'/reviews/tarkov-cheat-setup-review-stormchaser07/',
+	'/reviews/tarkov-loot-esp-review-lootgoblinx/',
+	'/reviews/tarkov-soft-aim-raid-review-rankedgrind42/',
+	'/reviews/tarkov-radar-hack-review-vanlifeeft/',
+	'/reviews/tarkov-battleye-update-review-patchdaymike/',
+	'/reviews/tarkov-sniper-soft-aim-review-snipezonly/',
+	'/faq/what-are-tarkov-cheats/',
+	'/faq/are-tarkov-cheats-undetected-in-2026/',
+	'/faq/pmc-raids-and-scav-runs/',
+	'/faq/esp-wallhack-radar-or-aimbot/',
+	'/faq/how-are-licenses-delivered/',
+	'/faq/where-to-check-updates/',
+	'/faq/how-to-contact-support/',
+	'/faq/what-is-a-tarkov-wallhack/',
+	'/faq/does-tarkov-cheats-include-radar-hack/',
+	'/faq/battleye-anti-cheat-and-tarkov-cheats/',
+	'/faq/buy-undetected-tarkov-cheats-windows-pc/',
 ];
 
 const LOCALE_CODES = [
@@ -245,8 +279,37 @@ async function main() {
 		bump();
 	} else ok(`sitemap-images.xml has ${IMAGE_SITEMAP_ENTRIES} image entries`);
 
-	// English path coverage
+	const uniqueImageHosts = new Set(imageLocs);
+	if (uniqueImageHosts.size !== imageLocs.length) {
+		fail(
+			`sitemap-images.xml has duplicate <loc> hosts (${imageLocs.length} locs, ${uniqueImageHosts.size} unique) — causes crawl warnings`,
+		);
+		bump();
+	} else ok('sitemap-images.xml has unique page <loc> hosts (no duplicates)');
+
+	for (const required of [`${SITE}/features/`, `${SITE}/pricing/`, `${SITE}/updates/`]) {
+		if (!enLocs.includes(required)) {
+			fail(`Missing core page in sitemap-en.xml: ${required}`);
+			bump();
+		}
+	}
+	if (errors === 0) {
+		ok('Core pages present in sitemap-en.xml: /features/ /pricing/ (Store) /updates/ (Status)');
+	}
+
+	for (const required of [`${SITE}/features/`, `${SITE}/pricing/`, `${SITE}/updates/`]) {
+		if (!imageLocs.includes(required)) {
+			fail(`Missing core host in sitemap-images.xml: ${required}`);
+			bump();
+		}
+	}
+	if (errors === 0) {
+		ok('Image sitemap hosts Features, Store (/pricing/), and Status (/updates/)');
+	}
+
+	// English path coverage (skip intentional 301 stubs)
 	for (const p of ENGLISH_PATHS) {
+		if (REDIRECT_ONLY_PATHS.has(p)) continue;
 		const full = `${SITE}${p === '/' ? '/' : p}`;
 		if (!enLocs.includes(full)) {
 			fail(`Missing English URL in sitemap-en.xml: ${full}`);
@@ -254,6 +317,33 @@ async function main() {
 		}
 	}
 	if (errors === 0) ok(`All ${ENGLISH_PAGES} English canonical paths present in sitemap-en.xml`);
+
+	if (sitemapEn.includes('/undefined') || sitemapEn.includes('undefined</image:loc>')) {
+		fail('sitemap-en.xml contains broken image:loc ending in /undefined');
+		bump();
+	} else ok('sitemap-en.xml has no undefined image URLs');
+
+	// Every page URL must include Google image sitemap annotations (SERP / Images crawl)
+	function countUrlsMissingImages(xml) {
+		const blocks = xml.split(/<url>/i).slice(1);
+		return blocks.filter((block) => !/<image:image[\s>]/i.test(block)).length;
+	}
+
+	const enMissingImages = countUrlsMissingImages(sitemapEn);
+	if (enMissingImages > 0) {
+		fail(`sitemap-en.xml: ${enMissingImages} <url> entries missing <image:image>`);
+		bump();
+	} else ok('Every English sitemap URL has <image:image>');
+
+	let localeMissingImages = 0;
+	for (const locale of I18N_LOCALE_CODES) {
+		const xml = await readFile(path.join(DIST, `sitemap-${locale}.xml`), 'utf8');
+		localeMissingImages += countUrlsMissingImages(xml);
+	}
+	if (localeMissingImages > 0) {
+		fail(`Locale sitemaps: ${localeMissingImages} <url> entries missing <image:image>`);
+		bump();
+	} else ok('Every locale sitemap URL has <image:image>');
 
 	// No overlap between EN and i18n sitemaps
 	const overlap = enLocs.filter((u) => i18nLocs.includes(u));
@@ -354,18 +444,23 @@ async function main() {
 	]);
 
 	const htmlSet = new Set(htmlPaths);
-	const missingFromSitemap = [...htmlSet].filter((p) => !sitemapPaths.has(p));
+	const missingFromSitemap = [...htmlSet].filter((p) => {
+		if (sitemapPaths.has(p) || REDIRECT_ONLY_PATHS.has(p)) return false;
+		// Locale blog stubs 301 to EN — intentionally omitted from sitemaps
+		if (/^\/[a-z]{2}\/blog(\/|$)/.test(p)) return false;
+		return true;
+	});
 	const extraInSitemap = [...sitemapPaths].filter((p) => !htmlSet.has(p));
 
-	if (htmlSet.size !== TOTAL_PAGES) {
-		fail(`Built HTML pages: expected ${TOTAL_PAGES}, got ${htmlSet.size}`);
+	if (htmlSet.size !== TOTAL_HTML_PAGES) {
+		fail(`Built HTML pages: expected ${TOTAL_HTML_PAGES}, got ${htmlSet.size}`);
 		bump();
-	} else ok(`${TOTAL_PAGES} indexable HTML pages built`);
+	} else ok(`${TOTAL_HTML_PAGES} HTML pages built (${REDIRECT_ONLY_PATHS.size} EN redirect-only omitted from sitemaps)`);
 
 	if (missingFromSitemap.length > 0) {
 		fail(`HTML pages missing from sitemaps: ${missingFromSitemap.slice(0, 5).join(', ')}${missingFromSitemap.length > 5 ? '…' : ''}`);
 		bump();
-	} else ok('Every built HTML page is listed in a sitemap');
+	} else ok('Every indexable HTML page is listed in a sitemap');
 
 	if (extraInSitemap.length > 0) {
 		fail(`Sitemap URLs without HTML: ${extraInSitemap.slice(0, 5).join(', ')}`);

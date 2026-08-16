@@ -8,34 +8,34 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SRC = path.resolve(ROOT, '..', 'amansand');
 
 const UI_REPLACEMENTS = [
-	['Warzone Cheats', 'Warzone Cheats'],
-	['Warzone cheats', 'Warzone cheats'],
-	['Warzone Cheats', 'Warzone Cheats'],
-	['Call of Duty: Warzone', 'Call of Duty: Warzone'],
-	['Call of Duty Warzone', 'Call of Duty: Warzone'],
-	['Call of Duty', 'Call of Duty: Warzone'],
-	['Warzone PC', 'Call of Duty: Warzone PC'],
-	['for Warzone', 'for Call of Duty: Warzone'],
-	['Warzone ', 'Call of Duty: Warzone '],
-	['warzone ', 'warzone '],
-	['Ricochet maintenance', 'Ricochet maintenance'],
-	['Ricochet anti-cheat', 'Ricochet anti-cheat'],
-	['Ricochet', 'Ricochet anti-cheat'],
+	['Tarkov Cheats', 'Tarkov Cheats'],
+	['Tarkov cheats', 'Tarkov cheats'],
+	['Tarkov Cheats', 'Tarkov Cheats'],
+	['Escape from Tarkov', 'Escape from Tarkov'],
+	['Escape from Tarkov', 'Escape from Tarkov'],
+	['Call of Duty', 'Escape from Tarkov'],
+	['Tarkov PC', 'Escape from Tarkov PC'],
+	['for Tarkov', 'for Escape from Tarkov'],
+	['Tarkov ', 'Escape from Tarkov '],
+	['tarkov ', 'tarkov '],
+	['BattlEye maintenance', 'BattlEye maintenance'],
+	['BattlEye anti-cheat', 'BattlEye anti-cheat'],
+	['BattlEye', 'BattlEye anti-cheat'],
 	['operatorEsp', 'playerEsp'],
-	['gulagFight', 'rebootFight'],
+	['extractFight', 'rebootFight'],
 	['alMazrah', 'battleRoyaleIsland'],
-	['operators', 'players'],
+	['PMCs', 'players'],
 	['operator', 'player'],
-	['Operators', 'Players'],
+	['PMCs', 'Players'],
 	['Operator', 'Player'],
 	['Al Mazrah', 'Verdansk'],
 	['Verdansk', 'Verdansk'],
-	['Resurgence', 'Resurgence'],
-	['gulag', 'gulag'],
-	['warzonescheats.net', 'warzonescheats.net'],
-	['Trucos Warzone', 'Trucos Call of Duty: Warzone'],
-	['Triches Warzone', 'Triches Call of Duty: Warzone'],
-	['Cheats Warzone', 'Cheats Call of Duty: Warzone'],
+	['scav-run', 'scav-run'],
+	['extract', 'extract'],
+	['tarkovcheats.org', 'tarkovcheats.org'],
+	['Trucos Tarkov', 'Trucos Escape from Tarkov'],
+	['Triches Tarkov', 'Triches Escape from Tarkov'],
+	['Cheats Tarkov', 'Cheats Escape from Tarkov'],
 ];
 
 function apply(content) {
@@ -52,18 +52,18 @@ for (const file of ['ui-strings-part1.mjs', 'ui-strings-part2.mjs']) {
 	console.log('Fixed', file);
 }
 
-// Fix pages-en ricochet key
+// Fix pages-en battleye key
 let pagesEn = await readFile(path.join(ROOT, 'scripts/i18n-data/pages-en.mjs'), 'utf8');
-pagesEn = pagesEn.replace(/\tricochet: \{/, "\t'ricochet': {");
-pagesEn = pagesEn.replace(/Call of Duty: Warzone Warzone/g, 'Call of Duty: Warzone');
-pagesEn = pagesEn.replace(/for Call of Duty: Warzone Warzone/g, 'for Call of Duty: Warzone');
+pagesEn = pagesEn.replace(/\tbattleye: \{/, "\t'battleye': {");
+pagesEn = pagesEn.replace(/Escape from Tarkov Tarkov/g, 'Escape from Tarkov');
+pagesEn = pagesEn.replace(/for Escape from Tarkov Tarkov/g, 'for Escape from Tarkov');
 await writeFile(path.join(ROOT, 'scripts/i18n-data/pages-en.mjs'), pagesEn);
 
 // Fix pages-i18n
 let pagesI18n = await readFile(path.join(ROOT, 'scripts/i18n-data/pages-i18n.mjs'), 'utf8');
 pagesI18n = apply(pagesI18n);
-pagesI18n = pagesI18n.replace(/'ricochet'/g, "'ricochet'");
-pagesI18n = pagesI18n.replace(/ricochet:/g, "'ricochet':");
+pagesI18n = pagesI18n.replace(/'battleye'/g, "'battleye'");
+pagesI18n = pagesI18n.replace(/battleye:/g, "'battleye':");
 await writeFile(path.join(ROOT, 'scripts/i18n-data/pages-i18n.mjs'), pagesI18n);
 
 // Fix generate-i18n pages count

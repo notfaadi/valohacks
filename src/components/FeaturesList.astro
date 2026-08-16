@@ -1,9 +1,10 @@
----
+﻿---
 import { productInfo } from '../data/site';
 
 const items = productInfo.featureList;
-const left = items.slice(0, 7);
-const right = items.slice(7, 14);
+const mid = Math.ceil(items.length / 2);
+const left = items.slice(0, mid);
+const right = items.slice(mid);
 ---
 
 <section class="features" id="features" aria-labelledby="features-heading">
@@ -123,8 +124,8 @@ const right = items.slice(7, 14);
 		height: 1.35rem;
 		flex-shrink: 0;
 		border-radius: 0.35rem;
-		background: color-mix(in srgb, var(--ok) 18%, var(--bg-elevated));
-		color: var(--ok);
+		background: color-mix(in srgb, var(--magenta) 18%, var(--bg-elevated));
+		color: var(--magenta);
 	}
 
 	.features__check svg {

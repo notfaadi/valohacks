@@ -4,8 +4,10 @@ import { getLocalizedPath, hreflangLinksXml, pageIds, type PageId } from './i18n
 import { defaultLocale, localeCodes, type LocaleCode } from './i18n/locales';
 import { siteConfig } from './site';
 import { pageSitemapMeta } from './sitemap-meta';
-import { escapeXml } from './sitemap-xml';
+import { escapeXml, assertCrawlableAssetUrl } from './sitemap-xml';
 import { sitemapLastmod } from './brand-sitemap';
+import { getPageCrawlImage } from './page-images';
+import { sitemapExcludedPageIds } from './seo-canonical';
 
 export type LocaleSitemapEntry = {
 	path: string;
@@ -19,17 +21,26 @@ export type LocaleSitemapEntry = {
 /** Non-English locale codes included in regional sitemaps. */
 export const i18nLocaleCodes = localeCodes.filter((code) => code !== defaultLocale);
 
-const BLOG_PAGES_PER_LOCALE = 18; // /blog/ index + 17 posts
+const BLOG_PAGES_PER_LOCALE = 0; // Locale blogs 301 to EN — not indexed
 
-/** Build sitemap entries for one non-English locale (25 product pages + 18 blog URLs). */
+/** Build sitemap entries for one non-English locale (product pages + blog URLs). */
 export function buildLocaleSitemapEntries(locale: LocaleCode): LocaleSitemapEntry[] {
 	if (locale === defaultLocale) {
 		throw new Error(`English pages belong in sitemap-en.xml, not sitemap-${locale}.xml`);
 	}
 
-	const productEntries: LocaleSitemapEntry[] = pageIds.map((pageId) => {
+	const productEntries: LocaleSitemapEntry[] = pageIds
+		.filter((pageId) => !sitemapExcludedPageIds.has(pageId))
+		.map((pageId) => {
 		const meta = pageSitemapMeta[pageId];
 		const page = pageId === 'home' ? null : getPageContent(locale, pageId);
+		const crawl = getPageCrawlImage(pageId);
+		const imageSrc =
+			pageId === 'home'
+				? crawl.src
+				: page?.heroImage && !page.heroImage.includes('undefined')
+					? page.heroImage
+					: crawl.src;
 
 		return {
 			path: getLocalizedPath(pageId, locale),
@@ -37,14 +48,11 @@ export function buildLocaleSitemapEntries(locale: LocaleCode): LocaleSitemapEntr
 			lastmod: sitemapLastmod(meta.lastmod),
 			priority: meta.i18nPriority,
 			changefreq: meta.changefreq,
-			image:
-				pageId === 'home'
-					? undefined
-					: {
-							url: new URL(page!.heroImage, siteConfig.url).href,
-							title: page!.title,
-							caption: page!.imageAlt,
-						},
+			image: {
+				url: new URL(imageSrc, siteConfig.url).href,
+				title: pageId === 'home' ? crawl.title : page?.title ?? crawl.title,
+				caption: pageId === 'home' ? crawl.caption : page?.imageAlt ?? crawl.caption,
+			},
 		};
 	});
 
@@ -59,6 +67,7 @@ export function buildLocaleSitemapEntries(locale: LocaleCode): LocaleSitemapEntr
 	return [...productEntries, ...blogEntries];
 }
 
+
 export { BLOG_PAGES_PER_LOCALE };
 
 export function localeSitemapFilename(locale: LocaleCode): string {
@@ -72,13 +81,15 @@ export function localeSitemapUrl(locale: LocaleCode): string {
 export function renderLocaleSitemapUrlBlock(entry: LocaleSitemapEntry): string {
 	const loc = new URL(entry.path, siteConfig.url).href;
 	const hreflangBlock = entry.pageId ? `\n${hreflangLinksXml(entry.pageId, escapeXml)}` : '';
-	const imageBlock = entry.image
-		? `\n    <image:image>
-      <image:loc>${escapeXml(entry.image.url)}</image:loc>
+	if (!entry.image) {
+		throw new Error(`[sitemap] Missing image for locale URL ${entry.path}`);
+	}
+	const imageUrl = assertCrawlableAssetUrl(entry.image.url, entry.path);
+	const imageBlock = `\n    <image:image>
+      <image:loc>${escapeXml(imageUrl)}</image:loc>
       <image:title>${escapeXml(entry.image.title)}</image:title>
       <image:caption>${escapeXml(entry.image.caption)}</image:caption>
-    </image:image>`
-		: '';
+    </image:image>`;
 
 	return `  <url>
     <loc>${escapeXml(loc)}</loc>

@@ -3,8 +3,8 @@ import { HERO_IMAGES, clampTitle, clampDesc, section } from './constants.mjs';
 /** Shared product terms kept in English for SEO keywords across locales. */
 const KW = {
 	hacks: 'valorant hacks',
-	cheats: 'valorant cheats',
-	hack: 'valorant hack',
+	cheats: 'valorant hacks',
+	hack: 'valorant cheat',
 	esp: 'valorant esp',
 	wallhack: 'ESP wallhack',
 	radar: 'radar hack',
@@ -12,7 +12,7 @@ const KW = {
 	product: 'Valorant Hacks',
 	game: 'Valorant',
 	checkout: 'Zadeyo',
-	vanguard: 'Vanguard',
+	vanguard: 'Vanguard anti-cheat',
 };
 
 /**
@@ -21,7 +21,7 @@ const KW = {
  */
 export const phrases = {
 	es: {
-		buy: 'Comprar Valorant Hacks', undetected: 'indetectables', maps: 'Bind, Haven, and Ascent',
+		buy: 'Comprar Valorant Hacks', undetected: 'indetectables', maps: 'Ascent, Haven, and Streets of Valorant',
 		win: 'Windows PC', delivery: 'entrega digital instantánea', monthly: '$35/mes', lifetime: '$150 de por vida',
 		s1: (topic) => `${KW.product} ofrece ${KW.wallhack}, ${KW.radar} y ${KW.aimbot} ${phrases.es.undetected} para ${KW.game} en ${phrases.es.win}. ${topic}`,
 		s2: () => `Licencias con ${phrases.es.delivery} vía checkout ${KW.checkout}. Planes ${phrases.es.monthly} y ${phrases.es.lifetime} incluyen ${KW.vanguard} maintenance.`,
@@ -29,7 +29,7 @@ export const phrases = {
 		legal: () => 'Contacta support@valohacks.net para solicitudes legales o de soporte.',
 	},
 	fr: {
-		buy: 'Acheter Valorant Hacks', undetected: 'indétectables', maps: 'Bind, Haven, and Ascent',
+		buy: 'Acheter Valorant Hacks', undetected: 'indétectables', maps: 'Ascent, Haven, and Streets of Valorant',
 		win: 'PC Windows', delivery: 'livraison numérique instantanée', monthly: '35 $/mois', lifetime: '150 $ à vie',
 		s1: (topic) => `${KW.product} combine ${KW.wallhack}, ${KW.radar} et ${KW.aimbot} ${phrases.fr.undetected} pour ${KW.game} sur ${phrases.fr.win}. ${topic}`,
 		s2: () => `Licences avec ${phrases.fr.delivery} via checkout ${KW.checkout}. Forfaits ${phrases.fr.monthly} et ${phrases.fr.lifetime} incluent la maintenance ${KW.vanguard}.`,
@@ -37,7 +37,7 @@ export const phrases = {
 		legal: () => 'Contactez support@valohacks.net pour le support ou les demandes légales.',
 	},
 	de: {
-		buy: 'Valorant Hacks kaufen', undetected: 'undetected', maps: 'Bind, Haven, and Ascent',
+		buy: 'Valorant Hacks kaufen', undetected: 'undetected', maps: 'Ascent, Haven, and Streets of Valorant',
 		win: 'Windows PC', delivery: 'sofortige digitale Lieferung', monthly: '$35/Monat', lifetime: '$150 Lifetime',
 		s1: (topic) => `${KW.product} bündelt ${KW.wallhack}, ${KW.radar} und ${KW.aimbot} als ${phrases.de.undetected} Paket für ${KW.game} auf ${phrases.de.win}. ${topic}`,
 		s2: () => `Lizenzen mit ${phrases.de.delivery} über ${KW.checkout} Checkout. ${phrases.de.monthly} und ${phrases.de.lifetime} inkl. ${KW.vanguard}-Wartung.`,
@@ -45,7 +45,7 @@ export const phrases = {
 		legal: () => 'support@valohacks.net für Support und rechtliche Anfragen.',
 	},
 	pt: {
-		buy: 'Comprar Valorant Hacks', undetected: 'indetectáveis', maps: 'Bind, Haven, and Ascent',
+		buy: 'Comprar Valorant Hacks', undetected: 'indetectáveis', maps: 'Ascent, Haven, and Streets of Valorant',
 		win: 'PC Windows', delivery: 'entrega digital instantânea', monthly: '$35/mês', lifetime: '$150 vitalício',
 		s1: (topic) => `${KW.product} reúne ${KW.wallhack}, ${KW.radar} e ${KW.aimbot} ${phrases.pt.undetected} para ${KW.game} no ${phrases.pt.win}. ${topic}`,
 		s2: () => `Licenças com ${phrases.pt.delivery} via checkout ${KW.checkout}. Planos ${phrases.pt.monthly} e ${phrases.pt.lifetime} incluem manutenção ${KW.vanguard}.`,
@@ -53,7 +53,7 @@ export const phrases = {
 		legal: () => 'Contacte support@valohacks.net para suporte ou questões legais.',
 	},
 	it: {
-		buy: 'Acquista Valorant Hacks', undetected: 'indetectable', maps: 'Bind, Haven, and Ascent',
+		buy: 'Acquista Valorant Hacks', undetected: 'indetectable', maps: 'Ascent, Haven, and Streets of Valorant',
 		win: 'PC Windows', delivery: 'consegna digitale istantanea', monthly: '$35/mese', lifetime: '$150 a vita',
 		s1: (topic) => `${KW.product} unisce ${KW.wallhack}, ${KW.radar} e ${KW.aimbot} ${phrases.it.undetected} per ${KW.game} su ${phrases.it.win}. ${topic}`,
 		s2: () => `Licenze con ${phrases.it.delivery} via checkout ${KW.checkout}. Piani ${phrases.it.monthly} e ${phrases.it.lifetime} includono manutenzione ${KW.vanguard}.`,
@@ -61,7 +61,7 @@ export const phrases = {
 		legal: () => 'Contatta support@valohacks.net per supporto o richieste legali.',
 	},
 	nl: {
-		buy: 'Valorant Hacks kopen', undetected: 'undetected', maps: 'Bind, Haven, and Ascent',
+		buy: 'Valorant Hacks kopen', undetected: 'undetected', maps: 'Ascent, Haven, and Streets of Valorant',
 		win: 'Windows PC', delivery: 'directe digitale levering', monthly: '$35/maand', lifetime: '$150 lifetime',
 		s1: (topic) => `${KW.product} bundelt ${KW.wallhack}, ${KW.radar} en ${KW.aimbot} als ${phrases.nl.undetected} pakket voor ${KW.game} op ${phrases.nl.win}. ${topic}`,
 		s2: () => `Licenties met ${phrases.nl.delivery} via ${KW.checkout} checkout. ${phrases.nl.monthly} en ${phrases.nl.lifetime} incl. ${KW.vanguard}-onderhoud.`,
@@ -69,7 +69,7 @@ export const phrases = {
 		legal: () => 'support@valohacks.net voor support en juridische vragen.',
 	},
 	pl: {
-		buy: 'Kup Valorant Hacks', undetected: 'undetected', maps: 'Bind, Haven, and Ascent',
+		buy: 'Kup Valorant Hacks', undetected: 'undetected', maps: 'Ascent, Haven, and Streets of Valorant',
 		win: 'PC Windows', delivery: 'natychmiastowa dostawa cyfrowa', monthly: '$35/mies.', lifetime: '$150 lifetime',
 		s1: (topic) => `${KW.product} łączy ${KW.wallhack}, ${KW.radar} i ${KW.aimbot} jako pakiet ${phrases.pl.undetected} dla ${KW.game} na ${phrases.pl.win}. ${topic}`,
 		s2: () => `Licencje z ${phrases.pl.delivery} przez checkout ${KW.checkout}. Plany ${phrases.pl.monthly} i ${phrases.pl.lifetime} z konserwacją ${KW.vanguard}.`,
@@ -77,7 +77,7 @@ export const phrases = {
 		legal: () => 'support@valohacks.net w sprawach wsparcia i prawnych.',
 	},
 	ru: {
-		buy: 'Купить Valorant Hacks', undetected: 'undetected', maps: 'Bind, Haven, and Ascent',
+		buy: 'Купить Valorant Hacks', undetected: 'undetected', maps: 'Ascent, Haven, and Streets of Valorant',
 		win: 'Windows PC', delivery: 'мгновенная цифровая доставка', monthly: '$35/мес', lifetime: '$150 навсегда',
 		s1: (topic) => `${KW.product} объединяет ${KW.wallhack}, ${KW.radar} и ${KW.aimbot} в ${phrases.ru.undetected} пакете для ${KW.game} на ${phrases.ru.win}. ${topic}`,
 		s2: () => `Лицензии с ${phrases.ru.delivery} через checkout ${KW.checkout}. Тарифы ${phrases.ru.monthly} и ${phrases.ru.lifetime} включают обслуживание ${KW.vanguard}.`,
@@ -85,7 +85,7 @@ export const phrases = {
 		legal: () => 'support@valohacks.net для поддержки и юридических вопросов.',
 	},
 	tr: {
-		buy: 'Valorant Hacks satın al', undetected: 'undetected', maps: 'Bind, Haven, and Ascent',
+		buy: 'Valorant Hacks satın al', undetected: 'undetected', maps: 'Ascent, Haven, and Streets of Valorant',
 		win: 'Windows PC', delivery: 'anında dijital teslimat', monthly: '$35/ay', lifetime: '$150 ömür boyu',
 		s1: (topic) => `${KW.product}, ${KW.game} için ${phrases.tr.win} üzerinde ${KW.wallhack}, ${KW.radar} ve ${KW.aimbot} ${phrases.tr.undetected} paket sunar. ${topic}`,
 		s2: () => `${KW.checkout} checkout ile ${phrases.tr.delivery}. ${phrases.tr.monthly} ve ${phrases.tr.lifetime} planları ${KW.vanguard} bakımı içerir.`,
@@ -93,7 +93,7 @@ export const phrases = {
 		legal: () => 'Destek ve yasal sorular için support@valohacks.net.',
 	},
 	ar: {
-		buy: 'اشترِ Valorant Hacks', undetected: 'غير مكتشف', maps: 'Bind, Haven, and Ascent',
+		buy: 'اشترِ Valorant Hacks', undetected: 'غير مكتشف', maps: 'Ascent, Haven, and Streets of Valorant',
 		win: 'Windows PC', delivery: 'تسليم رقمي فوري', monthly: '35$/شهر', lifetime: '150$ مدى الحياة',
 		s1: (topic) => `${KW.product} يجمع ${KW.wallhack} و${KW.radar} و${KW.aimbot} ${phrases.ar.undetected} لـ ${KW.game} على ${phrases.ar.win}. ${topic}`,
 		s2: () => `تراخيص مع ${phrases.ar.delivery} عبر checkout ${KW.checkout}. خطط ${phrases.ar.monthly} و${phrases.ar.lifetime} تشمل صيانة ${KW.vanguard}.`,
@@ -101,7 +101,7 @@ export const phrases = {
 		legal: () => 'support@valohacks.net للدعم والطلبات القانونية.',
 	},
 	ja: {
-		buy: 'Valorant Hacksを購入', undetected: 'undetected', maps: 'Bind, Haven, and Ascent',
+		buy: 'Valorant Hacksを購入', undetected: 'undetected', maps: 'Ascent, Haven, and Streets of Valorant',
 		win: 'Windows PC', delivery: '即時デジタル配信', monthly: '$35/月', lifetime: '$150永久',
 		s1: (topic) => `${KW.product}は${KW.game}向け${phrases.ja.win}用${KW.wallhack}、${KW.radar}、${KW.aimbot}の${phrases.ja.undetected}パッケージです。${topic}`,
 		s2: () => `${KW.checkout} checkoutで${phrases.ja.delivery}。${phrases.ja.monthly}と${phrases.ja.lifetime}プランに${KW.vanguard}メンテナンス含む。`,
@@ -109,7 +109,7 @@ export const phrases = {
 		legal: () => 'サポート・法務: support@valohacks.net',
 	},
 	ko: {
-		buy: 'Valorant Hacks 구매', undetected: 'undetected', maps: 'Bind, Haven, and Ascent',
+		buy: 'Valorant Hacks 구매', undetected: 'undetected', maps: 'Ascent, Haven, and Streets of Valorant',
 		win: 'Windows PC', delivery: '즉시 디지털 배송', monthly: '$35/월', lifetime: '$150 평생',
 		s1: (topic) => `${KW.product}는 ${KW.game} ${phrases.ko.win}용 ${KW.wallhack}, ${KW.radar}, ${KW.aimbot} ${phrases.ko.undetected} 패키지입니다. ${topic}`,
 		s2: () => `${KW.checkout} checkout으로 ${phrases.ko.delivery}. ${phrases.ko.monthly} 및 ${phrases.ko.lifetime} 요금제에 ${KW.vanguard} 유지보수 포함.`,
@@ -117,7 +117,7 @@ export const phrases = {
 		legal: () => '지원 및 법무: support@valohacks.net',
 	},
 	zh: {
-		buy: '购买 Valorant Hacks', undetected: 'undetected', maps: 'Bind, Haven, and Ascent',
+		buy: '购买 Valorant Hacks', undetected: 'undetected', maps: 'Ascent, Haven, and Streets of Valorant',
 		win: 'Windows PC', delivery: '即时数字交付', monthly: '$35/月', lifetime: '$150终身',
 		s1: (topic) => `${KW.product}为${KW.game}${phrases.zh.win}提供${KW.wallhack}、${KW.radar}和${KW.aimbot}${phrases.zh.undetected}套餐。${topic}`,
 		s2: () => `通过${KW.checkout} checkout${phrases.zh.delivery}。${phrases.zh.monthly}和${phrases.zh.lifetime}含${KW.vanguard}维护。`,
@@ -125,7 +125,7 @@ export const phrases = {
 		legal: () => '支持与法务：support@valohacks.net',
 	},
 	hi: {
-		buy: 'Valorant Hacks खरीदें', undetected: 'undetected', maps: 'Bind, Haven, and Ascent',
+		buy: 'Valorant Hacks खरीदें', undetected: 'undetected', maps: 'Ascent, Haven, and Streets of Valorant',
 		win: 'Windows PC', delivery: 'तुरंत डिजिटल डिलीवरी', monthly: '$35/माह', lifetime: '$150 लाइफ़टाइम',
 		s1: (topic) => `${KW.product} ${KW.game} के लिए ${phrases.hi.win} पर ${KW.wallhack}, ${KW.radar} और ${KW.aimbot} ${phrases.hi.undetected} पैकेज देता है। ${topic}`,
 		s2: () => `${KW.checkout} checkout से ${phrases.hi.delivery}। ${phrases.hi.monthly} और ${phrases.hi.lifetime} में ${KW.vanguard} maintenance शामिल।`,
@@ -133,7 +133,7 @@ export const phrases = {
 		legal: () => 'सहायता: support@valohacks.net',
 	},
 	id: {
-		buy: 'Beli Valorant Hacks', undetected: 'undetected', maps: 'Bind, Haven, and Ascent',
+		buy: 'Beli Valorant Hacks', undetected: 'undetected', maps: 'Ascent, Haven, and Streets of Valorant',
 		win: 'PC Windows', delivery: 'pengiriman digital instan', monthly: '$35/bulan', lifetime: '$150 seumur hidup',
 		s1: (topic) => `${KW.product} menyediakan ${KW.wallhack}, ${KW.radar}, dan ${KW.aimbot} ${phrases.id.undetected} untuk ${KW.game} di ${phrases.id.win}. ${topic}`,
 		s2: () => `${phrases.id.delivery} via checkout ${KW.checkout}. Paket ${phrases.id.monthly} dan ${phrases.id.lifetime} termasuk pemeliharaan ${KW.vanguard}.`,
@@ -141,7 +141,7 @@ export const phrases = {
 		legal: () => 'support@valohacks.net untuk dukungan dan legal.',
 	},
 	th: {
-		buy: 'ซื้อ Valorant Hacks', undetected: 'undetected', maps: 'Bind, Haven, and Ascent',
+		buy: 'ซื้อ Valorant Hacks', undetected: 'undetected', maps: 'Ascent, Haven, and Streets of Valorant',
 		win: 'Windows PC', delivery: 'จัดส่งดิจิทัลทันที', monthly: '$35/เดือน', lifetime: '$150 ตลอดชีพ',
 		s1: (topic) => `${KW.product} รวม ${KW.wallhack}, ${KW.radar} และ ${KW.aimbot} แบบ ${phrases.th.undetected} สำหรับ ${KW.game} บน ${phrases.th.win} ${topic}`,
 		s2: () => `${phrases.th.delivery} ผ่าน checkout ${KW.checkout} แพ็ก ${phrases.th.monthly} และ ${phrases.th.lifetime} รวมการดูแล ${KW.vanguard}`,
@@ -149,7 +149,7 @@ export const phrases = {
 		legal: () => 'support@valohacks.net สำหรับการสนับสนุน',
 	},
 	vi: {
-		buy: 'Mua Valorant Hacks', undetected: 'undetected', maps: 'Bind, Haven, and Ascent',
+		buy: 'Mua Valorant Hacks', undetected: 'undetected', maps: 'Ascent, Haven, and Streets of Valorant',
 		win: 'PC Windows', delivery: 'giao hàng kỹ thuật số tức thì', monthly: '$35/tháng', lifetime: '$150 trọn đời',
 		s1: (topic) => `${KW.product} cung cấp ${KW.wallhack}, ${KW.radar} và ${KW.aimbot} ${phrases.vi.undetected} cho ${KW.game} trên ${phrases.vi.win}. ${topic}`,
 		s2: () => `${phrases.vi.delivery} qua checkout ${KW.checkout}. Gói ${phrases.vi.monthly} và ${phrases.vi.lifetime} gồm bảo trì ${KW.vanguard}.`,
@@ -157,7 +157,7 @@ export const phrases = {
 		legal: () => 'support@valohacks.net cho hỗ trợ và pháp lý.',
 	},
 	uk: {
-		buy: 'Купити Valorant Hacks', undetected: 'undetected', maps: 'Bind, Haven, and Ascent',
+		buy: 'Купити Valorant Hacks', undetected: 'undetected', maps: 'Ascent, Haven, and Streets of Valorant',
 		win: 'Windows PC', delivery: 'миттєва цифрова доставка', monthly: '$35/міс', lifetime: '$150 назавжди',
 		s1: (topic) => `${KW.product} об'єднує ${KW.wallhack}, ${KW.radar} і ${KW.aimbot} у ${phrases.uk.undetected} пакеті для ${KW.game} на ${phrases.uk.win}. ${topic}`,
 		s2: () => `Ліцензії з ${phrases.uk.delivery} через checkout ${KW.checkout}. Тарифи ${phrases.uk.monthly} і ${phrases.uk.lifetime} включають обслуговування ${KW.vanguard}.`,
@@ -165,7 +165,7 @@ export const phrases = {
 		legal: () => 'support@valohacks.net для підтримки та правових питань.',
 	},
 	cs: {
-		buy: 'Koupit Valorant Hacks', undetected: 'undetected', maps: 'Bind, Haven, and Ascent',
+		buy: 'Koupit Valorant Hacks', undetected: 'undetected', maps: 'Ascent, Haven, and Streets of Valorant',
 		win: 'Windows PC', delivery: 'okamžité digitální doručení', monthly: '$35/měs.', lifetime: '$150 lifetime',
 		s1: (topic) => `${KW.product} spojuje ${KW.wallhack}, ${KW.radar} a ${KW.aimbot} jako ${phrases.cs.undetected} balíček pro ${KW.game} na ${phrases.cs.win}. ${topic}`,
 		s2: () => `Licence s ${phrases.cs.delivery} přes checkout ${KW.checkout}. Plány ${phrases.cs.monthly} a ${phrases.cs.lifetime} včetně údržby ${KW.vanguard}.`,
@@ -173,7 +173,7 @@ export const phrases = {
 		legal: () => 'support@valohacks.net pro podporu a právní dotazy.',
 	},
 	ro: {
-		buy: 'Cumpără Valorant Hacks', undetected: 'undetected', maps: 'Bind, Haven, and Ascent',
+		buy: 'Cumpără Valorant Hacks', undetected: 'undetected', maps: 'Ascent, Haven, and Streets of Valorant',
 		win: 'PC Windows', delivery: 'livrare digitală instantă', monthly: '$35/lună', lifetime: '$150 pe viață',
 		s1: (topic) => `${KW.product} combină ${KW.wallhack}, ${KW.radar} și ${KW.aimbot} ${phrases.ro.undetected} pentru ${KW.game} pe ${phrases.ro.win}. ${topic}`,
 		s2: () => `Licențe cu ${phrases.ro.delivery} via checkout ${KW.checkout}. Planuri ${phrases.ro.monthly} și ${phrases.ro.lifetime} includ mentenanță ${KW.vanguard}.`,
@@ -181,7 +181,7 @@ export const phrases = {
 		legal: () => 'support@valohacks.net pentru suport și legal.',
 	},
 	sv: {
-		buy: 'Köp Valorant Hacks', undetected: 'undetected', maps: 'Bind, Haven, and Ascent',
+		buy: 'Köp Valorant Hacks', undetected: 'undetected', maps: 'Ascent, Haven, and Streets of Valorant',
 		win: 'Windows PC', delivery: 'omedelbar digital leverans', monthly: '$35/mån', lifetime: '$150 lifetime',
 		s1: (topic) => `${KW.product} kombinerar ${KW.wallhack}, ${KW.radar} och ${KW.aimbot} som ${phrases.sv.undetected} paket för ${KW.game} på ${phrases.sv.win}. ${topic}`,
 		s2: () => `Licenser med ${phrases.sv.delivery} via ${KW.checkout} checkout. ${phrases.sv.monthly} och ${phrases.sv.lifetime} inkl. ${KW.vanguard}-underhåll.`,

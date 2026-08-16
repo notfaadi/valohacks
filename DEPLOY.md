@@ -1,11 +1,11 @@
-# Deploy warzonescheats.net
+# Deploy tarkovcheats.org
 
-Step-by-step guide to deploy the Warzone Hacks static site to **warzonescheats.net** on Cloudflare Pages, configure DNS, and submit to Google Search Console.
+Step-by-step guide to deploy the Tarkov Cheats static site to **tarkovcheats.org** on Cloudflare Pages, configure DNS, and submit to Google Search Console.
 
 ## Prerequisites
 
 - Node.js **≥ 22.12.0**
-- Cloudflare account with access to **warzonescheats.net** DNS
+- Cloudflare account with access to **tarkovcheats.org** DNS
 - Wrangler CLI (included as dev dependency): `npx wrangler login`
 
 ## 1. Build and validate locally
@@ -21,7 +21,7 @@ npm run build:validate
 
 `build:validate` runs `astro build` then `scripts/validate-sitemaps.mjs`. All sitemap checks must pass before deploying.
 
-Expected output: **556** indexable HTML pages (25 English marketing + 15 blog URLs + 21 locales × 25 pages ricocheth).
+Expected output: **556** indexable HTML pages (25 English marketing + 15 blog URLs + 21 locales × 25 pages BattlEye).
 
 ## 2. Cloudflare Pages project
 
@@ -30,12 +30,12 @@ Expected output: **556** indexable HTML pages (25 English marketing + 15 blog UR
 1. Log in to [Cloudflare Dashboard](https://dash.cloudflare.com) → **Workers & Pages** → **Create application** → **Pages** → **Connect to Git**.
 2. Select this repository.
 3. Configure build settings:
-   - **Project name:** `warzonescheats` (existing) or create a new project
+   - **Project name:** `tarkovscheats` (existing) or create a new project
    - **Production branch:** `main` (or `master`)
    - **Build command:** `npm run build`
    - **Build output directory:** `dist`
    - **Node.js version:** 22 (set via environment variable `NODE_VERSION=22` if needed)
-4. Save and deploy. Cloudflare runs the build on ricocheth push.
+4. Save and deploy. Cloudflare runs the build on BattlEye push.
 
 ### Option B — Direct upload / Wrangler CLI
 
@@ -44,13 +44,13 @@ npm run build:validate
 npm run pages:deploy
 ```
 
-This runs `wrangler pages deploy dist --project-name=warzonescheats` (see `wrangler.toml`).
+This runs `wrangler pages deploy dist --project-name=besttarkovcheats` (see `wrangler.toml`).
 
 ## 3. Custom domain and DNS
 
-Add **warzonescheats.net** as the primary custom domain on the Pages project.
+Add **tarkovcheats.org** as the primary custom domain on the Pages project.
 
-### Apex (warzonescheats.net)
+### Apex (tarkovcheats.org)
 
 In **Cloudflare DNS** for the zone:
 
@@ -64,11 +64,11 @@ Cloudflare CNAME flattening handles apex records automatically.
 
 1. Add a DNS record for `www` pointing to the same Pages project (proxied CNAME or A record).
 2. In **Rules** → **Redirect Rules** (or Bulk Redirects), create:
-   - **Source:** `www.warzonescheats.net/*`
-   - **Target:** `https://warzonescheats.net/${1}`
+   - **Source:** `www.tarkovcheats.org/*`
+   - **Target:** `https://tarkovcheats.org/${1}`
    - **Status:** 301
 
-The deployed `functions/_middleware.js` also enforces apex canonical host, legacy domain redirects (`warzonescheats.xyz`, `.net`, `.com`), and legacy path redirects.
+The deployed `functions/_middleware.js` also enforces apex canonical host, legacy domain redirects (`tarkovcheats.org`, `.net`, `.com`), and legacy path redirects.
 
 ### SSL / HTTPS
 
@@ -80,35 +80,35 @@ The deployed `functions/_middleware.js` also enforces apex canonical host, legac
 
 Verify these URLs return **200** with correct content:
 
-- `https://warzonehacks.net/`
-- `https://warzonehacks.net/es/`
-- `https://warzonehacks.net/warzone-hacks/`
-- `https://warzonehacks.net/warzone-aimbot/`
-- `https://warzonehacks.net/sitemap.xml`
-- `https://warzonehacks.net/robots.txt`
+- `https://tarkovcheats.org/`
+- `https://tarkovcheats.org/es/`
+- `https://tarkovcheats.org/tarkov-cheats/`
+- `https://tarkovcheats.org/tarkov-aimbot/`
+- `https://tarkovcheats.org/sitemap.xml`
+- `https://tarkovcheats.org/robots.txt`
 
 Verify redirects:
 
-- `http://warzonehacks.net` → `https://warzonehacks.net` (301)
-- `https://www.warzonehacks.net` → `https://warzonehacks.net` (301)
-- Legacy domains (e.g. `warzonescheats.net`) → `https://warzonehacks.net` (301)
+- `http://tarkovcheats.org` → `https://tarkovcheats.org` (301)
+- `https://www.tarkovcheats.org` → `https://tarkovcheats.org` (301)
+- Legacy domains (e.g. `tarkovcheats.org`) → `https://tarkovcheats.org` (301)
 - `/sitemap-index.xml` → `/sitemap.xml` (301)
-- Legacy paths (e.g. `/fortnite-hacks/`) → Warzone equivalents (301)
+- Legacy paths (e.g. `/fortnite-hacks/`) → Tarkov equivalents (301)
 
 ## 5. Google Search Console
 
 1. Go to [Google Search Console](https://search.google.com/search-console).
-2. **Add property** → choose **Domain** → enter `warzonehacks.net`.
+2. **Add property** → choose **Domain** → enter `tarkovcheats.org`.
 3. Verify ownership via the **DNS TXT record** Cloudflare provides (add in Cloudflare DNS, wait for propagation, then confirm in GSC).
 4. After verification, open **Sitemaps** and submit:
    ```
-   https://warzonehacks.net/sitemap.xml
+   https://tarkovcheats.org/sitemap.xml
    ```
-   Remove any legacy submissions (`sitemap-index.xml`, old `warzonescheats.net` URLs).
+   Remove any legacy submissions (`sitemap-index.xml`, old `tarkovcheats.org` URLs).
 5. Use **URL Inspection** to request indexing for:
    - Homepage (`/`)
-   - Pillar page (`/warzone-hacks/`)
-   - Key landing pages (`/warzone-aimbot/`, `/warzone-esp/`, `/warzone-cheats-2026/`, etc.)
+   - Pillar page (`/tarkov-cheats/`)
+   - Key landing pages (`/tarkov-aimbot/`, `/tarkov-esp/`, `/tarkov-cheats-2026/`, etc.)
    - A sample of locale homepages (`/es/`, `/de/`, `/fr/`)
 6. Monitor **Pages** (Coverage), **Core Web Vitals**, and **International targeting** (hreflang) over the following weeks.
 
@@ -126,11 +126,11 @@ Verify redirects:
 
 - [ ] `npm run build:validate` passes locally
 - [ ] Cloudflare Pages project attached to this repo
-- [ ] Custom domain `warzonehacks.net` attached and active
+- [ ] Custom domain `tarkovcheats.org` attached and active
 - [ ] `www` redirects to apex
-- [ ] Legacy domains 301 to `warzonehacks.net`
+- [ ] Legacy domains 301 to `tarkovcheats.org`
 - [ ] Always Use HTTPS enabled
-- [ ] `robots.txt` and sitemaps serve from `https://warzonehacks.net`
+- [ ] `robots.txt` and sitemaps serve from `https://tarkovcheats.org`
 - [ ] Google Search Console domain verified
 - [ ] `sitemap.xml` submitted in GSC
-- [ ] Homepage and `/warzone-hacks/` requested for indexing
+- [ ] Homepage and `/tarkov-cheats/` requested for indexing

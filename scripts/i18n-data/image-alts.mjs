@@ -1,0 +1,42 @@
+/** Descriptive image alts — Google rejects empty or keyword-only alts. */
+export const DESCRIPTIVE_IMAGE_ALTS = {
+	hero: 'Valorant Hacks hero — ESP and aimbot overlay in Valorant',
+	espWallhack: 'Wallhack outlines showing enemies through walls',
+	aimbotCombat: 'Soft aim assist overlay during an Valorant match',
+	squadFight: 'Valorant Hacks combat overlay during a squad fight',
+	playerEsp: 'Player ESP boxes and distance readouts in a Valorant match',
+	headerArt: 'Aimbot view and bone priority controls for Valorant',
+	cheatsPackage: '2D radar threat overlay for Valorant',
+	rebootFight: 'Aimbot assist during a Valorant firefight',
+	battleRoyale: 'Valorant Hacks in-match overview for Windows PC',
+	battleRoyaleIsland: 'ESP markers for players and spike sites in Valorant',
+};
+
+/** Page-level image alt by pageId (EN source of truth). */
+export const PAGE_IMAGE_ALTS = {
+	home: 'Valorant Hacks homepage hero — ESP and aimbot for Valorant',
+	'tarkov-esp': 'Valorant ESP player boxes and distance readouts in a match',
+	'tarkov-aimbot': 'Valorant aimbot and soft aim controls on Windows PC',
+	features: 'Valorant Hacks features — ESP, soft aim, and radar screenshots',
+	pricing: 'Valorant Hacks store plans for monthly and lifetime licenses',
+	setup: 'Valorant Hacks setup guide screenshot for Windows PC',
+	updates: 'Valorant Hacks live status after Vanguard and game patches',
+	faq: 'Valorant Hacks FAQ — delivery, setup, and update answers',
+	support: 'Valorant Hacks support page for license and setup help',
+	undetected: 'Valorant Hacks undetected status overview for Windows PC',
+	wallhack: 'Valorant wallhack visibility through walls in a match',
+	radar: 'Valorant 2D radar overlay showing nearby threats',
+	vanguard: 'Valorant Hacks maintenance after a Vanguard patch',
+	'cheats-2026': 'Valorant Hacks product overview for Valorant',
+	hacks: 'Valorant Hacks product page — ESP, aimbot, and radar',
+	'cheat-download': 'Valorant Hacks download and install delivery flow',
+	'mod-menu': 'Valorant Hacks in-game menu controls',
+	'soft-aim': 'Valorant soft aim FOV and smoothness settings',
+	'best-cheats': 'Valorant Hacks overview for Valorant on PC',
+	'aimbot-hack': 'Valorant aimbot hack controls and bone priority',
+	'esp-hack': 'Valorant ESP hack boxes and player markers',
+	'unlock-all': 'Valorant Hacks license features overview',
+	privacy: 'Valorant Hacks privacy policy page',
+	refund: 'Valorant Hacks refund policy page',
+	terms: 'Valorant Hacks terms of use page',
+};

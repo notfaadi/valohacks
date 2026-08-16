@@ -13,92 +13,61 @@ if (currentLocale !== defaultLocale) {
 	return null;
 }
 
-const localeList = JSON.stringify(
-	locales.map((l) => ({
-		code: l.code,
-		nativeName: l.nativeName,
-		region: l.region,
-		name: l.name,
-	})),
-);
-// Only ship the slug map for this page — the full map for all pages/locales
-// added ~20KB of inline JSON to every English page.
-const pageSlugs = JSON.stringify(localizedSlugs[pageId] ?? {});
+const localeMetas = locales.map((l) => ({
+	code: l.code,
+	nativeName: l.nativeName,
+	name: l.name,
+	region: l.region,
+}));
+const pageSlugs = localizedSlugs[pageId] ?? {};
 ---
 
-<div class="locale-suggest is-hidden" role="region" aria-label="Language suggestion" hidden>
-	<p class="locale-suggest__text"></p>
-	<button type="button" class="locale-suggest__dismiss" aria-label="Dismiss">×</button>
-</div>
-
-<script define:vars={{ localeList, pageSlugs, defaultLocale }}>
-	(function () {
-		const run = () => {
-			const bar = document.querySelector('.locale-suggest');
-			const textEl = bar?.querySelector('.locale-suggest__text');
-			const dismiss = bar?.querySelector('.locale-suggest__dismiss');
-			const storageKey = 'fc_locale_dismissed';
-			const cookieName = 'fc_locale';
-
-			if (!bar || sessionStorage.getItem(storageKey)) return;
-
-			const locales = JSON.parse(localeList);
-			const slugs = JSON.parse(pageSlugs);
-
-			function getLocalizedPath(locale) {
-				const slug = slugs[locale];
-				return slug ? `/${locale}/${slug}/` : `/${locale}/`;
+<div id="locale-suggest" class="locale-suggest" hidden role="region" aria-label="Language suggestion"></div>
+<script
+	is:inline
+	define:vars={{ localeMetas, pageSlugs, defaultLocale, currentLocale }}
+>
+	(() => {
+		const root = document.getElementById('locale-suggest');
+		if (!root || currentLocale !== defaultLocale) return;
+		if (sessionStorage.getItem('fc_locale_dismissed')) return;
+		const langs = navigator.languages?.length ? navigator.languages : [navigator.language];
+		let preferred = defaultLocale;
+		for (const tag of langs) {
+			const primary = String(tag).toLowerCase().split('-')[0];
+			if (localeMetas.some((l) => l.code === primary)) {
+				preferred = primary;
+				break;
 			}
-
-			function localeFromNavigator() {
-				const cookie = document.cookie.match(/(?:^|;\s*)fc_locale=([^;]+)/)?.[1];
-				if (cookie && locales.some((l) => l.code === cookie)) return cookie;
-
-				const langs = navigator.languages?.length ? navigator.languages : [navigator.language];
-				for (const tag of langs) {
-					const primary = tag.toLowerCase().split('-')[0];
-					if (locales.some((l) => l.code === primary)) return primary;
-				}
-				return defaultLocale;
-			}
-
-			const preferred = localeFromNavigator();
-			if (preferred === defaultLocale) return;
-
-			const target = locales.find((l) => l.code === preferred);
-			if (!target || !textEl) return;
-
-			const href = getLocalizedPath(preferred);
-			textEl.replaceChildren();
-			textEl.append(
-				document.createTextNode(`${target.nativeName} (${target.region}) — `),
-			);
-			const link = document.createElement('a');
-			link.href = href;
-			link.textContent = `${target.name} version`;
-			textEl.append(link);
-			bar.hidden = false;
-			bar.classList.remove('is-hidden');
-
-			dismiss?.addEventListener('click', () => {
-				sessionStorage.setItem(storageKey, '1');
-				bar.hidden = true;
-			});
-
-			link.addEventListener('click', () => {
-				document.cookie = `${cookieName}=${preferred};path=/;max-age=31536000;SameSite=Lax`;
-			});
-		};
-
-		if ('requestIdleCallback' in window) {
-			requestIdleCallback(run, { timeout: 3000 });
-		} else {
-			setTimeout(run, 1);
 		}
+		if (preferred === defaultLocale || preferred === currentLocale) return;
+		const meta = localeMetas.find((l) => l.code === preferred);
+		if (!meta) return;
+		const slug = pageSlugs[preferred];
+		const href = slug ? `/${preferred}/${slug}/` : `/${preferred}/`;
+		root.hidden = false;
+		root.innerHTML =
+			'<p class="locale-suggest__text">' +
+			meta.nativeName +
+			' (' +
+			meta.region +
+			') — <a href="' +
+			href +
+			'">' +
+			meta.name +
+			' version</a></p>' +
+			'<button type="button" class="locale-suggest__dismiss" aria-label="Dismiss">×</button>';
+		root.querySelector('a')?.addEventListener('click', () => {
+			document.cookie = 'fc_locale=' + meta.code + ';path=/;max-age=31536000;SameSite=Lax';
+		});
+		root.querySelector('.locale-suggest__dismiss')?.addEventListener('click', () => {
+			sessionStorage.setItem('fc_locale_dismissed', '1');
+			root.hidden = true;
+		});
 	})();
 </script>
 
-<style>
+<style is:global>
 	.locale-suggest {
 		display: flex;
 		align-items: center;
@@ -112,7 +81,7 @@ const pageSlugs = JSON.stringify(localizedSlugs[pageId] ?? {});
 		text-align: center;
 	}
 
-	.locale-suggest.is-hidden {
+	.locale-suggest[hidden] {
 		display: none;
 	}
 
@@ -120,7 +89,7 @@ const pageSlugs = JSON.stringify(localizedSlugs[pageId] ?? {});
 		margin: 0;
 	}
 
-	.locale-suggest :global(a) {
+	.locale-suggest a {
 		color: var(--magenta-soft);
 		font-weight: 700;
 		text-decoration: underline;

@@ -1,6 +1,6 @@
 import type { PageId } from './content.generated';
 import { fillBrandTokens, seoDescription } from '../brand';
-import { brandCopy, brandSeo, productInfo, seoPageTitle } from '../site-core';
+import { brandCopy, brandSeo, seoPageTitle } from '../site-core';
 
 export type SimpleSection = {
 	h2: string;
@@ -48,13 +48,35 @@ export const simplePageCopy: Partial<Record<PageId, SimplePageCopy>> = {
 		galleryTitle: 'In-game look',
 		sections: [
 			{
-				h2: 'FEATURES',
-				paragraphs: ['ESP, radar, and aim tools included in one {game} license.'],
-				list: [...productInfo.featureList],
+				h2: 'ESP & wallhack',
+				paragraphs: [
+					'See enemies and spike sites through walls with distance readouts.',
+					'Use filters so the overlay stays clear on Bind, Ascent, and unrated.',
+				],
+				list: ['Player boxes & distance', 'Player and spike markers', 'Agent filters'],
+			},
+			{
+				h2: 'Aimbot & soft aim',
+				paragraphs: [
+					'Aim help you can tune to feel natural.',
+					'Set FOV, smoothness, and bone priority per weapon before you queue.',
+				],
+				list: ['Smooth aim strength', 'FOV and bone priority', 'Hotkeys mid-match'],
+			},
+			{
+				h2: 'Radar',
+				paragraphs: [
+					'A simple 2D radar for threats outside your view.',
+					'Spot flanks near spike sites without filling the whole screen.',
+				],
+				list: ['Nearby enemy cues', 'Adjustable range', 'Works in ranked & unrated'],
 			},
 			{
 				h2: 'Updates & support',
-				paragraphs: ['We rebuild after big {game} or {antiCheat} patches.'],
+				paragraphs: [
+					'We rebuild after big {game} or {antiCheat} patches.',
+					'Check Status before you play after a patch day.',
+				],
 				list: ['Status on the Status page', 'Setup guide included', 'Email support with your order ID'],
 			},
 		],
@@ -71,8 +93,19 @@ export const simplePageCopy: Partial<Record<PageId, SimplePageCopy>> = {
 		sections: [
 			{
 				h2: 'What you get',
-				paragraphs: ['Full package access for Windows 10 / 11.'],
+				paragraphs: [
+					'Full package access for Windows 10 / 11.',
+					'Same ESP, soft aim, and radar on monthly and lifetime plans.',
+				],
 				list: ['ESP, aimbot, and radar', 'Patch rebuilds while active', 'Digital delivery after checkout'],
+			},
+			{
+				h2: 'Plans',
+				paragraphs: [
+					'Pick monthly to try first, or lifetime for one payment.',
+					'Both plans unlock the same features after checkout.',
+				],
+				list: ['Monthly — 30 days', 'Lifetime — one-time', 'Instant license by email'],
 			},
 			{
 				h2: 'Before you buy',
@@ -91,18 +124,27 @@ export const simplePageCopy: Partial<Record<PageId, SimplePageCopy>> = {
 		h1: 'Status',
 		intro: brandCopy.statusIntro,
 		ctaPrimary: brandCopy.ctaBuy,
-		ctaSecondary: 'Undetected guide',
-		ctaSecondaryHref: '/undetected-valorant-cheats/',
+		ctaSecondary: 'Valorant Hacks overview',
+		ctaSecondaryHref: '/valorant-hacks/',
 		galleryTitle: 'In-game look',
 		sections: [
 			{
 				h2: 'Current status',
-				paragraphs: ['We post a note when a new build is live after a game or anti-cheat update.'],
-				list: ['Check this page before queueing', 'Monthly and lifetime get rebuilds while active'],
+				paragraphs: [
+					'As of 13 Aug 2026 the package is online for Valorant on Windows PC. We post a new note here when a game or Vanguard patch needs a rebuild.',
+					'If Status is green, you can queue. If we are rebuilding, wait for the next note.',
+				],
+				list: [
+					'Check this page before every match after a patch',
+					'Monthly and lifetime licenses get rebuilds while active',
+					'No cheat stays undetected forever — status first, then play',
+				],
 			},
 			{
 				h2: 'After a patch',
-				paragraphs: ['Wait for our rebuild note, then launch. Do not play on an old build after a big update.'],
+				paragraphs: [
+					'Wait for our rebuild note, then launch. Do not play on an old build after a big update.',
+				],
 				list: ['Read the latest status note', 'Follow setup if something fails', 'Email support with your order ID'],
 			},
 			{
@@ -115,25 +157,135 @@ export const simplePageCopy: Partial<Record<PageId, SimplePageCopy>> = {
 	hacks: page({
 		title: brandSeo.previewTitle,
 		description: brandSeo.previewDescription,
-		h1: 'Preview',
+		h1: 'Valorant Hacks',
 		intro: brandCopy.previewIntro,
 		ctaPrimary: brandCopy.ctaBuy,
 		ctaSecondary: 'View features',
 		ctaSecondaryHref: '/features/',
-		galleryTitle: 'In-game look',
+		galleryTitle: 'In-match look',
 		sections: [
 			{
-				h2: 'What it is',
-				paragraphs: ['One package for {game} on Windows PC.'],
-				list: ['ESP / wallhack', 'Soft aim & aimbot', '2D radar', 'Patch updates'],
+				h2: 'What you get',
+				paragraphs: [
+					'One license for Valorant on Windows PC — built for ranked and unrated.',
+				],
+				list: [
+					'ESP / wallhack with distance',
+					'Soft aim & aimbot profiles',
+					'2D radar for flanks',
+					'Vanguard rebuilds after patches',
+				],
+			},
+			{
+				h2: 'Built for Valorant matches',
+				paragraphs: [
+					'Read enemies before you push and stay aware near spike sites. Tune soft aim per weapon class for Bind, Ascent, and long-range maps.',
+				],
+				list: [
+					'<a href="/valorant-esp/">ESP guide</a>',
+					'<a href="/valorant-aimbot/">Aimbot controls</a>',
+					'<a href="/valorant-radar-hack/">Radar overlay</a>',
+					'<a href="/updates/">Live status</a>',
+				],
 			},
 			{
 				h2: 'How to start',
-				paragraphs: ['Buy a plan, get your license by email, then follow setup.'],
+				paragraphs: ['Buy a plan, get your license by email, then follow setup. Check Status after every major patch.'],
 				list: [
 					'<a href="/pricing/">Open store</a>',
 					'<a href="/setup/">Setup guide</a>',
 					'<a href="/updates/">Check status</a>',
+				],
+			},
+		],
+	}),
+	'tarkov-esp': page({
+		title: 'Valorant ESP | {brand}',
+		description:
+			'Valorant ESP and wallhack for Valorant on Windows PC — player boxes, distance, and clear overlays in matches.',
+		h1: 'ESP',
+		intro: 'See players through walls during Valorant matches. Part of the same {brand} license.',
+		ctaPrimary: brandCopy.ctaBuy,
+		ctaSecondary: 'Valorant Hacks overview',
+		ctaSecondaryHref: '/valorant-hacks/',
+		galleryTitle: 'ESP in match',
+		sections: [
+			{
+				h2: 'What ESP shows',
+				paragraphs: ['Boxes, distance, and filters for enemies and spike sites.'],
+				list: ['Player ESP', 'Spike markers', 'Agent filters'],
+			},
+			{
+				h2: 'When to use it',
+				paragraphs: ['Clear Bind, Ascent, and unrated matches without flooding the screen.'],
+				list: ['Tune opacity', 'Filter noise', 'Pair with radar'],
+			},
+			{
+				h2: 'Next steps',
+				paragraphs: ['ESP is included with aimbot and radar in one plan.'],
+				list: [
+					'<a href="/valorant-hacks/">Full product</a>',
+					'<a href="/features/">All features</a>',
+					'<a href="/pricing/">Store</a>',
+				],
+			},
+		],
+	}),
+	'tarkov-aimbot': page({
+		title: 'Valorant Aimbot | {brand}',
+		description:
+			'Valorant aimbot and soft aim for Valorant on Windows PC — FOV, smoothness, and bone priority you can tune per weapon.',
+		h1: 'Aimbot',
+		intro: 'Soft aim and aim assist you can tune for Valorant. Included in the same {brand} license.',
+		ctaPrimary: brandCopy.ctaBuy,
+		ctaSecondary: 'Valorant Hacks overview',
+		ctaSecondaryHref: '/valorant-hacks/',
+		galleryTitle: 'Aimbot view',
+		sections: [
+			{
+				h2: 'Controls',
+				paragraphs: ['Set FOV, smoothness, and bone priority before you queue.'],
+				list: ['Soft aim strength', 'Bone priority', 'Hotkeys mid-match'],
+			},
+			{
+				h2: 'Play styles',
+				paragraphs: ['Keep settings subtle for longer sessions. Raise strength only when you accept more risk.'],
+				list: ['Legit soft aim', 'Per-weapon profiles', 'Works with ESP'],
+			},
+			{
+				h2: 'Next steps',
+				paragraphs: ['Aimbot ships with ESP and radar in one license.'],
+				list: [
+					'<a href="/valorant-hacks/">Full product</a>',
+					'<a href="/features/">All features</a>',
+					'<a href="/pricing/">Store</a>',
+				],
+			},
+		],
+	}),
+	radar: page({
+		title: 'Valorant Radar | {brand}',
+		description:
+			'Valorant 2D radar for Valorant on Windows PC — flank cues near spike sites without filling the whole screen.',
+		h1: 'Radar',
+		intro: 'A simple 2D radar for threats outside your view. Included in the same {brand} license.',
+		ctaPrimary: brandCopy.ctaBuy,
+		ctaSecondary: 'Valorant Hacks overview',
+		ctaSecondaryHref: '/valorant-hacks/',
+		galleryTitle: 'Radar overlay',
+		sections: [
+			{
+				h2: 'What it shows',
+				paragraphs: ['Nearby enemy cues with adjustable range for ranked and unrated.'],
+				list: ['Flank awareness', 'Spike-site approaches', 'Adjustable range'],
+			},
+			{
+				h2: 'With ESP',
+				paragraphs: ['Use radar for threats you cannot see yet. Use ESP when you push.'],
+				list: [
+					'<a href="/valorant-esp/">ESP guide</a>',
+					'<a href="/valorant-hacks/">Full product</a>',
+					'<a href="/pricing/">Store</a>',
 				],
 			},
 		],

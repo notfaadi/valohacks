@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { productInfo, siteConfig, seoKeywords } from '../data/site';
+import { productInfo, siteConfig } from '../data/site';
 import { brandTheme, brandThemeInlineStyle, brandThemeRootCss } from '../data/brand-theme';
 import I18nHead from '../components/I18nHead.astro';
 import LocaleSuggest from '../components/LocaleSuggest.astro';
@@ -8,7 +8,6 @@ import InlineBrandEditor from '../components/InlineBrandEditor.astro';
 import { defaultLocale, localeMap, locales, type LocaleCode } from '../data/i18n/locales';
 import type { PageId } from '../data/i18n/content.generated';
 import { buildCanonicalUrl, type HreflangAlternate } from '../data/i18n/routing';
-import { heroWidth, heroHeight } from '../lib/responsive-images';
 
 interface Crumb {
 	label: string;
@@ -47,8 +46,6 @@ const {
 	hreflangAlternates,
 	extraGraph = [],
 	lcpImage,
-	lcpImageSrcSet,
-	lcpImageSizes = '100vw',
 } = Astro.props;
 
 const canonicalURL = buildCanonicalUrl(canonicalPath);
@@ -56,8 +53,8 @@ const ogImageURL = new URL(ogImage, siteConfig.url).href;
 const logoURL = new URL(siteConfig.logoRaster, siteConfig.url).href;
 const ogImageIsLogo = ogImage === siteConfig.logo;
 const ogImageType = ogImage.endsWith('.webp') ? 'image/webp' : 'image/png';
-const ogImageWidth = ogImageIsLogo ? '512' : String(heroWidth);
-const ogImageHeight = ogImageIsLogo ? '512' : String(heroHeight);
+const ogImageWidth = ogImageIsLogo ? '512' : '1920';
+const ogImageHeight = ogImageIsLogo ? '512' : '1080';
 const twitterCard = ogImageIsLogo ? 'summary' : 'summary_large_image';
 const robots = noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large';
 const siteDescription = `${productInfo.tagline}. ${productInfo.summary}`;
@@ -79,6 +76,10 @@ const graph: Record<string, unknown>[] = [
 		primaryImageOfPage: {
 			'@type': 'ImageObject',
 			url: ogImageURL,
+			name: ogImageAlt,
+			description: ogImageAlt,
+			width: Number(ogImageWidth),
+			height: Number(ogImageHeight),
 		},
 	},
 	{
@@ -148,10 +149,12 @@ if (extraGraph.length > 0) {
 }
 
 const softwareNode = extraGraph.find((node) => node['@type'] === 'SoftwareApplication');
-if (softwareNode) {
+const productNode = extraGraph.find((node) => node['@type'] === 'Product');
+const aboutNode = softwareNode ?? productNode;
+if (aboutNode) {
 	const webpage = graph.find((node) => node['@type'] === 'WebPage') as Record<string, unknown> | undefined;
 	if (webpage) {
-		webpage.about = { '@id': softwareNode['@id'] };
+		webpage.about = { '@id': aboutNode['@id'] };
 	}
 }
 ---
@@ -163,12 +166,18 @@ if (softwareNode) {
 		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 		<meta name="color-scheme" content="dark" />
 		<meta name="theme-color" content={brandTheme.bg} />
-		{/* Self-hosted Inter + Syne via CSS — no Google Fonts (avoids CSP console errors). */}
+		<link
+			rel="preload"
+			as="font"
+			type="font/woff2"
+			href="/fonts/inter-latin-wght-normal.woff2"
+			crossorigin
+		/>
+		{/* Self-hosted Inter + Syne (latin) — no Google Fonts. */}
 		<script is:inline src="/trusted-types-policy.js"></script>
 		<meta name="robots" content={robots} />
 		<meta name="googlebot" content={robots} />
 		<meta name="description" content={description} />
-		<meta name="keywords" content={seoKeywords.join(', ')} />
 		<meta name="author" content={siteConfig.name} />
 		<link rel="canonical" href={canonicalURL} />
 		{
@@ -179,21 +188,6 @@ if (softwareNode) {
 					href={lcpImage}
 					type="image/webp"
 					fetchpriority="high"
-					media="(max-width: 760px)"
-				/>
-			)
-		}
-		{
-			lcpImageSrcSet && (
-				<link
-					rel="preload"
-					as="image"
-					href={lcpImageSrcSet.split(' ')[0]}
-					type="image/webp"
-					fetchpriority="high"
-					imagesrcset={lcpImageSrcSet}
-					imagesizes={lcpImageSizes}
-					media="(min-width: 761px)"
 				/>
 			)
 		}

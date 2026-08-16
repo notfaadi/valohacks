@@ -1,20 +1,16 @@
 name = "valohack"
-main = "src/worker.js"
+main = "src/worker.ts"
 compatibility_date = "2026-01-01"
 
-# Workers Builds / dashboard `npx wrangler deploy`
 [assets]
 directory = "./dist"
 binding = "ASSETS"
-# Host redirects (www / HTTP) must run before static files are served.
+not_found_handling = "404-page"
 run_worker_first = true
 
-# Cloudflare CI leaves Build command empty and only runs `npx wrangler deploy`.
 [build]
 command = "npm run build"
 
-# Bind BOTH hosts so www is not a second live site.
-# custom_domain lets Wrangler create the www DNS record on deploy.
 [[routes]]
 pattern = "valohacks.net"
 custom_domain = true

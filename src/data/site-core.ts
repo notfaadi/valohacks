@@ -6,16 +6,17 @@ import { brand, fillBrandTokens, seoDescription, seoTitle } from './brand';
  */
 export function seoPageTitle(template: string): string {
 	const text = fillBrandTokens(template).trim();
-	return text.length <= 70 ? text : `${text.slice(0, 67).trim()}…`;
+	/** Google SERP titles typically display ~50–60 chars; clamp at 60. */
+	return text.length <= 60 ? text : `${text.slice(0, 57).trim()}…`;
 }
 
 export { brand, fillBrandTokens, seoDescription, seoTitle };
 
 const copyDefaults = {
-	tagline: 'Undetected {primaryKeyword} — ESP, wallhack, aimbot, and 2D radar for PC',
+	tagline: 'Undetected {primaryKeyword} — ESP, aimbot, and radar for PC',
 	summary:
-		'{brand} is an undetected {game} cheat package for Windows PC. Includes ESP, wallhack, soft aim, 2D radar, and a Cloud DMA option, with {antiCheat} maintenance after patches.',
-	heroLede: 'Valorant hacks with aimbot, wallhack ESP, and 2D radar — Cloud DMA option available.',
+		'{brand} is an undetected {game} cheat package for Windows PC. Includes ESP, soft aim, and radar, with {antiCheat} maintenance after patches.',
+	heroLede: 'Hacks and cheats available — 0% detection.',
 	blogLabel: '{game} Intel',
 	ctaBuy: 'Buy now',
 	ctaBuyShort: 'Buy',
@@ -39,9 +40,9 @@ const copyDefaults = {
 } as const;
 
 const seoDefaults = {
-	homeTitle: 'Undetected {primaryKeyword} | ESP, Aimbot & Wallhack',
+	homeTitle: '{brand} | Undetected {primaryKeyword}',
 	homeDescription:
-		'Buy undetected {primaryKeyword} for Windows PC. ESP, wallhack, aimbot, and 2D radar with {antiCheat} updates plus Cloud DMA. Compare plans and buy.',
+		'{primaryKeyword} for Windows PC — ESP, aimbot, and radar with {antiCheat} maintenance. Compare plans and buy.',
 	featuresTitle: '{game} Features | {brand}',
 	featuresDescription:
 		'Everything in one {game} license for Windows PC — ESP, aimbot, radar, and patch updates.',
@@ -124,10 +125,9 @@ export const productInfo = {
 	productDetails: {
 		heading: 'Product Details',
 		body: fillBrandTokens(
-			'{brand} is undetected {primaryKeyword} for Windows PC. See players, utility, and spike state through a stream-proof overlay with regular {antiCheat} updates and 24/7 support.',
+			'{brand} is an undetected ESP and awareness toolkit for competitive play. See players, utility, and spike state through a stream-proof overlay with regular {antiCheat}-focused updates and 24/7 support.',
 		),
 	},
-	/** Homepage FEATURES grid — two columns of 7. Do not add Warzone leftovers here. */
 	featureList: [
 		'Player ESP',
 		'Health & Armor Bars',
@@ -135,6 +135,7 @@ export const productInfo = {
 		'Weapon ESP',
 		'Ability ESP',
 		'Radar Hack',
+		'Cloud DMA',
 		'FOV Circle (Private+)',
 		'Bone ESP',
 		'Distance ESP',
@@ -146,19 +147,21 @@ export const productInfo = {
 	],
 	features: {
 		esp: [
-			'Player ESP',
-			'Health & Armor Bars',
-			'Name ESP',
-			'Weapon ESP',
-			'Ability ESP',
-			'Bone ESP',
-			'Distance ESP',
-			'Box ESP',
-			'Agent ESP',
-			'Spike ESP',
+			'Player ESP / wallhack',
+			'Health and armor bars',
+			'Name, weapon, and ability ESP',
+			'Distance readouts',
+			'Toggleable ESP categories',
+			'Corpse and container highlights',
 		],
-		aimbot: ['FOV Circle (Private+)', 'Advanced Aimbot (Private+)', 'Smoothing Control (Private+)'],
-		radar: ['Radar Hack'],
+		aimbot: [
+			'Soft aim and aimbot controls',
+			'Smoothness and FOV settings',
+			'Bone priority',
+			'Hotkeys mid-match',
+			'Per-weapon profiles',
+		],
+		radar: ['2D radar overlay', 'Adjustable range', 'Works in ranked and unrated'],
 		general: [
 			fillBrandTokens('{antiCheat} maintenance after patches'),
 			'Digital delivery after checkout',

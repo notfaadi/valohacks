@@ -13,54 +13,54 @@ export type BrandSitemapImage = {
 
 const defaultImages: BrandSitemapImage[] = [
 	{
-		src: '/images/warzone-esp-player-tags.webp',
-		title: '{primaryKeyword} ESP',
-		caption: 'See players with {primaryKeyword}',
+		src: '/images/tarkov-cheats-esp.webp',
+		title: 'valorant hacks esp',
+		caption: 'valorant hacks esp wallhack',
 	},
 	{
-		src: '/images/warzone-wallhack-skeleton.webp',
-		title: '{primaryKeyword} wallhack',
-		caption: 'See through walls with {primaryKeyword}',
+		src: '/images/tarkov-cheats-wallhack.webp',
+		title: 'valorant hacks wallhack',
+		caption: 'valorant hacks wallhack esp',
 	},
 	{
-		src: '/images/warzone-aimbot-sniper.webp',
-		title: '{primaryKeyword} aimbot',
-		caption: 'Aimbot in {primaryKeyword}',
+		src: '/images/tarkov-cheats-aimbot.webp',
+		title: 'valorant hacks aimbot',
+		caption: 'valorant hacks aimbot soft aim',
 	},
 	{
-		src: '/images/warzone-aimbot-skeleton.webp',
-		title: '{primaryKeyword} aimbot view',
-		caption: 'Aimbot bone view in {primaryKeyword}',
+		src: '/images/tarkov-cheats-aimbot-view.webp',
+		title: 'valorant hacks aimbot',
+		caption: 'valorant hacks aimbot view',
 	},
 	{
-		src: '/images/warzone-esp-radar.webp',
-		title: '{primaryKeyword} radar',
-		caption: 'Radar map in {primaryKeyword}',
+		src: '/images/tarkov-cheats-radar.webp',
+		title: 'valorant hacks radar',
+		caption: 'valorant hacks radar hack',
 	},
 	{
-		src: '/images/warzone-cheats-combat.webp',
-		title: '{primaryKeyword} in a fight',
-		caption: 'Fight view with {primaryKeyword}',
+		src: '/images/tarkov-cheats-raid.webp',
+		title: 'valorant hacks',
+		caption: 'valorant hacks in match',
 	},
 ];
 
 /** Per-page image title/caption templates for the English urlset. */
 const pageImageTemplates: Record<PageId, { title: string; caption: string }> = {
-	home: { title: '{primaryKeyword}', caption: 'ESP, aimbot, and radar for Valorant on PC' },
-	'valorant-esp': { title: '{primaryKeyword} ESP', caption: 'See players through walls with {primaryKeyword}' },
-	'valorant-aimbot': { title: '{primaryKeyword} aimbot', caption: 'Aimbot view in {primaryKeyword}' },
-	features: { title: '{primaryKeyword} features', caption: 'What you get with {primaryKeyword}' },
-	pricing: { title: '{primaryKeyword} plans', caption: 'Monthly and lifetime {primaryKeyword} plans' },
-	setup: { title: '{primaryKeyword} setup', caption: 'How to set up {primaryKeyword} on PC' },
-	updates: { title: '{primaryKeyword} status', caption: 'Check {primaryKeyword} after a game patch' },
+	home: { title: '{brand} hero — ESP and aimbot in Valorant', caption: 'Homepage preview of {primaryKeyword} on Windows PC' },
+	'tarkov-esp': { title: '{primaryKeyword} ESP overlay', caption: 'Player ESP boxes and distance with {primaryKeyword}' },
+	'tarkov-aimbot': { title: '{primaryKeyword} aimbot view', caption: 'Aimbot and soft aim controls in {primaryKeyword}' },
+	features: { title: '{primaryKeyword} features', caption: 'ESP, soft aim, and radar included with {primaryKeyword}' },
+	pricing: { title: '{primaryKeyword} store plans', caption: 'Monthly and lifetime {primaryKeyword} plans' },
+	setup: { title: '{primaryKeyword} setup', caption: 'Install {primaryKeyword} on Windows PC after checkout' },
+	updates: { title: '{primaryKeyword} live status', caption: 'Check {primaryKeyword} after a game or Vanguard patch' },
 	faq: { title: '{primaryKeyword} FAQ', caption: 'Common questions about {primaryKeyword}' },
 	support: { title: '{primaryKeyword} support', caption: 'Help with your {primaryKeyword} license' },
-	undetected: { title: 'Undetected {primaryKeyword}', caption: 'Safe status notes for {primaryKeyword}' },
-	wallhack: { title: '{primaryKeyword} wallhack', caption: 'See through walls with {primaryKeyword}' },
-	radar: { title: '{primaryKeyword} radar', caption: 'Radar map in {primaryKeyword}' },
-	vanguard: { title: '{antiCheat} and {primaryKeyword}', caption: '{primaryKeyword} after a Vanguard update' },
-	'cheats-2026': { title: '{primaryKeyword} 2026', caption: '{primaryKeyword} buyer guide for 2026' },
-	hacks: { title: '{primaryKeyword}', caption: '{primaryKeyword} ESP, aimbot, and radar' },
+	undetected: { title: 'Undetected {primaryKeyword}', caption: 'Status notes for {primaryKeyword} after patches' },
+	wallhack: { title: '{primaryKeyword} wallhack', caption: 'Through-wall visibility with {primaryKeyword}' },
+	radar: { title: '{primaryKeyword} radar', caption: '2D radar map cues in {primaryKeyword}' },
+	battleye: { title: '{antiCheat} and {primaryKeyword}', caption: '{primaryKeyword} rebuilds after a Vanguard update' },
+	'cheats-2026': { title: '{primaryKeyword} overview', caption: '{primaryKeyword} for Valorant on PC' },
+	hacks: { title: '{primaryKeyword}', caption: '{primaryKeyword} ESP, aimbot, and radar package' },
 	'cheat-download': { title: '{primaryKeyword} download', caption: 'Get {primaryKeyword} after you buy' },
 	'mod-menu': { title: '{primaryKeyword} menu', caption: 'In-game menu for {primaryKeyword}' },
 	'soft-aim': { title: '{primaryKeyword} soft aim', caption: 'Soft aim settings in {primaryKeyword}' },
@@ -96,6 +96,7 @@ const raw = brand as typeof brand & { sitemap?: Partial<SitemapShape> };
 function normalizeImages(input: unknown): BrandSitemapImage[] {
 	if (!Array.isArray(input) || input.length < 1) return defaultImages.map((i) => ({ ...i }));
 	const out: BrandSitemapImage[] = [];
+	const seen = new Set<string>();
 	for (const item of input) {
 		if (!item || typeof item !== 'object') continue;
 		const row = item as Record<string, unknown>;
@@ -103,6 +104,8 @@ function normalizeImages(input: unknown): BrandSitemapImage[] {
 		const title = typeof row.title === 'string' ? row.title.trim() : '';
 		const caption = typeof row.caption === 'string' ? row.caption.trim() : '';
 		if (!src.startsWith('/images/') || !title || !caption) continue;
+		if (seen.has(src)) continue;
+		seen.add(src);
 		out.push({ src, title, caption });
 	}
 	return out.length ? out : defaultImages.map((i) => ({ ...i }));
@@ -117,10 +120,12 @@ export const brandSitemap: SitemapShape = {
 	images: normalizeImages(raw.sitemap?.images),
 };
 
-/** Prefer the later of page lastmod vs brand contentLastmod (Brand Studio bump). */
+/**
+ * Use the real page lastmod only.
+ * Do not inflate every URL with brand.sitemap.contentLastmod (looks like fake freshness).
+ */
 export function sitemapLastmod(pageLastmod: string): string {
-	const bump = brandSitemap.contentLastmod;
-	return bump && bump > pageLastmod ? bump : pageLastmod;
+	return pageLastmod;
 }
 
 export function resolvedSitemapImages(): BrandSitemapImage[] {

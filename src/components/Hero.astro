@@ -1,47 +1,54 @@
 ---
 import type { LocaleCode } from '../data/i18n/locales';
+import { defaultLocale } from '../data/i18n/locales';
 import { productInfo, siteConfig } from '../data/site';
-import { brandCopy } from '../data/site-core';
-import { fillBrandTokens } from '../data/brand';
-import { heroWidth, heroHeight } from '../lib/responsive-images';
+import { getT } from '../i18n/server';
+import { heroWidth, heroHeight, heroSrcSet, heroSizes, heroSrc } from '../lib/responsive-images';
 
 interface Props {
 	locale?: LocaleCode;
 }
 
+const locale = Astro.props.locale ?? defaultLocale;
+const t = getT(locale);
 const monthly = productInfo.plans.find((p) => p.id === 'monthly') ?? productInfo.plans[0];
-const ctaBuy = fillBrandTokens(brandCopy.ctaBuy);
-const chips = [
-	{ key: 'chipEsp', label: fillBrandTokens(brandCopy.chipEsp) },
-	{ key: 'chipAim', label: fillBrandTokens(brandCopy.chipAim) },
-	{ key: 'chipRadar', label: fillBrandTokens(brandCopy.chipRadar) },
-	{ key: 'chipUpdates', label: fillBrandTokens(brandCopy.chipUpdates) },
-] as const;
+const useBrandHero = locale === 'en';
+const title = useBrandHero ? t('hero.title') : t('hero.accent');
+const subtitle = t('hero.subtitle');
+const ctaBuy = useBrandHero ? t('cta.buy') : t('hero.buyNow');
+const priceFrom = t('hero.priceFrom');
+const priceLabel = priceFrom ? `${priceFrom} $${monthly.price}` : `$${monthly.price}`;
+const imageAlt = t('hero.imageAlt', { brand: siteConfig.name });
 
-const heroSrc = siteConfig.heroImage || '/images/hero-banner.webp';
+const chips = [
+	{ key: 'chipEsp', icon: 'esp' },
+	{ key: 'chipAim', icon: 'aim' },
+	{ key: 'chipRadar', icon: 'radar' },
+	{ key: 'chipUpdates', icon: 'updates' },
+] as const;
 ---
 
-<section class="hero" aria-label={siteConfig.name}>
+<section class="hero" aria-label={title}>
 	<div class="hero__media">
-		<picture>
-			<source srcset={heroSrc} type="image/webp" />
-			<img
-				src={heroSrc}
-				alt="Valorant hacks ESP and wallhack overlay with Reyna"
-				width={heroWidth}
-				height={heroHeight}
-				fetchpriority="high"
-				loading="eager"
-				decoding="async"
-			/>
-		</picture>
+		<img
+			src={heroSrc}
+			srcset={heroSrcSet}
+			sizes={heroSizes}
+			alt={imageAlt}
+			width={heroWidth}
+			height={heroHeight}
+			fetchpriority="high"
+			loading="eager"
+			decoding="sync"
+		/>
 	</div>
 	<div class="hero__veil" aria-hidden="true"></div>
-
 	<div class="shell hero__content">
 		<div class="hero__copy">
-			<h1 class="hero__brand" data-edit="name">Valorant hacks</h1>
-			<p class="hero__lede" data-edit="heroLede">{productInfo.heroLede}</p>
+			<h1 class="hero__brand">
+				{useBrandHero ? <span data-edit="name">{title}</span> : title}
+			</h1>
+			<p class="hero__lede" data-edit={useBrandHero ? 'heroLede' : undefined}>{subtitle}</p>
 			<div class="hero__actions">
 				<a class="hero__buy" href={siteConfig.checkoutUrl} rel="nofollow noopener noreferrer">
 					<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -50,11 +57,10 @@ const heroSrc = siteConfig.heroImage || '/images/hero-banner.webp';
 							stroke="currentColor"
 							stroke-width="1.7"
 							stroke-linecap="round"
-							stroke-linejoin="round"
-						/>
+							stroke-linejoin="round"></path>
 					</svg>
-					<span class="hero__buy-label" data-edit="ctaBuy">{ctaBuy}</span>
-					<span class="hero__buy-price">from ${monthly.price}</span>
+					<span class="hero__buy-label" data-edit={useBrandHero ? 'ctaBuy' : undefined}>{ctaBuy}</span>
+					<span class="hero__buy-price">{priceLabel}</span>
 				</a>
 			</div>
 			<ul class="hero__features">
@@ -62,7 +68,7 @@ const heroSrc = siteConfig.heroImage || '/images/hero-banner.webp';
 					chips.map((chip) => (
 						<li>
 							<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-								{chip.key === 'chipEsp' && (
+								{chip.icon === 'esp' && (
 									<>
 										<circle cx="12" cy="12" r="7.5" stroke="currentColor" stroke-width="1.6" />
 										<path
@@ -73,7 +79,7 @@ const heroSrc = siteConfig.heroImage || '/images/hero-banner.webp';
 										/>
 									</>
 								)}
-								{chip.key === 'chipAim' && (
+								{chip.icon === 'aim' && (
 									<path
 										d="M12 4.5l1.7 4.8H19l-4 3.1 1.5 4.8L12 14.8 7.5 17.2 9 12.4 5 9.3h5.3L12 4.5z"
 										stroke="currentColor"
@@ -81,7 +87,7 @@ const heroSrc = siteConfig.heroImage || '/images/hero-banner.webp';
 										stroke-linejoin="round"
 									/>
 								)}
-								{chip.key === 'chipRadar' && (
+								{chip.icon === 'radar' && (
 									<>
 										<circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6" />
 										<circle cx="12" cy="12" r="7.5" stroke="currentColor" stroke-width="1.6" />
@@ -93,7 +99,7 @@ const heroSrc = siteConfig.heroImage || '/images/hero-banner.webp';
 										/>
 									</>
 								)}
-								{chip.key === 'chipUpdates' && (
+								{chip.icon === 'updates' && (
 									<path
 										d="M5 13.2l4.2 4.2L19 7.6"
 										stroke="currentColor"
@@ -103,7 +109,7 @@ const heroSrc = siteConfig.heroImage || '/images/hero-banner.webp';
 									/>
 								)}
 							</svg>
-							<span data-edit={chip.key}>{chip.label}</span>
+							<span data-edit={useBrandHero ? chip.key : undefined}>{t(`hero.${chip.key}`)}</span>
 						</li>
 					))
 				}
@@ -112,12 +118,11 @@ const heroSrc = siteConfig.heroImage || '/images/hero-banner.webp';
 	</div>
 </section>
 
-<style>
+<style is:global>
 	.hero {
 		--hero-pad-y: clamp(2rem, 4vw, 3rem);
 		--hero-stack: clamp(0.7rem, 1.6vw, 0.9rem);
 		position: relative;
-		z-index: 1;
 		isolation: isolate;
 		display: grid;
 		align-items: center;
@@ -137,7 +142,6 @@ const heroSrc = siteConfig.heroImage || '/images/hero-banner.webp';
 		position: absolute;
 		inset: 0;
 		z-index: 0;
-		background: #050506;
 	}
 
 	.hero__media picture,
@@ -148,11 +152,11 @@ const heroSrc = siteConfig.heroImage || '/images/hero-banner.webp';
 	}
 
 	.hero__media img {
+		/* Cover = keep proportions; crop top/bottom of the shorter bar */
 		object-fit: cover;
 		object-position: 80% 50%;
-		image-rendering: -webkit-optimize-contrast;
+		image-rendering: auto;
 		transform: translateZ(0);
-		animation: hero-in 0.9s ease-out both;
 	}
 
 	.hero__veil {
@@ -162,10 +166,10 @@ const heroSrc = siteConfig.heroImage || '/images/hero-banner.webp';
 		pointer-events: none;
 		background: linear-gradient(
 			90deg,
-			rgba(8, 4, 6, 0.78) 0%,
-			rgba(8, 4, 6, 0.48) 26%,
-			rgba(8, 4, 6, 0.16) 46%,
-			transparent 64%
+			rgba(5, 5, 6, 0.78) 0%,
+			rgba(5, 5, 6, 0.52) 34%,
+			rgba(5, 5, 6, 0.18) 58%,
+			transparent 74%
 		);
 	}
 
@@ -174,7 +178,8 @@ const heroSrc = siteConfig.heroImage || '/images/hero-banner.webp';
 		z-index: 2;
 		padding-block: var(--hero-pad-y);
 		align-self: center;
-		transform: none;
+		/* Sit a touch above true center so title reads mid-image */
+		transform: translateY(clamp(-1.5rem, -3vw, -0.35rem));
 		display: grid;
 		grid-template-columns: minmax(0, 1fr);
 		justify-items: start;
@@ -204,6 +209,7 @@ const heroSrc = siteConfig.heroImage || '/images/hero-banner.webp';
 		overflow-wrap: anywhere;
 		color: #fff;
 		width: 100%;
+		text-transform: uppercase;
 	}
 
 	.hero__lede {
@@ -335,18 +341,8 @@ const heroSrc = siteConfig.heroImage || '/images/hero-banner.webp';
 		}
 	}
 
-	@keyframes hero-in {
-		from {
-			opacity: 0.7;
-		}
-		to {
-			opacity: 1;
-		}
-	}
-
 	@media (prefers-reduced-motion: reduce) {
-		.hero__copy,
-		.hero__media img {
+		.hero__copy {
 			animation: none;
 		}
 
@@ -357,19 +353,16 @@ const heroSrc = siteConfig.heroImage || '/images/hero-banner.webp';
 		}
 
 		.hero__content {
-			transform: none;
+			transform: translateY(clamp(-1.5rem, -3vw, -0.35rem));
 		}
 	}
 
+	/*
+	 * Phones / small tablets: stop using the ultra-wide 3.15:1 bar.
+	 * That ratio collapses to ~120px tall on a 390px phone and clips the CTA.
+	 * Mobile = taller full-bleed panel; height grows with copy.
+	 */
 	@media (max-width: 900px) {
-		.hero {
-			min-height: 100svh;
-			height: 100svh;
-			max-height: none;
-		}
-	}
-
-	@media (max-width: 760px) {
 		.hero {
 			min-height: 100svh;
 			height: 100svh;
@@ -381,32 +374,129 @@ const heroSrc = siteConfig.heroImage || '/images/hero-banner.webp';
 
 		.hero__media img {
 			object-fit: cover;
-			object-position: 85% 50%;
+			object-position: 80% 50%;
+		}
+
+		@media (max-width: 760px) {
+			.hero__media img {
+				object-fit: cover;
+				object-position: 68% 45%;
+			}
 		}
 
 		.hero__veil {
 			background: linear-gradient(
 				180deg,
-				rgba(5, 5, 6, 0.1) 0%,
-				rgba(5, 5, 6, 0.18) 36%,
-				rgba(5, 5, 6, 0.72) 70%,
-				rgba(5, 5, 6, 0.94) 100%
+				rgba(5, 5, 6, 0.28) 0%,
+				rgba(5, 5, 6, 0.52) 42%,
+				rgba(5, 5, 6, 0.9) 78%,
+				rgba(5, 5, 6, 0.96) 100%
 			);
 		}
 
 		.hero__content {
 			transform: none;
-			padding-top: 1.25rem;
-			padding-bottom: max(1.5rem, var(--safe-bottom, env(safe-area-inset-bottom, 0px)));
+			width: 100%;
+			min-height: clamp(18.5rem, 56svh, 28rem);
+			display: flex;
+			align-items: flex-end;
+			padding-block: 1.35rem 1.2rem;
+			padding-bottom: max(1.2rem, env(safe-area-inset-bottom, 0px));
+			box-sizing: border-box;
 		}
 
 		.hero__copy {
 			width: 100%;
+			max-width: 28rem;
 			gap: 0.65rem;
 		}
 
 		.hero__brand {
-			font-size: clamp(1.85rem, 8vw, 2.5rem);
+			font-size: clamp(1.7rem, 7.5vw, 2.35rem);
+			line-height: 1.08;
+		}
+
+		.hero__lede {
+			display: block;
+			overflow: visible;
+			-webkit-line-clamp: unset;
+			font-size: clamp(0.9rem, 3.6vw, 1rem);
+			max-width: 34ch;
+			color: color-mix(in srgb, #fff 80%, var(--ink-muted));
+		}
+
+		.hero__actions {
+			width: 100%;
+		}
+
+		.hero__buy {
+			width: 100%;
+			max-width: 22rem;
+			min-height: var(--touch-min, 2.75rem);
+			font-size: 0.9375rem;
+			justify-content: flex-start;
+		}
+
+		.hero__buy-price {
+			margin-left: auto;
+		}
+
+		.hero__features {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			column-gap: 0.75rem;
+			row-gap: 0.45rem;
+			max-width: 22rem;
+		}
+
+		.hero__features li {
+			font-size: 0.78rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.hero__content {
+			min-height: clamp(17.5rem, 60svh, 26rem);
+			padding-block: 1.2rem 1.1rem;
+		}
+
+		.hero__brand {
+			font-size: clamp(1.55rem, 8.2vw, 1.95rem);
+		}
+
+		.hero__lede {
+			max-width: none;
+		}
+
+		.hero__buy {
+			width: 100%;
+			max-width: none;
+		}
+
+		.hero__features {
+			max-width: none;
+		}
+	}
+
+	@media (max-width: 360px) {
+		.hero__content {
+			min-height: clamp(16.5rem, 64svh, 24rem);
+		}
+
+		.hero__brand {
+			font-size: 1.45rem;
+		}
+
+		.hero__features {
+			grid-template-columns: 1fr;
+			row-gap: 0.35rem;
+		}
+	}
+
+	@media (max-width: 900px) and (orientation: landscape) and (max-height: 480px) {
+		.hero__content {
+			min-height: min(70svh, 16.5rem);
+			padding-block: 0.85rem 0.8rem;
 		}
 
 		.hero__lede {
@@ -414,69 +504,15 @@ const heroSrc = siteConfig.heroImage || '/images/hero-banner.webp';
 			-webkit-box-orient: vertical;
 			-webkit-line-clamp: 2;
 			overflow: hidden;
-			font-size: 0.95rem;
-		}
-
-		.hero__buy {
-			width: 100%;
-			justify-content: flex-start;
-			min-height: var(--touch-min, 2.75rem);
-		}
-
-		.hero__features li {
-			min-height: 2.25rem;
-			align-items: flex-start;
-		}
-
-		.hero__features li span {
-			overflow-wrap: anywhere;
-		}
-	}
-
-	@media (max-width: 480px) {
-		.hero {
-			min-height: 100svh;
-			height: 100svh;
-		}
-
-		.hero__brand {
-			font-size: clamp(1.7rem, 8.5vw, 2.15rem);
-		}
-
-		.hero__buy {
-			flex-wrap: wrap;
-			row-gap: 0.35rem;
-		}
-
-		.hero__buy-price {
-			margin-left: 0;
-		}
-
-		.hero__features {
-			column-gap: 0.65rem;
-			row-gap: 0.35rem;
-		}
-	}
-
-	@media (max-width: 360px) {
-		.hero__features {
-			grid-template-columns: 1fr;
-		}
-	}
-
-	@media (max-height: 480px) and (orientation: landscape) {
-		.hero {
-			min-height: 100dvh;
-			height: 100dvh;
-			padding-block: 0.75rem;
+			font-size: 0.85rem;
 		}
 
 		.hero__features {
 			display: none;
 		}
 
-		.hero__lede {
-			-webkit-line-clamp: 1;
+		.hero__buy {
+			max-width: 20rem;
 		}
 	}
 </style>

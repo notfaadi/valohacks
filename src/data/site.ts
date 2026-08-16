@@ -41,18 +41,18 @@ export const trustSignals = {
 
 export const seoLandingPages = [
 	{ label: fillBrandTokens('{game} hacks'), href: '/valorant-hacks/' },
-	{ label: fillBrandTokens('{game} cheats'), href: '/valorant-cheats-2026/' },
+	{ label: fillBrandTokens('{primaryKeyword}'), href: '/valorant-hacks/' },
 	{ label: fillBrandTokens('{game} esp'), href: '/valorant-esp/' },
 	{ label: fillBrandTokens('{game} aimbot'), href: '/valorant-aimbot/' },
-	{ label: fillBrandTokens('{game} hack download'), href: '/valorant-cheat-download/' },
-	{ label: fillBrandTokens('Undetected {primaryKeyword}'), href: '/undetected-valorant-cheats/' },
-	{ label: fillBrandTokens('{game} wallhack'), href: '/valorant-wallhack/' },
+	{ label: fillBrandTokens('{game} setup'), href: '/setup/' },
+	{ label: fillBrandTokens('Undetected {primaryKeyword}'), href: '/valorant-hacks/' },
+	{ label: fillBrandTokens('{game} wallhack'), href: '/valorant-esp/' },
 	{ label: fillBrandTokens('{game} radar hack'), href: '/valorant-radar-hack/' },
 ] as const;
 
 export const mainNav = [
 	{ label: 'Home', href: '/' },
-	{ label: 'Hacks', href: '/valorant-hacks/' },
+	{ label: 'Cheats', href: '/valorant-hacks/' },
 	{ label: 'Aimbot', href: '/valorant-aimbot/' },
 	{ label: 'ESP', href: '/valorant-esp/' },
 	{ label: 'Features', href: '/features/' },
@@ -73,17 +73,17 @@ export const footerNav = [
 export const footerExplore = [
 	{ label: fillBrandTokens('{brand} home'), href: '/' },
 	{ label: fillBrandTokens('{game} hacks pillar'), href: '/valorant-hacks/' },
-	{ label: fillBrandTokens('Undetected {game} hacks'), href: '/undetected-valorant-cheats/' },
-	{ label: fillBrandTokens('{game} wallhack ESP'), href: '/valorant-wallhack/' },
-	{ label: fillBrandTokens('{game} radar hack'), href: '/valorant-radar-hack/' },
-	{ label: fillBrandTokens('{antiCheat} bypass guide'), href: '/vanguard-bypass/' },
-	{ label: fillBrandTokens('{game} cheats 2026'), href: '/valorant-cheats-2026/' },
-	{ label: fillBrandTokens('{game} Aimbot controls'), href: '/valorant-aimbot/' },
+	{ label: fillBrandTokens('Live {game} status'), href: '/updates/' },
 	{ label: fillBrandTokens('{game} ESP overlays'), href: '/valorant-esp/' },
+	{ label: fillBrandTokens('{game} Aimbot controls'), href: '/valorant-aimbot/' },
+	{ label: fillBrandTokens('{game} radar hack'), href: '/valorant-radar-hack/' },
 	{ label: fillBrandTokens('Full {game} hack feature list'), href: '/features/' },
 	{ label: 'Monthly & lifetime pricing', href: '/pricing/' },
 	{ label: fillBrandTokens('{game} hack setup guide'), href: '/setup/' },
 	{ label: fillBrandTokens('{game} hacks FAQ'), href: '/faq/' },
+	{ label: fillBrandTokens('{brand} reviews'), href: '/reviews/' },
+	{ label: fillBrandTokens('{game} Intel blog'), href: '/blog/' },
+	{ label: fillBrandTokens('Contact {brand} support'), href: '/support/' },
 ] as const;
 
 export type FaqItem = {
@@ -98,8 +98,8 @@ export const homeFaqs: readonly FaqItem[] = [
 	faq({
 		question: 'What is {brand}?',
 		answer:
-			'{brand} is an undetected {primaryKeyword} package for Windows PC — also searched as {game} cheats and {game} hack. It includes ESP wallhack, 2D radar, and aimbot controls, with {antiCheat} maintenance and setup support.',
-		slug: 'what-are-valorant-hacks',
+			'{brand} is an undetected {primaryKeyword} package for Valorant on Windows PC. It includes ESP wallhack, 2D radar, and aimbot controls, with {antiCheat} maintenance and setup support.',
+		slug: 'what-are-valorant-cheats',
 		seoTitle: 'What is {brand}? | FAQ',
 		seoDescription:
 			'{brand} explained: undetected ESP, radar, and aimbot for {game} on Windows PC with {antiCheat} maintenance.',
@@ -108,28 +108,28 @@ export const homeFaqs: readonly FaqItem[] = [
 		question: 'Are {primaryKeyword} undetected in 2026?',
 		answer:
 			'{brand} is maintained for {game} with rebuilds after {antiCheat} and game patches. Check the Status page before you queue. No cheat can guarantee permanent undetected status — maintenance and responsible use matter.',
-		slug: 'are-valorant-hacks-undetected-in-2026',
+		slug: 'are-valorant-cheats-undetected-in-2026',
 		seoTitle: 'Are {brand} Undetected in 2026? | FAQ',
 		seoDescription:
 			'How {brand} stays maintained after {antiCheat} patches in 2026 — and why no cheat can promise permanent undetected status.',
 	}),
 	faq({
-		question: 'Does this work in the main game modes?',
+		question: 'Does this work in ranked and unrated?',
 		answer:
-			'Yes. ESP, radar, and aimbot are built for {game} match flow — reading enemies, holding sites, and staying aware in fights.',
-		slug: 'unrated-and-competitive',
-		seoTitle: 'Game Mode Support | FAQ',
+			'Yes. ESP, radar, and aimbot are built for {game} match flow — reading enemies and staying aware near spike sites.',
+		slug: 'ranked-and-unrated',
+		seoTitle: 'Ranked and Unrated Support | FAQ',
 		seoDescription:
-			'{brand} works in the main {game} modes — ESP, radar, and aimbot for Windows PC.',
+			'{brand} works in ranked and unrated — ESP, radar, and aimbot for Windows PC.',
 	}),
 	faq({
 		question: 'What is included — ESP, wallhack, radar, or Aimbot?',
 		answer:
-			'{brand} bundles player ESP, spike and ability reads, radar, and configurable Aimbot in one license. See Features for the full list.',
+			'{brand} bundles ESP wallhack, player markers, 2D radar cues, and configurable Aimbot in one license. See Features for the full list.',
 		slug: 'esp-wallhack-radar-or-aimbot',
 		seoTitle: 'What Is Included: ESP, Wallhack, Radar, Aimbot | FAQ',
 		seoDescription:
-			'One {brand} license includes player ESP, spike and ability reads, radar, and configurable Aimbot for Windows PC.',
+			'One {brand} license includes ESP wallhack, player markers, 2D radar cues, and configurable Aimbot for Windows PC.',
 	}),
 	faq({
 		question: 'How are licenses delivered?',
@@ -141,9 +141,9 @@ export const homeFaqs: readonly FaqItem[] = [
 			'{brand} licenses are delivered digitally after payment confirmation. Timing varies by payment method and order review.',
 	}),
 	faq({
-		question: 'Where do I check updates after a {game} or {antiCheat} patch?',
+		question: 'Where do I check updates after a Valorant or {antiCheat} patch?',
 		answer:
-			'Maintenance notes are posted on the Status page when a {game} or {antiCheat} update affects the package. That is the fastest place to confirm whether a new {brand} build is live.',
+			'Maintenance notes are posted on the Status page when a Valorant or {antiCheat} update affects the package. That is the fastest place to confirm whether a new {brand} build is live.',
 		slug: 'where-to-check-updates',
 		seoTitle: 'Where to Check {game} / {antiCheat} Updates | FAQ',
 		seoDescription:
@@ -165,17 +165,17 @@ export const seoFaqs: readonly FaqItem[] = [
 	faq({
 		question: 'What is a {game} wallhack?',
 		answer:
-			'A {game} wallhack is an ESP overlay that shows enemy agents through walls. {brand} includes distance readouts, team colours, and toggleable categories.',
+			'A {game} wallhack is an ESP overlay that shows enemies through walls. {brand} includes distance readouts, spike cues, and toggleable categories.',
 		slug: 'what-is-a-valorant-wallhack',
 		seoTitle: 'What Is a {game} Wallhack? | FAQ',
 		seoDescription:
-			'A {game} wallhack is ESP that reveals agents through walls — with distance, team colours, and category toggles.',
+			'A {game} wallhack is ESP that reveals enemies through walls — with distance, spike sites, and category toggles.',
 	}),
 	faq({
 		question: 'Does {brand} include a radar hack?',
 		answer:
-			'Yes. {brand} includes 2D radar overlays that highlight nearby threats outside your view — useful for flanks and late-game fights.',
-		slug: 'does-valorant-hacks-include-radar-hack',
+			'Yes. {brand} includes 2D radar overlays that highlight nearby threats outside your view — useful for flanks and spike holds.',
+		slug: 'does-valorant-cheats-include-radar-hack',
 		seoTitle: 'Does {brand} Include a Radar Hack? | FAQ',
 		seoDescription:
 			'Yes — {brand} includes 2D radar overlays for nearby threats outside your FOV.',
@@ -184,7 +184,7 @@ export const seoFaqs: readonly FaqItem[] = [
 		question: 'How does {antiCheat} affect {primaryKeyword}?',
 		answer:
 			'{antiCheat} monitors {game} on Windows PC. {brand} posts maintenance notes after patches that may need a rebuild. Check Status before you queue.',
-		slug: 'vanguard-anti-cheat-and-valorant-hacks',
+		slug: 'vanguard-anti-cheat-and-valorant-cheats',
 		seoTitle: 'How {antiCheat} Affects {brand} | FAQ',
 		seoDescription:
 			'{antiCheat} may require {brand} rebuilds after patches. Status notes explain the update workflow.',
@@ -214,121 +214,111 @@ export type CustomerReview = {
 
 export const customerReviews = [
 	reviewMeta({
-		handle: 'xKrypt0_WZ',
+		handle: 'xKrypt0',
 		rating: 5,
-		text: 'soft aim on the meta ar feels cracked ngl. took me like 20 mins to figure out the menu tho lol. once u get it its smooth',
-		short: 'soft aim on the meta ar feels cracked ngl. once u get the menu its smooth',
+		text: 'Soft aim in Valorant Hacks feels smooth on Ascent. The menu took a few minutes to learn. After that, matches felt easy.',
+		short: 'Soft aim in Valorant Hacks feels smooth on Ascent.',
 		slug: 'valorant-soft-aim-review-xkrypt0',
-		seoTitle: 'Soft Aim Review by @xKrypt0_WZ — 5/5 | {brand}',
-		seoDescription:
-			'Real {game} soft aim review from @xKrypt0_WZ: 5/5 for the meta AR soft aim in {brand}. How the aimbot menu feels after setup on Windows PC.',
+		seoTitle: 'Soft Aim Review by @xKrypt0 — 5/5 | {brand}',
+		seoDescription: '@xKrypt0 rates {brand} soft aim 5/5 for Ascent on Windows PC.',
 		date: '2026-07-24',
 		tag: 'Soft aim',
 	}),
 	reviewMeta({
 		handle: 'buildsR4K',
 		rating: 4,
-		text: "esp boxes in competitive are actually useful, can see who's holding height before u push. radar could be bigger on 1080p — wish there was a size slider. still worth it for the price",
-		short: "esp boxes in competitive are actually useful, can see who's holding height before u push. still worth it for the price",
-		slug: 'valorant-esp-competitive-review-buildsr4k',
-		seoTitle: 'ESP Competitive Review by @buildsR4K — 4/5 | {brand}',
-		seoDescription:
-			'{game} ESP review from @buildsR4K: 4/5 for ESP operator boxes in Competitive with radar feedback. Honest take on undetected {game} hacks pricing and value.',
+		text: 'ESP boxes help on unrated matches. You can see who is holding a hallway before you push. Still worth the price for Valorant Hacks.',
+		short: 'ESP boxes help on unrated matches. Still worth the price for Valorant Hacks.',
+		slug: 'valorant-esp-unrated-review-buildsr4k',
+		seoTitle: 'ESP Review by @buildsR4K — 4/5 | {brand}',
+		seoDescription: '@buildsR4K rates {brand} ESP 4/5 for unrated matches on Windows PC.',
 		date: '2026-07-19',
-		tag: 'Competitive',
+		tag: 'unrated',
 	}),
 	reviewMeta({
 		handle: 'dma_wizard',
 		rating: 5,
-		text: 'switched from a kernel only tool last season. cloud dma setup was easier than i expected, support walked me through the dma part on discord. survived the last vanguard update while my old sub got flagged. lifetime was the move',
-		short: 'cloud dma setup was easier than i expected. survived the last vanguard update while my old sub got flagged',
+		text: 'I moved to Valorant Hacks this episode. Setup was simple. It stayed up after the last Vanguard update when my old cheat failed. Lifetime was a good buy.',
+		short: 'Valorant Hacks stayed up after the last Vanguard update. Lifetime was a good buy.',
 		slug: 'valorant-cloud-dma-review-dma-wizard',
-		seoTitle: 'Cloud DMA Review by @dma_wizard — 5/5 | {brand}',
-		seoDescription:
-			'Cloud DMA {game} hacks review from @dma_wizard: 5/5 after surviving a {antiCheat} update that flagged a kernel-only cheat. Setup help and lifetime license experience.',
+		seoTitle: 'Update Review by @dma_wizard — 5/5 | {brand}',
+		seoDescription: '@dma_wizard rates {brand} 5/5 after a {antiCheat} update on Windows PC.',
 		date: '2026-06-27',
-		tag: 'Cloud DMA',
+		tag: 'Updates',
 	}),
 	reviewMeta({
 		handle: 'ctrl_player99',
 		rating: 4,
-		text: "finally a valorant cheat that doesn't feel like garbage on controller. soft aim with xbox pad works, had to tweak fov a bit. menu navigation with pad is kinda awkward but doable",
-		short: "finally a valorant cheat that doesn't feel like garbage on controller. soft aim with xbox pad works",
-		slug: 'valorant-controller-soft-aim-review-ctrl-player99',
-		seoTitle: 'Controller Soft Aim by @ctrl_player99 — 4/5 | {brand}',
-		seoDescription:
-			'Controller {game} cheats review from @ctrl_player99: 4/5 for soft aim on an Xbox pad, FOV tweaks, and menu navigation in the {brand} package.',
+		text: 'Soft aim in Valorant Hacks is easy to tune on PC. I changed FOV a little and it felt natural. Menu is clear enough.',
+		short: 'Soft aim in Valorant Hacks is easy to tune on PC.',
+		slug: 'valorant-soft-aim-review-ctrl-player99',
+		seoTitle: 'Soft Aim Review by @ctrl_player99 — 4/5 | {brand}',
+		seoDescription: '@ctrl_player99 rates {brand} soft aim 4/5 on Windows PC.',
 		date: '2026-07-11',
-		tag: 'Controller',
+		tag: 'Soft aim',
 	}),
 	reviewMeta({
 		handle: 'stormChaser_07',
 		rating: 3,
-		text: 'features are good when it works. first launch took forever bc windows defender flagged the loader — not their fault but annoying. support replied in like 2 hours and sent a fix. esp and loot markers solid in ranked, just wish setup docs were clearer upfront',
-		short: 'features are good when it works. esp and loot markers solid in ranked, just wish setup docs were clearer upfront',
-		slug: 'valorant-hack-setup-review-stormchaser07',
+		text: 'Valorant Hacks works well once it is running. First launch was slow because Windows Defender flagged the loader. Support replied in about two hours. ESP on Haven is solid.',
+		short: 'ESP on Haven is solid. Support helped after a slow first launch.',
+		slug: 'valorant-cheat-setup-review-stormchaser07',
 		seoTitle: 'Setup Review by @stormChaser_07 — 3/5 | {brand}',
-		seoDescription:
-			'Honest 3/5 {game} hacks review from @stormChaser_07: ESP and loot markers solid in ranked, but first launch and setup docs needed support help.',
+		seoDescription: '@stormChaser_07 rates {brand} setup 3/5. ESP on Haven is solid after support help.',
 		date: '2026-06-15',
 		tag: 'Setup',
 	}),
 	reviewMeta({
 		handle: 'lootGoblinx',
 		rating: 5,
-		text: 'loot esp alone pays for monthly imo. contract markers + distance readouts = way faster off spawn',
-		short: 'loot esp alone pays for monthly imo. contract markers + distance readouts = way faster off spawn',
+		text: 'Player ESP in Valorant Hacks pays for the monthly plan. Spike markers and distance make early matches faster.',
+		short: 'Player ESP in Valorant Hacks pays for the monthly plan.',
 		slug: 'valorant-loot-esp-review-lootgoblinx',
-		seoTitle: 'Loot ESP Review by @lootGoblinx — 5/5 | {brand}',
-		seoDescription:
-			'{game} loot ESP review from @lootGoblinx: 5/5 for contract markers and distance readouts off spawn. Why loot ESP alone justifies the monthly {game} hacks license.',
+		seoTitle: 'Player ESP Review by @lootGoblinx — 5/5 | {brand}',
+		seoDescription: '@lootGoblinx rates {brand} player ESP 5/5 for early matches on Windows PC.',
 		date: '2026-08-01',
 	}),
 	reviewMeta({
 		handle: 'rankedGrind42',
 		rating: 4,
-		text: 'been using since season 3. soft aim profiles per weapon is nice — smg profile vs ar profile actually makes a diff in close fights. only complaint is updates page could show eta when vanguard patches hit, had to wait a day once',
-		short: 'soft aim profiles per weapon is nice — smg profile vs ar profile actually makes a diff in close fights',
-		slug: 'valorant-soft-aim-ranked-review-rankedgrind42',
+		text: 'I have used Valorant Hacks since last episode. Soft aim per weapon helps in Bind. Status updates after Vanguard patches could be clearer, but it came back the next day.',
+		short: 'Soft aim per weapon in Valorant Hacks helps in Bind.',
+		slug: 'valorant-soft-aim-match-review-rankedgrind42',
 		seoTitle: 'Ranked Soft Aim by @rankedGrind42 — 4/5 | {brand}',
-		seoDescription:
-			'Ranked {game} soft aim review from @rankedGrind42: 4/5 for per-weapon aimbot profiles since Season 3, with feedback on {antiCheat} patch-day updates.',
+		seoDescription: '@rankedGrind42 rates {brand} soft aim 4/5 for matches on Windows PC.',
 		date: '2026-07-07',
 		tag: 'Ranked',
 	}),
 	reviewMeta({
-		handle: 'vanLifeWZ',
+		handle: 'vanLifeVal',
 		rating: 5,
-		text: 'radar saved me so many times during clutch fights. seeing the third party before they slide in is huge in squads. boxes + radar combo is clean',
-		short: 'radar saved me so many times during clutch fights. boxes + radar combo is clean',
-		slug: 'valorant-radar-hack-review-vanlifewz',
-		seoTitle: 'Radar Hack Review by @vanLifeWZ — 5/5 | {brand}',
-		seoDescription:
-			'{game} radar hack review from @vanLifeWZ: 5/5 for 2D radar during clutch fights and spotting third parties in squads with ESP boxes.',
+		text: 'Radar in Valorant Hacks saved me near spike sites. Seeing the third party early in duos is huge. Boxes plus radar look clean.',
+		short: 'Radar in Valorant Hacks saved me near spike sites.',
+		slug: 'valorant-radar-hack-review-vanlifeval',
+		seoTitle: 'Radar Review by @vanLifeVal — 5/5 | {brand}',
+		seoDescription: '@vanLifeVal rates {brand} radar 5/5 near spike sites on Windows PC.',
 		date: '2026-07-28',
-		tag: 'Squads',
+		tag: 'Spike sites',
 	}),
 	reviewMeta({
 		handle: 'patchDayMike',
 		rating: 4,
-		text: 'every cheat goes down on patch day, thats life. difference here is they actually posted on updates within a few hours last patch. was back online next morning. my old provider left me hanging for 4 days once so yeah',
-		short: 'every cheat goes down on patch day, thats life. difference here is they actually posted on updates within a few hours',
+		text: 'Most cheats go down on patch day. Valorant Hacks posted on the status page within a few hours and was back the next morning. My old tool left me waiting for days.',
+		short: 'Valorant Hacks was back the next morning after a patch.',
 		slug: 'valorant-vanguard-update-review-patchdaymike',
-		seoTitle: '{antiCheat} Patch Review by @patchDayMike — 4/5 | {brand}',
-		seoDescription:
-			'{antiCheat} patch-day review from @patchDayMike: 4/5 for how fast {brand} posts maintenance updates and gets the undetected cheat back online after patches.',
+		seoTitle: 'Status Review by @patchDayMike — 4/5 | {brand}',
+		seoDescription: '@patchDayMike rates {brand} status updates 4/5 after {antiCheat} patches.',
 		date: '2026-06-09',
 		tag: 'Vanguard updates',
 	}),
 	reviewMeta({
 		handle: 'snipezOnly_',
 		rating: 5,
-		text: 'sniper soft aim profile + esp for tag = chef kiss. dont @ me',
-		short: 'sniper soft aim profile + esp for tag = chef kiss. dont @ me',
+		text: 'Operator soft aim plus ESP in Valorant Hacks is excellent for long shots. Simple and strong.',
+		short: 'Operator soft aim plus ESP in Valorant Hacks is excellent.',
 		slug: 'valorant-sniper-soft-aim-review-snipezonly',
 		seoTitle: 'Sniper Soft Aim by @snipezOnly_ — 5/5 | {brand}',
-		seoDescription:
-			'{game} sniper soft aim review from @snipezOnly_: 5/5 for the sniper aimbot profile paired with ESP tagging in the {brand} package.',
+		seoDescription: '@snipezOnly_ rates {brand} sniper soft aim 5/5 with ESP on Windows PC.',
 		date: '2026-08-01',
 	}),
 ] as const satisfies readonly CustomerReview[];

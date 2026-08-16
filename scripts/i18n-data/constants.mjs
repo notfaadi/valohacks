@@ -6,39 +6,39 @@ export const LOCALES = [
 ];
 
 export const PAGE_IDS = [
-	'home', 'valorant-esp', 'valorant-aimbot', 'features', 'pricing', 'setup',
-	'updates', 'faq', 'support', 'undetected', 'wallhack', 'radar', 'vanguard',
+	'home', 'tarkov-esp', 'tarkov-aimbot', 'features', 'pricing', 'setup',
+	'updates', 'faq', 'support', 'undetected', 'wallhack', 'radar', 'battleye',
 	'cheats-2026', 'hacks', 'cheat-download', 'mod-menu', 'soft-aim', 'best-cheats',
 	'aimbot-hack', 'esp-hack', 'unlock-all', 'privacy', 'refund', 'terms',
 ];
 
-/** Hero image per page — six unique Valorant cheat screenshots (primary pages each get a distinct file). */
+/** Hero image per page — simple valorant hacks keyword filenames. */
 export const HERO_IMAGES = {
-	home: '/images/warzone-esp-player-tags.webp',
-	'valorant-esp': '/images/warzone-esp-radar.webp',
-	'valorant-aimbot': '/images/warzone-aimbot-sniper.webp',
-	features: '/images/warzone-aimbot-skeleton.webp',
-	pricing: '/images/warzone-cheats-combat.webp',
-	setup: '/images/warzone-esp-radar.webp',
-	updates: '/images/warzone-esp-player-tags.webp',
-	faq: '/images/warzone-aimbot-skeleton.webp',
-	support: '/images/warzone-cheats-combat.webp',
-	undetected: '/images/warzone-wallhack-skeleton.webp',
-	wallhack: '/images/warzone-wallhack-skeleton.webp',
-	radar: '/images/warzone-esp-radar.webp',
-	vanguard: '/images/warzone-aimbot-sniper.webp',
-	'cheats-2026': '/images/warzone-esp-player-tags.webp',
-	hacks: '/images/warzone-cheats-combat.webp',
-	'cheat-download': '/images/warzone-cheats-combat.webp',
-	'mod-menu': '/images/warzone-esp-radar.webp',
-	'soft-aim': '/images/warzone-aimbot-skeleton.webp',
-	'best-cheats': '/images/warzone-esp-player-tags.webp',
-	'aimbot-hack': '/images/warzone-aimbot-skeleton.webp',
-	'esp-hack': '/images/warzone-wallhack-skeleton.webp',
-	'unlock-all': '/images/warzone-esp-radar.webp',
-	privacy: '/images/warzone-aimbot-sniper.webp',
-	refund: '/images/warzone-cheats-combat.webp',
-	terms: '/images/warzone-aimbot-skeleton.webp',
+	home: '/images/tarkov-cheats-esp.webp',
+	'tarkov-esp': '/images/tarkov-cheats-radar.webp',
+	'tarkov-aimbot': '/images/tarkov-cheats-aimbot.webp',
+	features: '/images/tarkov-cheats-aimbot-view.webp',
+	pricing: '/images/tarkov-cheats-raid.webp',
+	setup: '/images/tarkov-cheats-radar.webp',
+	updates: '/images/tarkov-cheats-esp.webp',
+	faq: '/images/tarkov-cheats-aimbot-view.webp',
+	support: '/images/tarkov-cheats-raid.webp',
+	undetected: '/images/tarkov-cheats-wallhack.webp',
+	wallhack: '/images/tarkov-cheats-wallhack.webp',
+	radar: '/images/tarkov-cheats-radar.webp',
+	battleye: '/images/tarkov-cheats-aimbot.webp',
+	'cheats-2026': '/images/tarkov-cheats-esp.webp',
+	hacks: '/images/tarkov-cheats-raid.webp',
+	'cheat-download': '/images/tarkov-cheats-raid.webp',
+	'mod-menu': '/images/tarkov-cheats-radar.webp',
+	'soft-aim': '/images/tarkov-cheats-aimbot-view.webp',
+	'best-cheats': '/images/tarkov-cheats-esp.webp',
+	'aimbot-hack': '/images/tarkov-cheats-aimbot-view.webp',
+	'esp-hack': '/images/tarkov-cheats-wallhack.webp',
+	'unlock-all': '/images/tarkov-cheats-radar.webp',
+	privacy: '/images/tarkov-cheats-aimbot.webp',
+	refund: '/images/tarkov-cheats-raid.webp',
+	terms: '/images/tarkov-cheats-aimbot-view.webp',
 };
 
 export const TS_HEADER = `import type { LocaleCode } from './locales';
@@ -70,7 +70,7 @@ export type LocaleUi = {
 \t\theaderArt: string; cheatsPackage: string; rebootFight: string; battleRoyale: string; battleRoyaleIsland: string;
 \t};
 };
-export type PageId = 'home' | 'valorant-esp' | 'valorant-aimbot' | 'features' | 'pricing' | 'setup' | 'updates' | 'faq' | 'support' | 'undetected' | 'wallhack' | 'radar' | 'vanguard' | 'cheats-2026' | 'hacks' | 'cheat-download' | 'mod-menu' | 'soft-aim' | 'best-cheats' | 'aimbot-hack' | 'esp-hack' | 'unlock-all' | 'privacy' | 'refund' | 'terms';
+export type PageId = 'home' | 'tarkov-esp' | 'tarkov-aimbot' | 'features' | 'pricing' | 'setup' | 'updates' | 'faq' | 'support' | 'undetected' | 'wallhack' | 'radar' | 'battleye' | 'cheats-2026' | 'hacks' | 'cheat-download' | 'mod-menu' | 'soft-aim' | 'best-cheats' | 'aimbot-hack' | 'esp-hack' | 'unlock-all' | 'privacy' | 'refund' | 'terms';
 `;
 
 /** Clamp meta strings to SEO limits without ugly ellipsis. */
@@ -123,8 +123,12 @@ export function section(h2, ...args) {
 
 /** Authoritative external citation helpers (open in new tab). */
 export const EXT = {
-	activision: '<a href="https://playvalorant.com" target="_blank" rel="noopener noreferrer">Valorant</a>',
-	valorant: '<a href="https://playvalorant.com" target="_blank" rel="noopener noreferrer">Valorant</a>',
-	status: '<a href="https://support.riotgames.com/" target="_blank" rel="noopener noreferrer">Riot Games Support</a>',
-	vanguard: '<a href="https://playvalorant.com" target="_blank" rel="noopener noreferrer">Vanguard</a>',
+	activision:
+		'<a href="https://playvalorant.com/" target="_blank" rel="noopener noreferrer">Valorant</a>',
+	valorant:
+		'<a href="https://playvalorant.com/" target="_blank" rel="noopener noreferrer">Valorant</a>',
+	status:
+		'<a href="https://status.riotgames.com/" target="_blank" rel="noopener noreferrer">Riot Games Status</a>',
+	vanguard:
+		'<a href="https://playvalorant.com/" target="_blank" rel="noopener noreferrer">Vanguard Anti-Cheat</a>',
 };

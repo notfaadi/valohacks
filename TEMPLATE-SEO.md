@@ -33,7 +33,7 @@ Optional lock: set env `BRAND_STUDIO_TOKEN=your-secret` before `npm run dev`, th
 
 **Still edit by hand after a rebrand:** keyword landing bodies (`content.generated.ts`), FAQ/review item answers (`site.ts`). Hub page SEO/copy/theme/hero/domain are permanent via Studio.
 
-**Security:** write API only exists in `astro dev`; localhost IP + Host + header checks; rate-limited; stripped from `dist` on build; Cloudflare `_redirects` returns 404; robots disallow `/brand-studio/`.
+**Security:** write API only exists in `astro dev`; localhost IP + Host + header checks; rate-limited; stripped from `dist` on build; Cloudflare `_redirects` rewrites Brand Studio to `/404.html` (Workers disallow status 404 in `_redirects`); robots disallow `/brand-studio/`.
 
 Then continue with FAQs / images if the game changed (steps below).
 
@@ -69,7 +69,7 @@ This updates `astro.config.mjs` `site`, `public/robots.txt`, and `public/site.we
 | Sitemap XML (auto) | `src/pages/sitemap*.xml.ts` + `brand.sitemap` | Do not hand-edit XML — change brand URL / labels, then rebuild |
 | FAQs / reviews / landing link labels | `src/data/site.ts` | Use `{brand}` `{game}` tokens in copy |
 | Simple EN pages (Preview, Features, Store, Status) | `src/data/i18n/simple-pages.ts` | Keep structure; swap game wording / tokens |
-| Images | `public/images/` + `src/data/warzone.ts` | Own licensed / provided assets only |
+| Images | `public/images/` + `src/data/tarkov.ts` | Own licensed / provided assets only |
 | Nav labels | `src/components/Navbar.astro` | Keep meanings (Preview / Features / Store / Status) |
 | Dense i18n landings (optional) | `src/data/i18n/content.generated.ts` | Regenerate or rewrite after brand swap |
 
@@ -117,7 +117,7 @@ Helpers: `seoTitle(topic)` and `seoDescription(template)` in `src/data/brand.ts`
 1. Or update **`src/data/brand.ts`** manually, then **`npm run sync:brand`**
 2. Rewrite **`simple-pages.ts`** for the new game (keep structure + tokens)
 3. Update FAQs / review meta in **`site.ts`** (keep `{brand}` / `{game}` tokens)
-4. Replace images; update **`warzone.ts`** (image registry) paths/alts
+4. Replace images; update **`tarkov.ts`** (image registry) paths/alts
 5. Update keyword landing **hrefs** in `seoLandingPages` if URL slugs change for the new game
 6. (Optional) Regenerate or trim `content.generated.ts` / blog posts for the new niche
 7. Run **`npm run build`** and spot-check `/`, `/features/`, `/pricing/`, `/updates/`, `/faq/`, `/reviews/`

@@ -1,3 +1,7 @@
+/**
+ * Responsive image helpers — prefer compressed WebP for LCP and below-fold media.
+ */
+
 export interface ResponsiveWidth {
 	src: string;
 	width: number;
@@ -14,7 +18,14 @@ export function contentSrcSet(baseSrc: string): string | undefined {
 	if (!match) return undefined;
 
 	const [, dir, name] = match;
-	if (name.endsWith('-640w') || name.endsWith('-960w') || name.endsWith('-1400w')) {
+	if (
+		name.endsWith('-640w') ||
+		name.endsWith('-960w') ||
+		name.endsWith('-1400w') ||
+		name.endsWith('-1024w') ||
+		name.endsWith('-1536w') ||
+		name.endsWith('-480w')
+	) {
 		return undefined;
 	}
 
@@ -26,22 +37,28 @@ export function contentSrcSet(baseSrc: string): string | undefined {
 	);
 }
 
+/**
+ * Homepage / banner hero — compressed WebP ladder (not the 375KB+ PNG master).
+ * Native art ~1024×409 (~2.5:1).
+ */
 export const heroResponsive: ResponsiveWidth[] = [
+	{ src: '/images/hero-banner-480w.webp', width: 480 },
+	{ src: '/images/hero-banner-768w.webp', width: 768 },
 	{ src: '/images/hero-banner.webp', width: 1024 },
 ];
 
-/** Desktop srcset (mobile uses a dedicated `<picture>` source — see Hero.astro). */
 export const heroDesktopResponsive: ResponsiveWidth[] = heroResponsive;
 
-/** Full-bleed homepage hero banner. */
-export const heroSrc = heroResponsive[0].src;
+/** Full-bleed Reyna hero banner. */
+export const heroSrc = '/images/hero-banner-768w.webp';
 export const heroSrcSet = buildSrcSet(heroResponsive);
 export const heroSizes = '100vw';
 
-/** LCP preload for homepage hero. */
-export const heroPreloadSrc = heroResponsive[0].src;
+/** LCP preload — mobile-first 768w (Lighthouse Moto G Power ~721px). */
+export const heroPreloadSrc = '/images/hero-banner-768w.webp';
+export const heroMimeType = 'image/webp';
 
-/** Intrinsic dimensions for hero LCP (matches hero-banner.webp). */
+/** Exact native dimensions of hero-banner.webp (1024 source). */
 export const heroWidth = 1024;
 export const heroHeight = 509;
 
